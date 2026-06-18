@@ -1,5 +1,5 @@
 {
-  "name": "citystyle-india",
+  "name": "girls-of-passion",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@vercel/blob": "^2.4.0",
+    "google-auth-library": "^10.7.0",
     "lucide-react": "^0.468.0",
     "mongoose": "^8.8.3",
     "next": "^15.0.3",

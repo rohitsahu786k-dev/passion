@@ -1,0 +1,25 @@
+interface:
+  display_name: seo cluster
+  short_description: 'SERP-based semantic topic clustering for content architecture
+    planning. Groups
+
+    keywords by actual Google SERP overlap (not text similarity), designs hub-and-spoke
+
+    content clusters with internal link matrices, and generates interactive
+
+    visualizations. Optionally executes content creation if claude-blog is installed.
+
+    Use when user says "topic cluster", "content cluster", "semantic clustering",
+
+    "pillar page", "hub and spoke", "content architecture", "keyword grouping",
+
+    or "cluster plan".'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

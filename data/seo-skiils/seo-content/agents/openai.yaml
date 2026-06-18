@@ -1,0 +1,17 @@
+interface:
+  display_name: seo content
+  short_description: 'Content quality and E-E-A-T analysis with AI citation readiness
+    assessment.
+
+    Use when user says "content quality", "E-E-A-T", "content analysis",
+
+    "readability check", "thin content", or "content audit".'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

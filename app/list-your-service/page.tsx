@@ -4,7 +4,7 @@ import { ListingForm } from '@/components/ui/ListingForm';
 
 export const metadata: Metadata = {
   title: 'List Your Service',
-  description: 'Submit your legal local service listing for approval and sponsored ranking on CityStyle India.'
+  description: 'Submit a Girls of Passion listing request for approval, moderation, and sponsored visibility review.'
 };
 
 export default function ListYourServicePage() {

@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation';
 import { ArrowRight, CalendarDays, Phone, MessageCircle, Clock, ChevronRight, ShieldCheck, Star } from 'lucide-react';
 import { BlogSchema } from '@/components/seo/BlogSchema';
 import { InternalLinkHub } from '@/components/seo/InternalLinkHub';
+import { VideoBlock } from '@/components/seo/VideoBlock';
 import { blogSeeds, getBlog } from '@/data/blogSeeds';
 import { getCity } from '@/data/cities';
+import { getSeoVideo } from '@/data/videos';
 import { cityLandingPath, cityServicePath } from '@/lib/seo/site';
 interface UnifiedBlog {
   slug: string;
@@ -17,6 +19,9 @@ interface UnifiedBlog {
   serviceName: string;
   readingTime: number;
   keywords: string[];
+  content?: string;
+  featuredImage?: { url: string; alt?: string; width?: number; height?: number };
+  videos?: Array<{ id: string; title: string; description: string; uploadDate: string }>;
 }
 
 async function getUnifiedBlog(slug: string): Promise<UnifiedBlog | null> {
@@ -37,7 +42,7 @@ async function getUnifiedBlog(slug: string): Promise<UnifiedBlog | null> {
     const { Blog } = await import('@/lib/models/Blog');
     const { services } = await import('@/data/services');
     await connectDB();
-    type LeanBlog = { slug: string; title: string; excerpt: string; publishedAt: Date; cityName?: string; city?: string; service?: string; readingTime?: number; keywords?: string[] };
+    type LeanBlog = { slug: string; title: string; excerpt: string; content?: string; publishedAt: Date; cityName?: string; city?: string; service?: string; readingTime?: number; keywords?: string[]; featuredImage?: { url: string; alt?: string; width?: number; height?: number }; videos?: Array<{ id: string; title: string; description: string; uploadDate: string }> };
     const dbPost = await Blog.findOne({ slug, isPublished: true }).lean() as LeanBlog | null;
     if (dbPost) {
       const svc = services.find((s) => s.slug === (dbPost.service || ''));
@@ -47,6 +52,9 @@ async function getUnifiedBlog(slug: string): Promise<UnifiedBlog | null> {
         cityName: dbPost.cityName || '', city: dbPost.city || '',
         serviceName: svc?.shortName || dbPost.service || '',
         readingTime: dbPost.readingTime || 5, keywords: dbPost.keywords || [],
+        content: dbPost.content,
+        featuredImage: dbPost.featuredImage,
+        videos: dbPost.videos,
       };
     }
   } catch {
@@ -101,6 +109,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const blog = await getUnifiedBlog(slug);
   if (!blog) notFound();
   const city = getCity(blog.city);
+  const selectedVideo = blog.videos?.[0] || getSeoVideo(blog.city);
 
   const faqs = [
     {
@@ -144,6 +153,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         updatedAt={blog.publishedAt}
         cityName={blog.cityName}
         serviceName={blog.serviceName}
+        imageUrl={blog.featuredImage?.url}
         faqs={faqs}
       />
 
@@ -186,6 +196,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {blog.title}
             </h1>
             <p className="mt-5 text-base leading-7 text-[#B8B8B8]">{blog.excerpt}</p>
+            {blog.featuredImage?.url && (
+              <figure className="mt-8 overflow-hidden rounded-xl border border-[#2A2A2A] bg-[#050505]">
+                <img
+                  src={blog.featuredImage.url}
+                  alt={blog.featuredImage.alt || blog.title}
+                  width={blog.featuredImage.width || 1400}
+                  height={blog.featuredImage.height || 800}
+                  className="h-auto w-full"
+                />
+              </figure>
+            )}
             <div className="mt-5 flex items-center gap-3">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
@@ -215,6 +236,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </p>
               </div>
             </section>
+
+            {blog.content && (
+              <section id="full-guide">
+                <h2 className="text-2xl font-bold text-white mb-4">Complete Guide</h2>
+                <div className="h-0.5 w-12 bg-[#D4AF37] mb-5" />
+                <div
+                  className="blog-content space-y-5 text-sm leading-7 text-[#B8B8B8]"
+                  dangerouslySetInnerHTML={{ __html: blog.content }}
+                />
+              </section>
+            )}
 
             <section id="overview">
               <h2 className="text-2xl font-bold text-white mb-4">
@@ -484,6 +516,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </aside>
         </div>
       </article>
+
+      <VideoBlock video={selectedVideo} title={`Helpful Video for ${blog.cityName} Visitors`} />
 
       <InternalLinkHub
         currentCitySlug={blog.city}

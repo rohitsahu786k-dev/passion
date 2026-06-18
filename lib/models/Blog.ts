@@ -14,6 +14,8 @@ export interface IBlog extends Document {
   service: string;
   author: { name: string; designation: string; image?: string };
   featuredImage?: { url: string; alt: string; width: number; height: number };
+  inlineImages?: Array<{ url: string; alt: string; width: number; height: number }>;
+  videos?: Array<{ id: string; title: string; description: string; uploadDate: string }>;
   faqs: Array<{ question: string; answer: string }>;
   tags: string[];
   category: string;
@@ -38,6 +40,8 @@ const BlogSchema = new Schema<IBlog>(
     service: { type: String, index: true },
     author: { name: String, designation: String, image: String },
     featuredImage: { url: String, alt: String, width: Number, height: Number },
+    inlineImages: [{ url: String, alt: String, width: Number, height: Number }],
+    videos: [{ id: String, title: String, description: String, uploadDate: String }],
     faqs: [{ question: String, answer: String }],
     tags: [String],
     category: String,

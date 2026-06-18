@@ -8,6 +8,7 @@ type BlogSchemaProps = {
   updatedAt: string;
   cityName?: string;
   serviceName?: string;
+  imageUrl?: string;
   faqs?: Array<{ question: string; answer: string }>;
 };
 
@@ -19,6 +20,7 @@ export function BlogSchema({
   updatedAt,
   cityName = 'India',
   serviceName = 'Escort Service',
+  imageUrl,
   faqs = [],
 }: BlogSchemaProps) {
   const siteUrl = getSiteUrl();
@@ -45,6 +47,7 @@ export function BlogSchema({
     dateModified: updatedAt,
     url: articleUrl,
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    ...(imageUrl ? { image: [imageUrl] } : {}),
     inLanguage: 'en-IN',
     isPartOf: { '@type': 'Blog', name: `${siteName} Blog`, url: `${siteUrl}/blog/` },
     about: { '@type': 'Thing', name: `${serviceName} in ${cityName}` },

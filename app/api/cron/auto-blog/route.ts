@@ -6,6 +6,8 @@ import { generateBlog, TOPIC_ANGLES } from '@/lib/services/blogGenerator';
 import { cities } from '@/data/cities';
 import { services } from '@/data/services';
 import type { TopicAngle } from '@/lib/services/blogTopics';
+import { absoluteUrl } from '@/lib/seo/site';
+import { notifyGoogleIndexing } from '@/lib/services/googleIndexing';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -67,6 +69,11 @@ export async function GET(req: NextRequest) {
     revalidatePath('/sitemap.xml');
     revalidatePath('/rss/');
 
+    const indexing =
+      process.env.INDEXING_API_AUTO_NOTIFY === 'true'
+        ? await notifyGoogleIndexing(absoluteUrl(`/blog/${blog.slug}/`))
+        : null;
+
     return NextResponse.json({
       success: true,
       title: blog.title,
@@ -77,6 +84,7 @@ export async function GET(req: NextRequest) {
       readingTime: blogData.readingTime,
       hasImage: !!blogData.featuredImage,
       imageUrl: blogData.featuredImage?.url ?? null,
+      indexing,
       totalPublished: existingSlugs.size + 1,
     });
   } catch (err) {

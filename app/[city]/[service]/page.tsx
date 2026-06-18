@@ -5,6 +5,7 @@ import { ShieldCheck, Star, Phone, MessageCircle, ChevronRight, IndianRupee } fr
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { CitySchema } from '@/components/seo/CitySchema';
 import { InternalLinkHub } from '@/components/seo/InternalLinkHub';
+import { VideoBlock } from '@/components/seo/VideoBlock';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { LeadForm } from '@/components/ui/LeadForm';
 import { blogSeeds } from '@/data/blogSeeds';
@@ -208,6 +209,8 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
           </div>
         </section>
       )}
+
+      <VideoBlock citySlug={city.slug} title={`${city.name} City Context Video`} />
 
       <InternalLinkHub
         currentCitySlug={city.slug}

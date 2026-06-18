@@ -5,6 +5,7 @@ import { MapPin, Star, Phone, MessageCircle, ChevronRight, Shield, Clock, Award 
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { CitySchema } from '@/components/seo/CitySchema';
 import { InternalLinkHub } from '@/components/seo/InternalLinkHub';
+import { VideoBlock } from '@/components/seo/VideoBlock';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { LeadForm } from '@/components/ui/LeadForm';
 import { cities, getCity } from '@/data/cities';
@@ -221,6 +222,8 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </section>
       )}
+
+      <VideoBlock citySlug={city.slug} title={`${city.name} Travel and Safety Video Guide`} />
 
       {/* FAQ */}
       <section id="faqs" className="section-pad bg-[#0D0D0D]">

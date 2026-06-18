@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import { Poppins } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
+import { ContactHydrator } from '@/components/ui/ContactHydrator';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { getSiteConfig } from '@/lib/getSiteConfig';
 
@@ -23,6 +25,7 @@ export const viewport: Viewport = {
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
 const siteName = 'Girls of Passion';
+const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID || 'G-L8JE09MSYM';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -139,6 +142,23 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html lang="en-IN" className={poppins.variable}>
       <head>
+        {googleAnalyticsId && (
+          <>
+            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${googleAnalyticsId}');
+              `}
+            </Script>
+          </>
+        )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -174,6 +194,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <main>{children}</main>
         <Footer />
         <FloatingCTA phone={config.phone} whatsapp={config.whatsapp} />
+        <ContactHydrator />
       </body>
     </html>
   );

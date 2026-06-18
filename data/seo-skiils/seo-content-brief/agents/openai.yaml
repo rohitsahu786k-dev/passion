@@ -1,0 +1,23 @@
+interface:
+  display_name: seo content brief
+  short_description: 'Generate competitive SEO content briefs with per-section word
+    counts,
+
+    competitor scoring, keyword density guidance, and page-type templates.
+
+    Supports both new page briefs and improve-existing-page briefs.
+
+    Use when user says "content brief", "write a brief", "content outline",
+
+    "blog brief", "service page brief", "brief for", "writing brief",
+
+    "content plan", or "outline for".'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

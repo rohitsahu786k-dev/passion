@@ -15,7 +15,7 @@ export function CTAButton({ phone, whatsapp, label = 'Get verified options' }: C
         Call now
       </a>
       <a
-        href={createWhatsAppUrl(whatsapp, `Hello CityStyle, I want help with ${label}.`)}
+        href={createWhatsAppUrl(whatsapp, `Hello Girls of Passion, I want help with ${label}.`)}
         target="_blank"
         rel="noreferrer"
         className="focus-ring inline-flex items-center gap-2 rounded-md border border-line bg-white px-5 py-3 text-sm font-semibold text-ink"

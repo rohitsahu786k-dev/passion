@@ -1,0 +1,17 @@
+interface:
+  display_name: seo sitemap
+  short_description: 'Analyze existing XML sitemaps or generate new ones with industry
+    templates.
+
+    Validates format, URLs, and structure. Use when user says "sitemap",
+
+    "generate sitemap", "sitemap issues", or "XML sitemap".'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

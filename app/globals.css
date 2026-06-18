@@ -299,6 +299,62 @@ img {
   height: auto;
 }
 
+.blog-content h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2rem;
+}
+
+.blog-content h3 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 650;
+  margin-top: 1.25rem;
+}
+
+.blog-content a {
+  color: #d4af37;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-content ul,
+.blog-content ol {
+  display: grid;
+  gap: 0.5rem;
+  margin-left: 1.25rem;
+}
+
+.blog-content ul {
+  list-style: disc;
+}
+
+.blog-content ol {
+  list-style: decimal;
+}
+
+.blog-content table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.75rem;
+}
+
+.blog-content th,
+.blog-content td {
+  border: 1px solid #2a2a2a;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.blog-content th {
+  color: #fff;
+  background: #151515;
+}
+
 /* Mobile menu — GPU-composited height animation */
 .mobile-menu {
   max-height: 0;

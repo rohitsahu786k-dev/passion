@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import { put } from '@vercel/blob';
+import sharp from 'sharp';
 
 let openai: OpenAI | null = null;
 
@@ -23,19 +24,34 @@ export interface GeneratedImage {
   height: number;
 }
 
-// Fallback city photo mapping (existing public assets)
 const cityFallbackPhotos: Record<string, string> = {
-  delhi: '/public/assets/photos/beautiful-delhi-escorts.jpg',
-  mumbai: '/public/assets/photos/beautiful-mumbai-escorts.jpg',
-  jaipur: '/public/assets/photos/beautiful-jaipur-escorts.jpg',
-  goa: '/public/assets/photos/beautiful-goa-escorts.jpg',
-  udaipur: '/public/assets/photos/beautiful-escort-girls-udaipur.jpg',
-  hyderabad: '/public/assets/photos/beautiful-hyderabad-escorts.jpg',
-  chennai: '/public/assets/photos/beautiful-chennai-escorts.jpg',
-  pune: '/public/assets/photos/beautiful-pune-escorts.jpg',
-  noida: '/public/assets/photos/beautiful-noida-escorts.jpg',
-  indore: '/public/assets/photos/beautiful-indore-escorts.jpg',
+  delhi: '/assets/photos/beautiful-delhi-escorts.jpg',
+  mumbai: '/assets/photos/beautiful-mumbai-escorts.jpg',
+  jaipur: '/assets/photos/beautiful-jaipur-escorts.jpg',
+  goa: '/assets/photos/beautiful-goa-escorts.jpg',
+  udaipur: '/assets/photos/beautiful-escort-girls-udaipur.jpg',
+  hyderabad: '/assets/photos/beautiful-hyderabad-escorts.jpg',
+  chennai: '/assets/photos/beautiful-chennai-escorts.jpg',
+  pune: '/assets/photos/beautiful-pune-escorts.jpg',
+  noida: '/assets/photos/beautiful-noida-escorts.jpg',
+  indore: '/assets/photos/beautiful-indore-escorts.jpg',
 };
+
+async function uploadWebpImage(tempUrl: string, filename: string) {
+  const res = await fetch(tempUrl);
+  if (!res.ok) throw new Error(`Failed to download image: ${res.status}`);
+
+  const sourceBuffer = Buffer.from(await res.arrayBuffer());
+  const webpBuffer = await sharp(sourceBuffer)
+    .resize(1400, 800, { fit: 'cover' })
+    .webp({ quality: 82 })
+    .toBuffer();
+
+  return put(filename, webpBuffer, {
+    access: 'public',
+    contentType: 'image/webp',
+  });
+}
 
 export async function generateBlogImage(
   cityName: string,
@@ -43,9 +59,8 @@ export async function generateBlogImage(
   slug: string,
   landmark: string
 ): Promise<GeneratedImage | null> {
-  // Skip if Vercel Blob is not configured
   if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    console.warn('[imageGenerator] BLOB_READ_WRITE_TOKEN not set — skipping AI image generation');
+    console.warn('[imageGenerator] BLOB_READ_WRITE_TOKEN not set - skipping AI image generation');
     return null;
   }
 
@@ -67,23 +82,14 @@ export async function generateBlogImage(
     const tempUrl = imageResponse.data?.[0]?.url;
     if (!tempUrl) throw new Error('No image URL returned from DALL-E 3');
 
-    // Download the temporary image
-    const res = await fetch(tempUrl);
-    if (!res.ok) throw new Error(`Failed to download image: ${res.status}`);
-    const imageBuffer = await res.arrayBuffer();
-
-    // Upload to Vercel Blob for permanent storage
-    const filename = `blog-images/${slug}-${Date.now()}.png`;
-    const { url } = await put(filename, imageBuffer, {
-      access: 'public',
-      contentType: 'image/png',
-    });
+    const filename = `blog-images/${slug}-${Date.now()}.webp`;
+    const { url } = await uploadWebpImage(tempUrl, filename);
 
     return {
       url,
-      alt: `${serviceName} in ${cityName} – Girls of Passion`,
-      width: 1792,
-      height: 1024,
+      alt: `${serviceName} in ${cityName} - Girls of Passion`,
+      width: 1400,
+      height: 800,
     };
   } catch (err) {
     console.error('[imageGenerator] DALL-E 3 generation failed:', err instanceof Error ? err.message : err);
@@ -91,11 +97,27 @@ export async function generateBlogImage(
   }
 }
 
+export async function generateRelatedBlogImages(
+  cityName: string,
+  serviceName: string,
+  slug: string,
+  landmarks: string[],
+  count = 2
+): Promise<GeneratedImage[]> {
+  const images: GeneratedImage[] = [];
+  for (let i = 0; i < count; i += 1) {
+    const landmark = landmarks[i % Math.max(landmarks.length, 1)] || cityName;
+    const image = await generateBlogImage(cityName, serviceName, `${slug}-${i + 1}`, landmark);
+    if (image) images.push(image);
+  }
+  return images;
+}
+
 export function getCityFallbackImage(citySlug: string, serviceName: string, cityName: string): GeneratedImage {
-  const url = cityFallbackPhotos[citySlug] || '/public/assets/photos/beautiful-india-escorts.jpg';
+  const url = cityFallbackPhotos[citySlug] || '/assets/photos/beautiful-india-escorts.jpg';
   return {
     url,
-    alt: `${serviceName} in ${cityName} – Girls of Passion`,
+    alt: `${serviceName} in ${cityName} - Girls of Passion`,
     width: 800,
     height: 600,
   };

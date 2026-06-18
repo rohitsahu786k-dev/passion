@@ -1,0 +1,21 @@
+interface:
+  display_name: seo programmatic
+  short_description: 'Programmatic SEO planning and analysis for pages generated at
+    scale from data
+
+    sources. Covers template engines, URL patterns, internal linking automation,
+
+    thin content safeguards, and index bloat prevention. Use when user says
+
+    "programmatic SEO", "pages at scale", "dynamic pages", "template pages",
+
+    "generated pages", or "data-driven SEO".'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
