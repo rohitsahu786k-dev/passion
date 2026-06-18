@@ -1,7 +1,20 @@
 import OpenAI from 'openai';
 import { put } from '@vercel/blob';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+let openai: OpenAI | null = null;
+
+function getOpenAIClient(): OpenAI | null {
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn('[imageGenerator] OPENAI_API_KEY not set - skipping AI image generation');
+    return null;
+  }
+
+  if (!openai) {
+    openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  }
+
+  return openai;
+}
 
 export interface GeneratedImage {
   url: string;
@@ -37,9 +50,12 @@ export async function generateBlogImage(
   }
 
   try {
+    const client = getOpenAIClient();
+    if (!client) return null;
+
     const prompt = `Cinematic lifestyle editorial photography. An elegant, sophisticated Indian woman in refined evening attire at ${landmark}, ${cityName}, India. Luxury ambiance with warm professional lighting and soft bokeh background. Premium hospitality photography style, ultra-realistic, high-end magazine quality. No text or watermarks.`;
 
-    const imageResponse = await openai.images.generate({
+    const imageResponse = await client.images.generate({
       model: 'dall-e-3',
       prompt,
       n: 1,

@@ -5,7 +5,19 @@ import { TOPIC_ANGLES, type TopicAngle } from './blogTopics';
 import { generateBlogImage, getCityFallbackImage } from './imageGenerator';
 import type { GeneratedImage } from './imageGenerator';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+let openai: OpenAI | null = null;
+
+function getOpenAIClient(): OpenAI {
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error('OPENAI_API_KEY is required to generate blog content');
+  }
+
+  if (!openai) {
+    openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  }
+
+  return openai;
+}
 
 const SITE_NAME = 'Girls of Passion';
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -142,7 +154,7 @@ RETURN ONLY THIS JSON (no markdown, no code blocks, strict JSON):
   ]
 }`;
 
-  const response = await openai.chat.completions.create({
+  const response = await getOpenAIClient().chat.completions.create({
     model: 'gpt-4o',
     messages: [
       { role: 'system', content: systemPrompt },
