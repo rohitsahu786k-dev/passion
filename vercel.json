@@ -5,5 +5,11 @@
     "deploymentEnabled": {
       "main": true
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/auto-blog",
+      "schedule": "0 1 * * *"
+    }
+  ]
 }
