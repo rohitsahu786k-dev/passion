@@ -1,6 +1,15 @@
 import OpenAI from 'openai';
-import { put } from '@vercel/blob';
+import { v2 as cloudinary } from 'cloudinary';
 import sharp from 'sharp';
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'dlkycxmrh',
+  api_key: process.env.CLOUDINARY_API_KEY || '172956651759117',
+  api_secret: process.env.CLOUDINARY_API_SECRET || 'sKutGaL6QtOOXEhsHImmF8x_bq4',
+  secure: true
+});
+
 
 let openai: OpenAI | null = null;
 
@@ -37,19 +46,34 @@ const cityFallbackPhotos: Record<string, string> = {
   indore: '/assets/photos/beautiful-indore-escorts.jpg',
 };
 
-async function uploadWebpImage(tempUrl: string, filename: string) {
-  const res = await fetch(tempUrl);
-  if (!res.ok) throw new Error(`Failed to download image: ${res.status}`);
-
-  const sourceBuffer = Buffer.from(await res.arrayBuffer());
+async function uploadWebpImage(sourceBuffer: Buffer, filename: string) {
   const webpBuffer = await sharp(sourceBuffer)
     .resize(1400, 800, { fit: 'cover' })
     .webp({ quality: 82 })
     .toBuffer();
 
-  return put(filename, webpBuffer, {
-    access: 'public',
-    contentType: 'image/webp',
+  const baseName = filename.split('/').pop()?.replace(/\.webp$/, '') || `img-${Date.now()}`;
+
+  return new Promise<{ url: string }>((resolve, reject) => {
+    const uploadStream = cloudinary.uploader.upload_stream(
+      {
+        folder: 'blog-images',
+        public_id: baseName,
+        format: 'webp',
+        resource_type: 'image',
+      },
+      (error, result) => {
+        if (error) {
+          console.error('[imageGenerator] Cloudinary upload error:', error);
+          return reject(error);
+        }
+        if (!result) {
+          return reject(new Error('Cloudinary upload returned no result'));
+        }
+        resolve({ url: result.secure_url });
+      }
+    );
+    uploadStream.end(webpBuffer);
   });
 }
 
@@ -59,8 +83,8 @@ export async function generateBlogImage(
   slug: string,
   landmark: string
 ): Promise<GeneratedImage | null> {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    console.warn('[imageGenerator] BLOB_READ_WRITE_TOKEN not set - skipping AI image generation');
+  if (!process.env.CLOUDINARY_URL && !process.env.CLOUDINARY_API_KEY) {
+    console.warn('[imageGenerator] Cloudinary credentials not set - skipping AI image generation');
     return null;
   }
 
@@ -71,19 +95,28 @@ export async function generateBlogImage(
     const prompt = `Cinematic lifestyle editorial photography. An elegant, sophisticated Indian woman in refined evening attire at ${landmark}, ${cityName}, India. Luxury ambiance with warm professional lighting and soft bokeh background. Premium hospitality photography style, ultra-realistic, high-end magazine quality. No text or watermarks.`;
 
     const imageResponse = await client.images.generate({
-      model: 'dall-e-3',
+      model: 'gpt-image-2',
       prompt,
       n: 1,
       size: '1792x1024',
-      quality: 'standard',
-      style: 'natural',
     });
 
+    const b64Data = imageResponse.data?.[0]?.b64_json;
     const tempUrl = imageResponse.data?.[0]?.url;
-    if (!tempUrl) throw new Error('No image URL returned from DALL-E 3');
+
+    let sourceBuffer: Buffer;
+    if (b64Data) {
+      sourceBuffer = Buffer.from(b64Data, 'base64');
+    } else if (tempUrl) {
+      const res = await fetch(tempUrl);
+      if (!res.ok) throw new Error(`Failed to download image: ${res.status}`);
+      sourceBuffer = Buffer.from(await res.arrayBuffer());
+    } else {
+      throw new Error('No image URL or b64_json returned from DALL-E 3');
+    }
 
     const filename = `blog-images/${slug}-${Date.now()}.webp`;
-    const { url } = await uploadWebpImage(tempUrl, filename);
+    const { url } = await uploadWebpImage(sourceBuffer, filename);
 
     return {
       url,

@@ -10,14 +10,12 @@ import {
   Star,
   LogOut,
   Sparkles,
-  Link2,
 } from 'lucide-react';
 
 const navItems = [
   { label: 'Dashboard', href: '/admin/', icon: LayoutDashboard },
   { label: 'Blogs', href: '/admin/blogs/', icon: BookOpen },
   { label: 'AI Blog', href: '/admin/auto-blog/', icon: Sparkles },
-  { label: 'Backlinks', href: '/admin/backlinks/', icon: Link2 },
   { label: 'Leads', href: '/admin/leads/', icon: Inbox },
   { label: 'Listings', href: '/admin/listings/', icon: Store },
   { label: 'Reviews', href: '/admin/reviews/', icon: Star },

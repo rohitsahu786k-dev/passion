@@ -6,14 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "backlinks:worker": "tsx scripts/run-backlinks-worker.ts",
-    "backlinks:worker:loop": "tsx scripts/run-backlinks-worker.ts --loop"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@sparticuz/chromium": "^149.0.0",
-    "@vercel/blob": "^2.4.0",
+    "cloudinary": "^2.10.0",
     "google-auth-library": "^10.7.0",
     "lucide-react": "^0.468.0",
     "mongoose": "^8.8.3",
