@@ -124,7 +124,15 @@ async function extractVisibleError(page: Page) {
     for (const selector of selectors) {
       const element = document.querySelector(selector);
       const text = element?.textContent?.trim();
-      if (text) return text;
+      if (!element || !text) continue;
+
+      const style = window.getComputedStyle(element);
+      const isVisible = style.display !== 'none' && style.visibility !== 'hidden';
+      const normalized = text.replace(/\s+/g, ' ').trim();
+      const lower = normalized.toLowerCase();
+      const isUiAction = ['remove', 'add', 'view', '(view)'].includes(lower);
+
+      if (isVisible && !isUiAction && normalized.length >= 5) return normalized;
     }
     return null;
   });
@@ -322,13 +330,22 @@ export async function runMoneyRobotCampaign(
     }
 
     await log('Submitting MoneyRobot campaign...');
-    const clickedByText = await clickButtonByText(page, ['create', 'submit', 'start', 'save']);
-    if (!clickedByText) {
+    try {
       await clickFirst(
         page,
         ['#create_campaign_btn', 'button#btnCreateCampaign', '#btnCreateCampaign', 'button[type="submit"]'],
         10000
       );
+    } catch {
+      const clickedByText = await clickButtonByText(page, [
+        'start campaign',
+        'create campaign',
+        'submit campaign',
+        'save campaign',
+      ]);
+      if (!clickedByText) {
+        throw new Error('MoneyRobot submit button was not found');
+      }
     }
 
     await Promise.race([
