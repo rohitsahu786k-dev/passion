@@ -4,12 +4,13 @@ import { notFound } from 'next/navigation';
 import { MapPin, Star, Phone, MessageCircle, ChevronRight, Shield, Clock, Award } from 'lucide-react';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { CitySchema } from '@/components/seo/CitySchema';
+import { InternalLinkHub } from '@/components/seo/InternalLinkHub';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { LeadForm } from '@/components/ui/LeadForm';
 import { cities, getCity } from '@/data/cities';
 import { services } from '@/data/services';
 import { blogSeeds } from '@/data/blogSeeds';
-import { absoluteUrl, generateCityMeta } from '@/lib/seo/generateMeta';
+import { absoluteUrl, cityLandingPath, cityServicePath, generateCityMeta } from '@/lib/seo/generateMeta';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -82,7 +83,7 @@ export default async function CityPage({ params }: CityPageProps) {
         address={city.address}
         rating={city.rating}
         reviewCount={city.reviewCount}
-        url={absoluteUrl(`/${city.slug}-escort-service/`)}
+        url={absoluteUrl(cityLandingPath(city.slug))}
         faqs={faqs}
       />
       <FloatingCTA />
@@ -154,7 +155,7 @@ export default async function CityPage({ params }: CityPageProps) {
             {services.map((service) => (
               <Link
                 key={service.slug}
-                href={`/${city.slug}/${service.slug}/`}
+                href={cityServicePath(city.slug, service.slug)}
                 className="group rounded-xl border border-[#2A2A2A] bg-[#151515] p-5 hover:border-[#D4AF37]/40 transition-all"
               >
                 <div className="mb-3 h-1 w-8 rounded-full bg-[#D4AF37] group-hover:w-12 transition-all" />
@@ -249,7 +250,7 @@ export default async function CityPage({ params }: CityPageProps) {
               .map((c) => (
                 <Link
                   key={c.slug}
-                  href={`/${c.slug}-escort-service/`}
+                  href={cityLandingPath(c.slug)}
                   className="inline-flex items-center gap-1 rounded-full border border-[#2A2A2A] bg-[#111] px-3 py-1.5 text-xs text-[#888] hover:border-[#D4AF37]/40 hover:text-[#D4AF37] transition-all"
                 >
                   <MapPin size={10} />
@@ -266,6 +267,11 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </div>
       </section>
+
+      <InternalLinkHub
+        currentCitySlug={city.slug}
+        title={`Explore More Escort Services Near ${city.name}`}
+      />
 
       {/* Final CTA */}
       <section className="section-pad bg-gradient-to-b from-[#0D0D0D] to-[#050505]">

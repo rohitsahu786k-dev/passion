@@ -4,12 +4,13 @@ import { notFound } from 'next/navigation';
 import { ShieldCheck, Star, Phone, MessageCircle, ChevronRight, IndianRupee } from 'lucide-react';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { CitySchema } from '@/components/seo/CitySchema';
+import { InternalLinkHub } from '@/components/seo/InternalLinkHub';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { LeadForm } from '@/components/ui/LeadForm';
 import { blogSeeds } from '@/data/blogSeeds';
 import { cities, getCity } from '@/data/cities';
 import { getService, services } from '@/data/services';
-import { absoluteUrl, generateCityMeta } from '@/lib/seo/generateMeta';
+import { absoluteUrl, cityLandingPath, cityServicePath, generateCityMeta } from '@/lib/seo/generateMeta';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -79,7 +80,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
         address={city.address}
         rating={city.rating}
         reviewCount={city.reviewCount}
-        url={absoluteUrl(`/${city.slug}/${service.slug}/`)}
+        url={absoluteUrl(cityServicePath(city.slug, service.slug))}
         faqs={faqs}
       />
       <FloatingCTA />
@@ -90,7 +91,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
           <nav className="flex items-center gap-1.5 text-xs text-[#555]" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link>
             <ChevronRight size={12} />
-            <Link href={`/${city.slug}-escort-service/`} className="hover:text-[#D4AF37] transition-colors">{city.name} Escort Service</Link>
+            <Link href={cityLandingPath(city.slug)} className="hover:text-[#D4AF37] transition-colors">{city.name} Escort Service</Link>
             <ChevronRight size={12} />
             <span className="text-[#B8B8B8]">{service.shortName}</span>
           </nav>
@@ -100,7 +101,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
       {/* Hero */}
       <section className="border-b border-[#2A2A2A] bg-[#0D0D0D]">
         <div className="container-shell py-12">
-          <Breadcrumb items={[{ label: city.name, href: `/${city.slug}-escort-service/` }, { label: service.shortName }]} />
+          <Breadcrumb items={[{ label: city.name, href: cityLandingPath(city.slug) }, { label: service.shortName }]} />
           <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_360px]">
             <div>
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/5 px-4 py-2 text-xs font-semibold text-[#D4AF37]">
@@ -207,6 +208,12 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
           </div>
         </section>
       )}
+
+      <InternalLinkHub
+        currentCitySlug={city.slug}
+        currentServiceSlug={service.slug}
+        title={`More Services Related to ${service.shortName} in ${city.name}`}
+      />
 
       {/* Final CTA */}
       <section className="section-pad bg-gradient-to-b from-[#0D0D0D] to-[#050505]">

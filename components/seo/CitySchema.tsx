@@ -1,3 +1,5 @@
+import { cityPhotoSlug } from '@/lib/seo/site';
+
 type CitySchemaProps = {
   cityName: string;
   serviceName?: string;
@@ -24,7 +26,7 @@ export function CitySchema({
   const brand = 'Girls of Passion';
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
   const label = serviceName ? `${serviceName} in ${cityName}` : `${cityName} Escort Service`;
-  const citySlug = cityName.toLowerCase().replace(/\s+/g, '-');
+  const citySlug = cityPhotoSlug(cityName.toLowerCase().replace(/\s+/g, '-'));
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -61,22 +63,6 @@ export function CitySchema({
       bestRating: '5',
       worstRating: '1',
     },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Person', name: 'Arjun M.' },
-        reviewBody: `Very professional service in ${cityName}. Quick response, verified profiles, and complete discretion. Highly recommend Girls of Passion.`,
-        datePublished: '2026-03-10',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Person', name: 'Vikram S.' },
-        reviewBody: `Best escort service in ${cityName} I have used. Private, professional, and the team was very supportive throughout the booking process.`,
-        datePublished: '2026-04-05',
-      },
-    ],
     sameAs: [siteUrl],
   };
 
@@ -89,10 +75,6 @@ export function CitySchema({
     datePublished: '2023-01-01',
     isPartOf: { '@type': 'WebSite', name: brand, url: siteUrl },
     about: { '@type': 'Thing', name: `Adult Companionship in ${cityName}` },
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '#faqs'],
-    },
     inLanguage: 'en-IN',
     primaryImageOfPage: {
       '@type': 'ImageObject',
@@ -125,40 +107,6 @@ export function CitySchema({
     },
   };
 
-  const howToSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: `How to Book Escort Service in ${cityName}`,
-    description: `Complete guide to booking verified adult companionship in ${cityName} through Girls of Passion.`,
-    totalTime: 'PT10M',
-    step: [
-      {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'Contact Girls of Passion',
-        text: `Call or WhatsApp Girls of Passion to enquire about available verified companion profiles in ${cityName}.`,
-      },
-      {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Share Your Location & Requirements',
-        text: `Tell us your preferred area in ${cityName}, date, timing, and specific requirements.`,
-      },
-      {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Receive Profile Details',
-        text: `Our team shares available verified profiles matching your requirements in ${cityName}.`,
-      },
-      {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Confirm & Meet',
-        text: `Confirm the booking. The companion arrives at your ${cityName} location on time, discreetly.`,
-      },
-    ],
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -174,7 +122,6 @@ export function CitySchema({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </>
   );

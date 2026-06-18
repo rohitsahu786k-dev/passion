@@ -1,3 +1,5 @@
+import { absoluteUrl, getSiteUrl } from '@/lib/seo/site';
+
 type BlogSchemaProps = {
   title: string;
   slug: string;
@@ -19,9 +21,9 @@ export function BlogSchema({
   serviceName = 'Escort Service',
   faqs = [],
 }: BlogSchemaProps) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
+  const siteUrl = getSiteUrl();
   const siteName = 'Girls of Passion';
-  const articleUrl = `${siteUrl}/blog/${slug}/`;
+  const articleUrl = absoluteUrl(`/blog/${slug}/`);
 
   const articleSchema = {
     '@context': 'https://schema.org',

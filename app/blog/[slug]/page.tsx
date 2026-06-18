@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, CalendarDays, Phone, MessageCircle, Clock, ChevronRight, ShieldCheck, Star } from 'lucide-react';
 import { BlogSchema } from '@/components/seo/BlogSchema';
+import { InternalLinkHub } from '@/components/seo/InternalLinkHub';
 import { blogSeeds, getBlog } from '@/data/blogSeeds';
 import { getCity } from '@/data/cities';
+import { cityLandingPath, cityServicePath } from '@/lib/seo/site';
 interface UnifiedBlog {
   slug: string;
   title: string;
@@ -123,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
   ];
 
-  const cityPageUrl = city ? `/${city.slug}-escort-service/` : '/india-escort-service/';
+  const cityPageUrl = city ? cityLandingPath(city.slug) : '/india-escort-service/';
   const cityPageLabel = city ? `${blog.cityName} Escort Service` : 'India Escort Service';
 
   // Related posts from same city (excluding current)
@@ -368,7 +370,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   India Escort Service
                 </Link>
                 <Link
-                  href={`/${blog.city}/vip-escort/`}
+                  href={cityServicePath(blog.city, 'vip-escort')}
                   className="inline-flex items-center gap-2 rounded-lg border border-[#2A2A2A] bg-[#151515] px-4 py-2 text-sm text-[#B8B8B8] hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-colors"
                 >
                   <ArrowRight size={14} />
@@ -446,7 +448,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 ].map(({ label, slug }) => (
                   <Link
                     key={slug}
-                    href={`/${blog.city}/${slug}/`}
+                    href={cityServicePath(blog.city, slug)}
                     className="flex items-center justify-between text-sm text-[#B8B8B8] hover:text-[#D4AF37] transition-colors py-1 border-b border-[#1a1a1a] last:border-0"
                   >
                     <span>{label}</span>
@@ -482,6 +484,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </aside>
         </div>
       </article>
+
+      <InternalLinkHub
+        currentCitySlug={blog.city}
+        title={`More Guides and Services for ${blog.cityName}`}
+      />
     </>
   );
 }

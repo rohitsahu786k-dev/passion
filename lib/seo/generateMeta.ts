@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { absoluteUrl, cityServicePath, cityLandingPath, publicCitySlug, SITE_NAME } from './site';
+
+export { absoluteUrl, cityLandingPath, cityServicePath, publicCitySlug } from './site';
 
 type CityMetaOptions = {
   cityName: string;
@@ -8,9 +11,6 @@ type CityMetaOptions = {
   rating?: number;
   reviewCount?: number;
 };
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
-const siteName = 'Girls of Passion';
 
 export function generateCityMeta({
   cityName,
@@ -24,8 +24,8 @@ export function generateCityMeta({
     ? `${serviceName} in ${cityName}`
     : `${cityName} Escort Service`;
 
-  const path = serviceSlug ? `/${citySlug}/${serviceSlug}/` : `/${citySlug}/`;
-  const canonical = `${siteUrl}${path}`;
+  const path = serviceSlug ? cityServicePath(citySlug, serviceSlug) : cityLandingPath(citySlug);
+  const canonical = absoluteUrl(path);
 
   const title = serviceName
     ? `${serviceName} in ${cityName} | Girls of Passion`
@@ -35,7 +35,7 @@ export function generateCityMeta({
     ? `Book a discreet ${label.toLowerCase()} with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship in ${cityName}.`
     : `Book a discreet ${cityName} escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across ${cityName} hotels, residences, and key areas.`;
 
-  const ogImage = `/assets/photos/luxury-escort-service-${citySlug}.jpg`;
+  const ogImage = `/assets/photos/luxury-escort-service-${publicCitySlug(citySlug)}.jpg`;
 
   return {
     title,
@@ -57,7 +57,7 @@ export function generateCityMeta({
       url: canonical,
       type: 'website',
       locale: 'en_IN',
-      siteName,
+      siteName: SITE_NAME,
       images: [
         {
           url: ogImage,
@@ -89,8 +89,4 @@ export function generateCityMeta({
       'review-count': reviewCount.toString(),
     },
   };
-}
-
-export function absoluteUrl(path = '/') {
-  return `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`;
 }

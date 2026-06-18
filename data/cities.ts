@@ -39,5 +39,6 @@ export const cities: City[] = [
 ];
 
 export function getCity(slug: string) {
-  return cities.find((city) => city.slug === slug);
+  const normalizedSlug = slug === 'maunt-abu' ? 'mount-abu' : slug;
+  return cities.find((city) => city.slug === normalizedSlug);
 }

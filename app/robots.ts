@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { absoluteUrl, getSiteUrl } from '@/lib/seo/site';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
+  const baseUrl = getSiteUrl();
 
   return {
     rules: [
@@ -34,7 +35,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Majestic-12', disallow: '/' },
       { userAgent: 'Cliqzbot', disallow: '/' },
     ],
-    sitemap: [`${baseUrl}/sitemap.xml`, `${baseUrl}/rss/`],
+    sitemap: absoluteUrl('/sitemap.xml'),
     host: baseUrl,
   };
 }

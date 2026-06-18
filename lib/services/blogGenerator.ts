@@ -4,6 +4,7 @@ import { services } from '@/data/services';
 import { TOPIC_ANGLES, type TopicAngle } from './blogTopics';
 import { generateBlogImage, getCityFallbackImage } from './imageGenerator';
 import type { GeneratedImage } from './imageGenerator';
+import { cityLandingPath, cityServicePath } from '@/lib/seo/site';
 
 let openai: OpenAI | null = null;
 
@@ -80,9 +81,9 @@ export async function generateBlog(input: BlogGenerationInput): Promise<Generate
   const relatedCities = cities.filter(c => c.slug !== city.slug).slice(0, 3);
 
   const internalLinks = [
-    `<a href="/${city.slug}-escort-service/">${city.name} Escort Service</a>`,
-    `<a href="/${city.slug}/${service.slug}/">${service.name} in ${city.name}</a>`,
-    ...relatedCities.map(c => `<a href="/${c.slug}-escort-service/">${c.name} Escort Service</a>`),
+    `<a href="${cityLandingPath(city.slug)}">${city.name} Escort Service</a>`,
+    `<a href="${cityServicePath(city.slug, service.slug)}">${service.name} in ${city.name}</a>`,
+    ...relatedCities.map(c => `<a href="${cityLandingPath(c.slug)}">${c.name} Escort Service</a>`),
     `<a href="/blog/">Escort Service Guides</a>`,
     `<a href="/contact/">Contact Girls of Passion</a>`,
   ];

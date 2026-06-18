@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { absoluteUrl } from '@/lib/seo/site';
 
 type Crumb = {
   label: string;
@@ -10,13 +11,13 @@ export function Breadcrumb({ items }: { items: Crumb[] }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: process.env.NEXT_PUBLIC_SITE_URL || '' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
       ...items.map((item, i) => ({
         '@type': 'ListItem',
         position: i + 2,
         name: item.label,
         ...(item.href
-          ? { item: `${process.env.NEXT_PUBLIC_SITE_URL || ''}${item.href}` }
+          ? { item: absoluteUrl(item.href) }
           : {}),
       })),
     ],
