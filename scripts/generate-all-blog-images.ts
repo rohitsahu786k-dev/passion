@@ -151,95 +151,113 @@ async function main() {
     let successCount = 0;
     let skipCount = 0;
     
-    for (let i = 0; i < itemsToProcess.length; i++) {
-      const seed = itemsToProcess[i];
-      const globalIdx = startIndex + i;
-      console.log(`\n[${globalIdx + 1}/${blogSeeds.length}] Processing slug: ${seed.slug}`);
+    const concurrency = 5;
+    for (let i = 0; i < itemsToProcess.length; i += concurrency) {
+      const chunk = itemsToProcess.slice(i, i + concurrency);
+      console.log(`\n--- Processing batch ${Math.floor(i / concurrency) + 1} of ${Math.ceil(itemsToProcess.length / concurrency)} (Size: ${chunk.length}) ---`);
       
-      const existing = existingMap.get(seed.slug) as any;
-      if (existing && existing.featuredImage?.url && existing.featuredImage.url.includes('cloudinary')) {
-        console.log(`-> Blog already exists in DB with a Cloudinary image: ${existing.featuredImage.url}. Skipping.`);
-        skipCount++;
-        continue;
-      }
-      
-      const city = getCity(seed.city);
-      if (!city) {
-        console.error(`-> Error: City "${seed.city}" not found in cities list. Skipping.`);
-        continue;
-      }
-      
-      const landmark = city.landmarks && city.landmarks[0] ? city.landmarks[0] : city.name;
-      
-      if (isDryRun) {
-        console.log(`-> [Dry-Run] Would generate image for ${city.name} at landmark: ${landmark}`);
-        console.log(`-> [Dry-Run] Would save blog to DB.`);
-        successCount++;
-        continue;
-      }
-      
-      console.log(`-> Generating image for ${city.name} (${seed.serviceName}) at landmark: ${landmark}...`);
-      const imageResult = await generateBlogImage(city.name, seed.serviceName, seed.slug, landmark);
-      
-      if (!imageResult || !imageResult.url) {
-        console.error(`-> Failed to generate image for ${seed.slug}. Skipping database write.`);
-        continue;
-      }
-      
-      console.log(`-> Image generated successfully: ${imageResult.url}`);
-      
-      const htmlContent = getLocalSeoContent(seed, city);
-      
-      const blogData = {
-        title: seed.title,
-        slug: seed.slug,
-        content: htmlContent,
-        excerpt: seed.excerpt,
-        metaTitle: seed.title.slice(0, 60),
-        metaDescription: seed.excerpt.slice(0, 160),
-        focusKeyword: seed.keywords[0] || `${seed.serviceName} in ${seed.cityName}`,
-        keywords: seed.keywords,
-        city: seed.city,
-        cityName: seed.cityName,
-        service: seed.service,
-        author: {
-          name: 'Girls of Passion Editorial Team',
-          designation: 'SEO Content Team'
-        },
-        featuredImage: imageResult,
-        inlineImages: [],
-        faqs: [
-          {
-            question: `Is ${seed.serviceName} available in ${seed.cityName}?`,
-            answer: `Yes. Girls of Passion provides ${seed.serviceName.toLowerCase()} in ${seed.cityName} with verified profiles, discreet booking, and 24x7 professional support. Contact us via call or WhatsApp to check current availability.`
-          },
-          {
-            question: `How do I book escort service in ${seed.cityName}?`,
-            answer: `To book escort service in ${seed.cityName}, contact Girls of Passion via call or WhatsApp. Share your preferred location, date, and requirements. Our team will confirm availability and guide you through the discreet booking process.`
-          },
-          {
-            question: `Is the booking process private in ${seed.cityName}?`,
-            answer: `Yes. All bookings with Girls of Passion in ${seed.cityName} are handled with complete confidentiality. Your personal information is never shared with third parties.`
+      await Promise.all(chunk.map(async (seed, chunkIdx) => {
+        const globalIdx = startIndex + i + chunkIdx;
+        
+        const existing = existingMap.get(seed.slug) as any;
+        if (existing && existing.featuredImage?.url && existing.featuredImage.url.includes('cloudinary')) {
+          console.log(`[${globalIdx + 1}/${blogSeeds.length}] -> Blog already exists in DB with a Cloudinary image: ${existing.featuredImage.url}. Skipping.`);
+          skipCount++;
+          return;
+        }
+        
+        const city = getCity(seed.city);
+        if (!city) {
+          console.error(`[${globalIdx + 1}/${blogSeeds.length}] -> Error: City "${seed.city}" not found in cities list. Skipping.`);
+          return;
+        }
+        
+        const landmark = city.landmarks && city.landmarks[0] ? city.landmarks[0] : city.name;
+        
+        if (isDryRun) {
+          console.log(`[${globalIdx + 1}/${blogSeeds.length}] -> [Dry-Run] Would generate image for ${city.name} at landmark: ${landmark}`);
+          successCount++;
+          return;
+        }
+        
+        console.log(`[${globalIdx + 1}/${blogSeeds.length}] -> Generating image for ${city.name} (${seed.serviceName}) at landmark: ${landmark}...`);
+        
+        let imageResult = null;
+        for (let attempt = 1; attempt <= 3; attempt++) {
+          try {
+            imageResult = await generateBlogImage(city.name, seed.serviceName, seed.slug, landmark);
+            if (imageResult && imageResult.url) {
+              break;
+            }
+          } catch (e) {
+            console.error(`[${globalIdx + 1}/${blogSeeds.length}] -> Attempt ${attempt} failed:`, e);
           }
-        ],
-        tags: [seed.cityName, seed.serviceName, 'escort service', 'india'],
-        category: 'Guide',
-        readingTime: seed.readingTime,
-        isPublished: true,
-        publishedAt: new Date(seed.publishedAt)
-      };
+          if (attempt < 3) {
+            console.log(`[${globalIdx + 1}/${blogSeeds.length}] -> Retrying in 5 seconds...`);
+            await new Promise(r => setTimeout(r, 5000));
+          }
+        }
+        
+        if (!imageResult || !imageResult.url) {
+          console.error(`[${globalIdx + 1}/${blogSeeds.length}] -> Failed to generate image for ${seed.slug} after retries. Skipping database write.`);
+          return;
+        }
+        
+        console.log(`[${globalIdx + 1}/${blogSeeds.length}] -> Image generated successfully: ${imageResult.url}`);
+        
+        const htmlContent = getLocalSeoContent(seed, city);
+        
+        const blogData = {
+          title: seed.title,
+          slug: seed.slug,
+          content: htmlContent,
+          excerpt: seed.excerpt,
+          metaTitle: seed.title.slice(0, 60),
+          metaDescription: seed.excerpt.slice(0, 160),
+          focusKeyword: seed.keywords[0] || `${seed.serviceName} in ${seed.cityName}`,
+          keywords: seed.keywords,
+          city: seed.city,
+          cityName: seed.cityName,
+          service: seed.service,
+          author: {
+            name: 'Girls of Passion Editorial Team',
+            designation: 'SEO Content Team'
+          },
+          featuredImage: imageResult,
+          inlineImages: [],
+          faqs: [
+            {
+              question: `Is ${seed.serviceName} available in ${seed.cityName}?`,
+              answer: `Yes. Girls of Passion provides ${seed.serviceName.toLowerCase()} in ${seed.cityName} with verified profiles, discreet booking, and 24x7 professional support. Contact us via call or WhatsApp to check current availability.`
+            },
+            {
+              question: `How do I book escort service in ${seed.cityName}?`,
+              answer: `To book escort service in ${seed.cityName}, contact Girls of Passion via call or WhatsApp. Share your preferred location, date, and requirements. Our team will confirm availability and guide you through the discreet booking process.`
+            },
+            {
+              question: `Is the booking process private in ${seed.cityName}?`,
+              answer: `Yes. All bookings with Girls of Passion in ${seed.cityName} are handled with complete confidentiality. Your personal information is never shared with third parties.`
+            }
+          ],
+          tags: [seed.cityName, seed.serviceName, 'escort service', 'india'],
+          category: 'Guide',
+          readingTime: seed.readingTime,
+          isPublished: true,
+          publishedAt: new Date(seed.publishedAt)
+        };
+        
+        await Blog.findOneAndUpdate(
+          { slug: seed.slug },
+          blogData,
+          { upsert: true, new: true }
+        );
+        
+        console.log(`[${globalIdx + 1}/${blogSeeds.length}] -> Blog database record updated successfully!`);
+        successCount++;
+      }));
       
-      await Blog.findOneAndUpdate(
-        { slug: seed.slug },
-        blogData,
-        { upsert: true, new: true }
-      );
-      
-      console.log(`-> Blog database record updated successfully!`);
-      successCount++;
-      
-      // Delay to avoid hitting rate limits quickly
-      await new Promise(r => setTimeout(r, 1000));
+      console.log(`Batch finished. Waiting 3 seconds before next batch...`);
+      await new Promise(r => setTimeout(r, 3000));
     }
     
     console.log(`\nScript summary:`);

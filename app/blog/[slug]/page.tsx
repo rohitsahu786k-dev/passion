@@ -25,18 +25,7 @@ interface UnifiedBlog {
 }
 
 async function getUnifiedBlog(slug: string): Promise<UnifiedBlog | null> {
-  // Check seeds first — covers all SSG pre-built pages (no DB needed)
-  const seed = getBlog(slug);
-  if (seed) {
-    return {
-      slug: seed.slug, title: seed.title, excerpt: seed.excerpt,
-      publishedAt: seed.publishedAt, cityName: seed.cityName, city: seed.city,
-      serviceName: seed.serviceName, readingTime: seed.readingTime, keywords: seed.keywords,
-    };
-  }
-
-  // Dynamic import for DB — only executed at ISR runtime for non-seed posts
-  // Never runs during SSG pre-building (seed check above exits early)
+  // Try querying DB first (so we get the generated content and Cloudinary featured images)
   try {
     const { connectDB } = await import('@/lib/mongodb');
     const { Blog } = await import('@/lib/models/Blog');
@@ -60,6 +49,17 @@ async function getUnifiedBlog(slug: string): Promise<UnifiedBlog | null> {
   } catch {
     // DB unavailable
   }
+
+  // Check seeds as fallback — covers all SSG pre-built pages (no DB needed)
+  const seed = getBlog(slug);
+  if (seed) {
+    return {
+      slug: seed.slug, title: seed.title, excerpt: seed.excerpt,
+      publishedAt: seed.publishedAt, cityName: seed.cityName, city: seed.city,
+      serviceName: seed.serviceName, readingTime: seed.readingTime, keywords: seed.keywords,
+    };
+  }
+
   return null;
 }
 
