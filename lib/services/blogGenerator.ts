@@ -2,6 +2,8 @@ import OpenAI from 'openai';
 import { cities } from '@/data/cities';
 import { services } from '@/data/services';
 import { TOPIC_ANGLES, type TopicAngle } from './blogTopics';
+import { generateBlogImage, getCityFallbackImage } from './imageGenerator';
+import type { GeneratedImage } from './imageGenerator';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -13,6 +15,7 @@ export interface BlogGenerationInput {
   citySlug: string;
   serviceSlug: string;
   topicAngle: TopicAngle;
+  generateImage?: boolean;
 }
 
 export interface GeneratedBlog {
@@ -28,6 +31,7 @@ export interface GeneratedBlog {
   cityName: string;
   service: string;
   author: { name: string; designation: string };
+  featuredImage?: GeneratedImage;
   faqs: Array<{ question: string; answer: string }>;
   tags: string[];
   category: string;
@@ -161,6 +165,13 @@ RETURN ONLY THIS JSON (no markdown, no code blocks, strict JSON):
   const content = String(parsed.content || '');
   const slug = buildSlug(city.slug, service.slug, input.topicAngle);
 
+  // Optionally generate a featured image via DALL-E 3 + Vercel Blob
+  let featuredImage: GeneratedImage | undefined;
+  if (input.generateImage) {
+    const img = await generateBlogImage(city.name, service.name, slug, city.landmarks[0]);
+    featuredImage = img ?? getCityFallbackImage(city.slug, service.name, city.name);
+  }
+
   return {
     title: String(parsed.title || titleRaw).slice(0, 80),
     slug,
@@ -177,6 +188,7 @@ RETURN ONLY THIS JSON (no markdown, no code blocks, strict JSON):
     city: city.slug,
     cityName: city.name,
     service: service.slug,
+    featuredImage,
     author: {
       name: 'Girls of Passion Editorial Team',
       designation: 'SEO Content Team',

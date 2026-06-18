@@ -8,7 +8,7 @@ import { services } from '@/data/services';
 import type { TopicAngle } from '@/lib/services/blogTopics';
 
 export const runtime = 'nodejs';
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get('authorization');
@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
       (await Blog.find({}).select('slug').lean()).map(b => b.slug as string)
     );
 
-    // Priority: iterate angles → cities → services to spread content across all topics
+    // Priority: iterate angles → cities → services
     let nextTopic: { citySlug: string; serviceSlug: string; angle: TopicAngle } | null = null;
 
     outer:
@@ -51,15 +51,12 @@ export async function GET(req: NextRequest) {
       citySlug: nextTopic.citySlug,
       serviceSlug: nextTopic.serviceSlug,
       topicAngle: nextTopic.angle,
+      generateImage: true,
     });
 
     const existing = await Blog.findOne({ slug: blogData.slug });
     if (existing) {
-      return NextResponse.json({
-        skipped: true,
-        reason: 'Slug already exists',
-        slug: blogData.slug,
-      });
+      return NextResponse.json({ skipped: true, reason: 'Slug already exists', slug: blogData.slug });
     }
 
     const blog = await Blog.create({ ...blogData, isPublished: true });
@@ -67,6 +64,8 @@ export async function GET(req: NextRequest) {
     revalidatePath('/blog/');
     revalidatePath(`/blog/${blog.slug}/`);
     revalidatePath(`/${blogData.city}-escort-service/`);
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss/');
 
     return NextResponse.json({
       success: true,
@@ -76,6 +75,8 @@ export async function GET(req: NextRequest) {
       service: blogData.service,
       angle: nextTopic.angle,
       readingTime: blogData.readingTime,
+      hasImage: !!blogData.featuredImage,
+      imageUrl: blogData.featuredImage?.url ?? null,
       totalPublished: existingSlugs.size + 1,
     });
   } catch (err) {

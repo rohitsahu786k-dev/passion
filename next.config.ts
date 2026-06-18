@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'res.cloudinary.com' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: '*.public.blob.vercel-storage.com' },
+      { protocol: 'https', hostname: 'oaidalleapiprodscus.blob.core.windows.net' },
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,

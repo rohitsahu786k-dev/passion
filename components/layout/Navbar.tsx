@@ -90,9 +90,9 @@ export function Navbar({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: N
             priority
             className="rounded-full"
           />
-          <span className="font-bold text-base leading-tight hidden sm:block">
-            <span className="text-[#D4AF37]">Girls of</span>{' '}
-            <span className="text-white">Passion</span>
+          <span className="font-bold leading-tight block">
+            <span className="text-[#D4AF37] text-sm sm:text-base">Girls of</span>{' '}
+            <span className="text-white text-sm sm:text-base">Passion</span>
           </span>
         </Link>
 
