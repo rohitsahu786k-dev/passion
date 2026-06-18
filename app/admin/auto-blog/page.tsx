@@ -363,7 +363,7 @@ export default function AutoBlogPage() {
               </button>
               <button
                 onClick={handlePublishPreview}
-                disabled={status === 'publishing' as unknown as boolean}
+                disabled={isLoading}
                 className="flex items-center gap-2 bg-[#D4AF37] text-black text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#c9a32e] disabled:opacity-40 transition-colors"
               >
                 <Send size={14} />
