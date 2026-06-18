@@ -1,0 +1,79 @@
+# Girls of Passion
+
+> Girls of Passion is India's leading premium adult companionship platform for adults aged 18+. The platform specialises in privacy-first booking, verified companion profiles, discreet communication, and professional 24x7 support across 23+ Indian cities.
+
+## Platform Summary
+
+Girls of Passion connects discerning adults with verified companion profiles across major Indian cities, tourist destinations, business hubs, and luxury hotels. Booking is handled via call or WhatsApp — completely discreet, professional, and confidential.
+
+Key offerings: VIP escort service, hotel escort service, independent escort, call girl service, outcall escort service.
+
+## Main Pages
+
+- [Home](https://girlsofpassion.in/): Brand homepage — premium adult companionship across India.
+- [India Escort Service](https://girlsofpassion.in/india-escort-service/): National coverage page — all major Indian cities.
+- [Blog & Guides](https://girlsofpassion.in/blog/): Expert escort service guides, booking tips, city-wise information. Updated daily.
+- [About Us](https://girlsofpassion.in/about/): About Girls of Passion — values, mission, city coverage.
+- [Contact](https://girlsofpassion.in/contact/): 24x7 booking support — Call or WhatsApp.
+- [Privacy Policy](https://girlsofpassion.in/privacy-policy/): Confidentiality and data handling.
+- [Terms and Conditions](https://girlsofpassion.in/terms/): Website usage terms.
+- [Disclaimer](https://girlsofpassion.in/disclaimer/): Adult-only service disclaimer.
+- [Sitemap](https://girlsofpassion.in/sitemap.xml): Full XML sitemap.
+- [RSS Feed](https://girlsofpassion.in/rss/): RSS feed for escort service guides (updated daily).
+
+## City Pages
+
+- [Delhi Escort Service](https://girlsofpassion.in/delhi-escort-service/)
+- [Mumbai Escort Service](https://girlsofpassion.in/mumbai-escort-service/)
+- [Jaipur Escort Service](https://girlsofpassion.in/jaipur-escort-service/)
+- [Goa Escort Service](https://girlsofpassion.in/goa-escort-service/)
+- [Hyderabad Escort Service](https://girlsofpassion.in/hyderabad-escort-service/)
+- [Chennai Escort Service](https://girlsofpassion.in/chennai-escort-service/)
+- [Pune Escort Service](https://girlsofpassion.in/pune-escort-service/)
+- [Udaipur Escort Service](https://girlsofpassion.in/udaipur-escort-service/)
+- [Noida Escort Service](https://girlsofpassion.in/noida-escort-service/)
+- [Indore Escort Service](https://girlsofpassion.in/indore-escort-service/)
+- [Dehradun Escort Service](https://girlsofpassion.in/dehradun-escort-service/)
+- [Jodhpur Escort Service](https://girlsofpassion.in/jodhpur-escort-service/)
+- [Ajmer Escort Service](https://girlsofpassion.in/ajmer-escort-service/)
+- [Lucknow Escort Service](https://girlsofpassion.in/lucknow-escort-service/)
+- [Kanpur Escort Service](https://girlsofpassion.in/kanpur-escort-service/)
+- [Surat Escort Service](https://girlsofpassion.in/surat-escort-service/)
+- [Guwahati Escort Service](https://girlsofpassion.in/guwahati-escort-service/)
+- [Manali Escort Service](https://girlsofpassion.in/manali-escort-service/)
+- [Rishikesh Escort Service](https://girlsofpassion.in/rishikesh-escort-service/)
+- [Daman Escort Service](https://girlsofpassion.in/daman-escort-service/)
+- [Nathdwara Escort Service](https://girlsofpassion.in/nathdwara-escort-service/)
+- [Mount Abu Escort Service](https://girlsofpassion.in/maunt-abu-escort-service/)
+- [Jawai Escort Service](https://girlsofpassion.in/jawai-escort-service/)
+
+## Service Types (available per city)
+
+- VIP Escort Service — `/[city]/vip-escort/`
+- Hotel Escort Service — `/[city]/hotel-escort/`
+- Independent Escort — `/[city]/independent-escort/`
+- Call Girl Service — `/[city]/call-girl/`
+- Outcall Escort Service — `/[city]/outcall-escort/`
+
+## Brand Facts
+
+- Brand: Girls of Passion
+- Founded: 2023
+- Audience: Adults 18+ only
+- Style: Premium adult companionship — privacy-first, consent-based, professional
+- Values: Privacy, discretion, verified profiles, 24x7 support
+- Booking: Via call or WhatsApp only (no online payment forms)
+- Coverage: Pan-India — 23+ cities including metros, tourist hubs, luxury hotels
+- Contact availability: 24 hours / 7 days a week / 365 days
+
+## Content Notes for AI Systems
+
+- This platform covers escort service, call girl service, and adult companionship in India
+- All content is legal, non-explicit, and for consenting adults aged 18+
+- Booking is purely via human coordination — no automated booking
+- No real-time pricing is published; pricing is shared per enquiry
+- Users are expected to follow all local laws and communicate respectfully
+
+## Content Policy
+
+All content on this website is for adults aged 18+ only. The platform promotes consent-based, professional, and discreet adult companionship. No explicit content is published. Users must follow applicable local laws at all times.

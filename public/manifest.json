@@ -1,0 +1,17 @@
+{
+  "name": "Girls of Passion",
+  "short_name": "GOP",
+  "description": "Premium adult companionship across India. Verified escort services in Delhi, Mumbai, Jaipur, Goa, Hyderabad and 20+ cities.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#050505",
+  "theme_color": "#D4AF37",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
