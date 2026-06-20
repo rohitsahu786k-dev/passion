@@ -29,7 +29,7 @@ export function generateCityMeta({
 
   const title = serviceName
     ? `${serviceName} in ${cityName} | Girls of Passion`
-    : `${cityName} Escort Service | Premium Adult Companionship 24x7`;
+    : `${cityName} Escort Service | Girls of Passion`;
 
   const description = serviceName
     ? `Book a discreet ${label.toLowerCase()} with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship in ${cityName}.`

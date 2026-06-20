@@ -2,7 +2,7 @@
 
 > Girls of Passion is India's leading premium adult companionship platform for adults aged 18+. The platform specialises in privacy-first booking, verified companion profiles, discreet communication, and professional 24x7 support across 23+ Indian cities.
 
-> DYNAMIC INDEX (updated daily): https://girlsofpassion.in/api/llms-dynamic
+> DYNAMIC INDEX (updated daily): https://www.girlsofpassion.in/api/llms-dynamic
 
 ## Platform Summary
 
@@ -12,43 +12,43 @@ Key offerings: VIP escort service, hotel escort service, independent escort, cal
 
 ## Main Pages
 
-- [Home](https://girlsofpassion.in/): Brand homepage — premium adult companionship across India.
-- [India Escort Service](https://girlsofpassion.in/india-escort-service/): National coverage page — all major Indian cities.
-- [Blog & Guides](https://girlsofpassion.in/blog/): Expert escort service guides, booking tips, city-wise information. Updated daily via AI.
-- [About Us](https://girlsofpassion.in/about/): About Girls of Passion — values, mission, city coverage.
-- [Contact](https://girlsofpassion.in/contact/): 24x7 booking support — Call or WhatsApp.
-- [Privacy Policy](https://girlsofpassion.in/privacy-policy/): Confidentiality and data handling.
-- [Terms and Conditions](https://girlsofpassion.in/terms/): Website usage terms.
-- [Disclaimer](https://girlsofpassion.in/disclaimer/): Adult-only service disclaimer.
-- [Sitemap](https://girlsofpassion.in/sitemap.xml): Full XML sitemap — auto-updated with every new blog.
-- [RSS Feed](https://girlsofpassion.in/rss/): RSS feed for escort service guides (updated daily from database).
-- [Full Dynamic Index](https://girlsofpassion.in/api/llms-dynamic): Complete machine-readable index including all AI-generated blog posts.
+- [Home](https://www.girlsofpassion.in/): Brand homepage — premium adult companionship across India.
+- [India Escort Service](https://www.girlsofpassion.in/india-escort-service/): National coverage page — all major Indian cities.
+- [Blog & Guides](https://www.girlsofpassion.in/blog/): Expert escort service guides, booking tips, city-wise information. Updated daily via AI.
+- [About Us](https://www.girlsofpassion.in/about/): About Girls of Passion — values, mission, city coverage.
+- [Contact](https://www.girlsofpassion.in/contact/): 24x7 booking support — Call or WhatsApp.
+- [Privacy Policy](https://www.girlsofpassion.in/privacy-policy/): Confidentiality and data handling.
+- [Terms and Conditions](https://www.girlsofpassion.in/terms/): Website usage terms.
+- [Disclaimer](https://www.girlsofpassion.in/disclaimer/): Adult-only service disclaimer.
+- [Sitemap](https://www.girlsofpassion.in/sitemap.xml): Full XML sitemap — auto-updated with every new blog.
+- [RSS Feed](https://www.girlsofpassion.in/rss/): RSS feed for escort service guides (updated daily from database).
+- [Full Dynamic Index](https://www.girlsofpassion.in/api/llms-dynamic): Complete machine-readable index including all AI-generated blog posts.
 
 ## City Pages
 
-- [Delhi Escort Service](https://girlsofpassion.in/delhi-escort-service/)
-- [Mumbai Escort Service](https://girlsofpassion.in/mumbai-escort-service/)
-- [Jaipur Escort Service](https://girlsofpassion.in/jaipur-escort-service/)
-- [Goa Escort Service](https://girlsofpassion.in/goa-escort-service/)
-- [Hyderabad Escort Service](https://girlsofpassion.in/hyderabad-escort-service/)
-- [Chennai Escort Service](https://girlsofpassion.in/chennai-escort-service/)
-- [Pune Escort Service](https://girlsofpassion.in/pune-escort-service/)
-- [Udaipur Escort Service](https://girlsofpassion.in/udaipur-escort-service/)
-- [Noida Escort Service](https://girlsofpassion.in/noida-escort-service/)
-- [Indore Escort Service](https://girlsofpassion.in/indore-escort-service/)
-- [Dehradun Escort Service](https://girlsofpassion.in/dehradun-escort-service/)
-- [Jodhpur Escort Service](https://girlsofpassion.in/jodhpur-escort-service/)
-- [Ajmer Escort Service](https://girlsofpassion.in/ajmer-escort-service/)
-- [Lucknow Escort Service](https://girlsofpassion.in/lucknow-escort-service/)
-- [Kanpur Escort Service](https://girlsofpassion.in/kanpur-escort-service/)
-- [Surat Escort Service](https://girlsofpassion.in/surat-escort-service/)
-- [Guwahati Escort Service](https://girlsofpassion.in/guwahati-escort-service/)
-- [Manali Escort Service](https://girlsofpassion.in/manali-escort-service/)
-- [Rishikesh Escort Service](https://girlsofpassion.in/rishikesh-escort-service/)
-- [Daman Escort Service](https://girlsofpassion.in/daman-escort-service/)
-- [Nathdwara Escort Service](https://girlsofpassion.in/nathdwara-escort-service/)
-- [Mount Abu Escort Service](https://girlsofpassion.in/maunt-abu-escort-service/)
-- [Jawai Escort Service](https://girlsofpassion.in/jawai-escort-service/)
+- [Delhi Escort Service](https://www.girlsofpassion.in/delhi-escort-service/)
+- [Mumbai Escort Service](https://www.girlsofpassion.in/mumbai-escort-service/)
+- [Jaipur Escort Service](https://www.girlsofpassion.in/jaipur-escort-service/)
+- [Goa Escort Service](https://www.girlsofpassion.in/goa-escort-service/)
+- [Hyderabad Escort Service](https://www.girlsofpassion.in/hyderabad-escort-service/)
+- [Chennai Escort Service](https://www.girlsofpassion.in/chennai-escort-service/)
+- [Pune Escort Service](https://www.girlsofpassion.in/pune-escort-service/)
+- [Udaipur Escort Service](https://www.girlsofpassion.in/udaipur-escort-service/)
+- [Noida Escort Service](https://www.girlsofpassion.in/noida-escort-service/)
+- [Indore Escort Service](https://www.girlsofpassion.in/indore-escort-service/)
+- [Dehradun Escort Service](https://www.girlsofpassion.in/dehradun-escort-service/)
+- [Jodhpur Escort Service](https://www.girlsofpassion.in/jodhpur-escort-service/)
+- [Ajmer Escort Service](https://www.girlsofpassion.in/ajmer-escort-service/)
+- [Lucknow Escort Service](https://www.girlsofpassion.in/lucknow-escort-service/)
+- [Kanpur Escort Service](https://www.girlsofpassion.in/kanpur-escort-service/)
+- [Surat Escort Service](https://www.girlsofpassion.in/surat-escort-service/)
+- [Guwahati Escort Service](https://www.girlsofpassion.in/guwahati-escort-service/)
+- [Manali Escort Service](https://www.girlsofpassion.in/manali-escort-service/)
+- [Rishikesh Escort Service](https://www.girlsofpassion.in/rishikesh-escort-service/)
+- [Daman Escort Service](https://www.girlsofpassion.in/daman-escort-service/)
+- [Nathdwara Escort Service](https://www.girlsofpassion.in/nathdwara-escort-service/)
+- [Mount Abu Escort Service](https://www.girlsofpassion.in/maunt-abu-escort-service/)
+- [Jawai Escort Service](https://www.girlsofpassion.in/jawai-escort-service/)
 
 ## Service Types (available per city)
 

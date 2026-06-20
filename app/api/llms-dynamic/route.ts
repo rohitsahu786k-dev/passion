@@ -7,9 +7,9 @@ import { services } from '@/data/services';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in').replace(
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in').replace(
     'http://127.0.0.1:3000',
-    'https://girlsofpassion.in'
+    'https://www.girlsofpassion.in'
   );
   const now = new Date();
 
