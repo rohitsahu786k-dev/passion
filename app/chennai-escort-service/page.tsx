@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,41 +15,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Chennai Escort Service & Call Girl | Book 24/7',
-  description: 'Chennai Escort Service and Chennai Call Girl booking available 24/7. Book Call Girls in Chennai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Chennai Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Chennai escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/chennai-escort-service/',
+  image: '/assets/photos/luxury-escort-service-chennai.jpg',
+  imageAlt: 'Chennai escort service featured image',
   keywords: [
     'Chennai Escort Service',
     'Chennai Call Girl',
     'Call Girls in Chennai',
-    'Chennai Escorts services',
-    'Chennai Call girls',
-    'Chennai escort service',
-    'Girls of Passion Chennai',
+    'Premium Chennai Escort Service',
+    '24x7 Chennai Escort Booking',
   ],
-  alternates: {
-    canonical: '/chennai-escort-service/',
-    languages: {
-      'en-IN': '/chennai-escort-service/',
-      'x-default': '/chennai-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Chennai Escort Service & Call Girl | Book 24/7',
-    description: 'Chennai Escort Service and Chennai Call Girl booking available 24/7. Book Call Girls in Chennai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/chennai-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-chennai.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Chennai Escort Service & Call Girl | Book 24/7',
-    description: 'Chennai Escort Service and Chennai Call Girl booking available 24/7. Book Call Girls in Chennai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Chennai companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -128,7 +108,7 @@ const companionProfiles = [
 export default function ChennaiEscortPage() {
   const phone = '+919999900133';
   const whatsapp = '919999900133';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Chennai%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Chennai%20escort%20service.`;
 
   const faqs = [
     {

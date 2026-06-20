@@ -1,20 +1,14 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 
-export const metadata: Metadata = {
-  title: 'Disclaimer | Girls of Passion',
-  description:
-    'Legal disclaimer for Girls of Passion – adult-only service for users aged 18 and above. Read our service disclaimer, terms of use, and legal notices.',
-  alternates: {
-    canonical: '/disclaimer/',
-    languages: {
-      'en-IN': '/disclaimer/',
-      'x-default': '/disclaimer/',
-    },
-  },
-  robots: { index: true, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Disclaimer | 18+ Verified Platform Notice',
+  description: 'Read the 18+ disclaimer for Girls of Passion covering adult-only access, legal notices, verified information limits, and responsible platform use.',
+  path: '/disclaimer/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Disclaimer featured image',
+});
 export default function DisclaimerPage() {
   return (
     <>

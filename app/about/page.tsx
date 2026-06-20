@@ -1,33 +1,18 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { Shield, CheckCircle, Clock, Lock, MapPin, Star, Phone, MessageCircle } from 'lucide-react';
 import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 import { getSiteUrl } from '@/lib/seo/site';
 
-export const metadata: Metadata = {
-  title: 'About Girls of Passion | Premium Adult Companionship',
-  description:
-    'Girls of Passion is India\'s trusted premium adult companionship platform with verified profiles, privacy-first booking, 24x7 professional support, and coverage across 23+ cities.',
-  alternates: {
-    canonical: '/about/',
-    languages: {
-      'en-IN': '/about/',
-      'x-default': '/about/',
-    },
-  },
-  openGraph: {
-    title: 'About Girls of Passion | Premium Adult Companionship',
-    description: 'Learn about Girls of Passion – India\'s most trusted escort service platform. Verified profiles, discreet booking, 24x7 support across Delhi, Mumbai, Jaipur, Goa and 20+ cities.',
-    url: '/about/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-india.jpg', width: 1200, height: 630 }],
-  },
-  robots: { index: true, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'About Girls of Passion | 23+ Verified Cities',
+  description: 'Learn about Girls of Passion, a premium 24x7 adult companionship platform with verified profiles, discreet booking, and support across 23+ cities.',
+  path: '/about/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Girls of Passion about page featured image',
+});
 const siteUrl = getSiteUrl();
 
 const aboutSchema = {

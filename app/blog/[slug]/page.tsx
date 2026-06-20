@@ -9,6 +9,7 @@ import { blogSeeds, getBlog } from '@/data/blogSeeds';
 import { getCity } from '@/data/cities';
 import { getSeoVideo } from '@/data/videos';
 import { cityLandingPath, cityServicePath } from '@/lib/seo/site';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 interface UnifiedBlog {
   slug: string;
@@ -78,39 +79,23 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params;
   const blog = await getUnifiedBlog(slug);
   if (!blog) return {};
-  const ogImage = `/assets/photos/luxury-escort-service-${blog.city}.jpg`;
+
+  const ogImage = blog.featuredImage?.url || `/assets/photos/luxury-escort-service-${blog.city}.jpg`;
   const postNumber = blog.slug.match(/(\d+)$/)?.[1];
-  const metaTitle = `${blog.cityName || 'India'} Escort Guide${postNumber ? ` ${postNumber}` : ''} | GOP`;
-  return {
+  const metaTitle = `Premium ${blog.cityName || 'India'} Escort Guide${postNumber ? ` ${postNumber}` : ''} | 24x7 Tips`;
+  const description = blog.excerpt.length > 160 ? `${blog.excerpt.slice(0, 157).trim()}...` : blog.excerpt;
+
+  return buildPageMetadata({
     title: metaTitle,
-    description: blog.excerpt,
-    keywords: blog.keywords.join(', '),
-    alternates: {
-    canonical: `/blog/${blog.slug}/`,
-    languages: {
-      'en-IN': `/blog/${blog.slug}/`,
-      'x-default': `/blog/${blog.slug}/`,
-    },
-  },
-    openGraph: {
-      title: metaTitle,
-      description: blog.excerpt,
-      type: 'article',
-      publishedTime: blog.publishedAt,
-      modifiedTime: blog.publishedAt,
-      siteName: 'Girls of Passion',
-      locale: 'en_IN',
-      url: `/blog/${blog.slug}/`,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: blog.title }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: metaTitle,
-      description: blog.excerpt,
-      images: [ogImage],
-    },
-    robots: { index: true, follow: true },
-  };
+    description,
+    path: `/blog/${blog.slug}/`,
+    image: ogImage,
+    imageAlt: blog.featuredImage?.alt || blog.title,
+    type: 'article',
+    publishedTime: blog.publishedAt,
+    modifiedTime: blog.publishedAt,
+    keywords: blog.keywords,
+  });
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

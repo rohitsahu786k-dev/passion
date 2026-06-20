@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,41 +15,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Maunt Abu Escort Service & Call Girl | Book 24/7',
-  description: 'Maunt Abu Escort Service and Maunt Abu Call Girl booking available 24/7. Book Call Girls in Maunt Abu with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Mount Abu Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Mount Abu escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/maunt-abu-escort-service/',
+  image: '/assets/photos/luxury-escort-service-maunt-abu.jpg',
+  imageAlt: 'Mount Abu escort service featured image',
   keywords: [
-    'Maunt Abu Escort Service',
-    'Maunt Abu Call Girl',
-    'Call Girls in Maunt Abu',
-    'Maunt Abu Escorts services',
-    'Maunt Abu Call girls',
-    'Maunt Abu escort service',
-    'Girls of Passion Maunt Abu',
+    'Mount Abu Escort Service',
+    'Mount Abu Call Girl',
+    'Call Girls in Mount Abu',
+    'Premium Mount Abu Escort Service',
+    '24x7 Mount Abu Escort Booking',
   ],
-  alternates: {
-    canonical: '/maunt-abu-escort-service/',
-    languages: {
-      'en-IN': '/maunt-abu-escort-service/',
-      'x-default': '/maunt-abu-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Maunt Abu Escort Service & Call Girl | Book 24/7',
-    description: 'Maunt Abu Escort Service and Maunt Abu Call Girl booking available 24/7. Book Call Girls in Maunt Abu with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/maunt-abu-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-maunt-abu.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Maunt Abu Escort Service & Call Girl | Book 24/7',
-    description: 'Maunt Abu Escort Service and Maunt Abu Call Girl booking available 24/7. Book Call Girls in Maunt Abu with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Maunt Abu companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -128,7 +108,7 @@ const companionProfiles = [
 export default function MauntAbuEscortPage() {
   const phone = '+919999900121';
   const whatsapp = '919999900121';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Maunt%20Abu%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Maunt%20Abu%20escort%20service.`;
 
   const faqs = [
     {

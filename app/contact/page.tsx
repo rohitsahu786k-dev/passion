@@ -1,33 +1,18 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { Phone, MessageCircle, Clock, MapPin } from 'lucide-react';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
 
-export const metadata: Metadata = {
-  title: 'Contact Girls of Passion | 24x7 Escort Booking Support India',
-  description:
-    'Contact Girls of Passion 24x7 for discreet adult companionship booking across India. Call or WhatsApp for verified escort service in Delhi, Mumbai, Jaipur, Goa and 20+ cities.',
-  alternates: {
-    canonical: '/contact/',
-    languages: {
-      'en-IN': '/contact/',
-      'x-default': '/contact/',
-    },
-  },
-  openGraph: {
-    title: 'Contact Girls of Passion | 24x7 Escort Booking Support India',
-    description: 'Reach Girls of Passion 24x7 for premium, discreet companion booking anywhere in India.',
-    url: '/contact/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-india.jpg', width: 1200, height: 630 }],
-  },
-  robots: { index: true, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Contact Girls of Passion | 24x7 Verified Support',
+  description: 'Contact Girls of Passion 24x7 for premium escort booking support, verified profiles, discreet WhatsApp help, and private coordination across India.',
+  path: '/contact/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Girls of Passion contact featured image',
+});
 const contactMethods = [
   {
     icon: Phone,
@@ -41,7 +26,7 @@ const contactMethods = [
     icon: MessageCircle,
     title: 'WhatsApp',
     desc: 'Send us a WhatsApp message for quick, discreet booking support.',
-    action: `/go/whatsapp?phone=${whatsapp}&text=Hi%2C%20I%20am%20interested%20in%20your%20services`,
+    action: `https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`,
     label: 'Message Us',
     className: 'btn-whatsapp',
     external: true,

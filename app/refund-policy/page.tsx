@@ -1,20 +1,14 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { PolicyPage } from '@/components/layout/PolicyPage';
 
-export const metadata: Metadata = {
-  title: 'Refund Policy | Girls of Passion',
-  description:
-    'Refund policy for Girls of Passion covering paid placements, moderation decisions, failed transactions, and support requests.',
-  alternates: {
-    canonical: '/refund-policy/',
-    languages: {
-      'en-IN': '/refund-policy/',
-      'x-default': '/refund-policy/',
-    },
-  },
-  robots: { index: false, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Refund Policy | 24x7 Listing Support Rules',
+  description: 'Read the 24x7 refund policy for paid placements, failed transactions, moderation decisions, sponsored visibility, and support requests.',
+  path: '/refund-policy/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Refund policy featured image',
+});
 export default function RefundPolicyPage() {
   return (
     <PolicyPage

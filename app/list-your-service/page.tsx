@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { ShieldCheck, TrendingUp } from 'lucide-react';
 import { ListingForm } from '@/components/ui/ListingForm';
 
-export const metadata: Metadata = {
-  title: 'List Your Service',
-  description: 'Submit a Girls of Passion listing request for approval, moderation, and sponsored visibility review.'
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'List Your Service | 3 Premium Visibility Plans',
+  description: 'Submit a listing request for 3 premium visibility plans with manual approval, verification checks, moderation, and sponsored ranking review.',
+  path: '/list-your-service/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'List your service featured image',
+});
 export default function ListYourServicePage() {
   return (
     <section className="section-pad bg-linen">

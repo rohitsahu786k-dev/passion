@@ -1,20 +1,14 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { PolicyPage } from '@/components/layout/PolicyPage';
 
-export const metadata: Metadata = {
-  title: 'Listing Policy | Girls of Passion',
-  description:
-    'Listing and moderation policy for Girls of Passion covering profile quality, verification, prohibited content, and sponsored visibility.',
-  alternates: {
-    canonical: '/listing-policy/',
-    languages: {
-      'en-IN': '/listing-policy/',
-      'x-default': '/listing-policy/',
-    },
-  },
-  robots: { index: false, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Listing Policy | 7 Verified Quality Rules',
+  description: 'Review 7 listing quality rules for verification, moderation, profile accuracy, prohibited content, sponsored visibility, and adult-only standards.',
+  path: '/listing-policy/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Listing policy featured image',
+});
 export default function ListingPolicyPage() {
   return (
     <PolicyPage

@@ -1,20 +1,14 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { PolicyPage } from '@/components/layout/PolicyPage';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy | Girls of Passion',
-  description:
-    'Privacy policy for Girls of Passion covering enquiries, analytics, cookies, contact details, and adult-only service communications.',
-  alternates: {
-    canonical: '/privacy-policy/',
-    languages: {
-      'en-IN': '/privacy-policy/',
-      'x-default': '/privacy-policy/',
-    },
-  },
-  robots: { index: true, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Privacy Policy | 24x7 Discreet Data Rules',
+  description: 'Review the 24x7 privacy policy for enquiries, cookies, analytics, WhatsApp contact, discreet data handling, and adult-only communications.',
+  path: '/privacy-policy/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Privacy policy featured image',
+});
 export default function PrivacyPolicyPage() {
   return (
     <PolicyPage

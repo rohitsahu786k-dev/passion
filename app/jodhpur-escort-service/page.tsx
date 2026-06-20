@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,41 +15,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Jodhpur Escort Service & Call Girl | Book 24/7',
-  description: 'Jodhpur Escort Service and Jodhpur Call Girl booking available 24/7. Book Call Girls in Jodhpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Jodhpur Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Jodhpur escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/jodhpur-escort-service/',
+  image: '/assets/photos/luxury-escort-service-jodhpur.jpg',
+  imageAlt: 'Jodhpur escort service featured image',
   keywords: [
     'Jodhpur Escort Service',
     'Jodhpur Call Girl',
     'Call Girls in Jodhpur',
-    'Jodhpur Escorts services',
-    'Jodhpur Call girls',
-    'Jodhpur escort service',
-    'Girls of Passion Jodhpur',
+    'Premium Jodhpur Escort Service',
+    '24x7 Jodhpur Escort Booking',
   ],
-  alternates: {
-    canonical: '/jodhpur-escort-service/',
-    languages: {
-      'en-IN': '/jodhpur-escort-service/',
-      'x-default': '/jodhpur-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Jodhpur Escort Service & Call Girl | Book 24/7',
-    description: 'Jodhpur Escort Service and Jodhpur Call Girl booking available 24/7. Book Call Girls in Jodhpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/jodhpur-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-jodhpur.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Jodhpur Escort Service & Call Girl | Book 24/7',
-    description: 'Jodhpur Escort Service and Jodhpur Call Girl booking available 24/7. Book Call Girls in Jodhpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Jodhpur companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -128,7 +108,7 @@ const companionProfiles = [
 export default function JodhpurEscortPage() {
   const phone = '+919999900126';
   const whatsapp = '919999900126';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Jodhpur%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Jodhpur%20escort%20service.`;
 
   const faqs = [
     {

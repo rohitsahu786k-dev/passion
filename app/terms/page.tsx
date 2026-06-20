@@ -1,20 +1,14 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import { PolicyPage } from '@/components/layout/PolicyPage';
 
-export const metadata: Metadata = {
-  title: 'Terms and Conditions | Girls of Passion',
-  description:
-    'Terms and conditions for using Girls of Passion, an adult-only companionship information and enquiry platform.',
-  alternates: {
-    canonical: '/terms/',
-    languages: {
-      'en-IN': '/terms/',
-      'x-default': '/terms/',
-    },
-  },
-  robots: { index: true, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Terms & Conditions | 18+ Girls of Passion Rules',
+  description: 'Read 18+ Girls of Passion terms covering lawful use, verified listings, privacy expectations, platform rules, and responsible adult-only access.',
+  path: '/terms/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Terms and conditions featured image',
+});
 export default function TermsPage() {
   return (
     <PolicyPage

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -18,41 +19,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Pune Escort Service & Call Girl | Book 24/7',
-  description: 'Pune Escort Service and Pune Call Girl booking available 24/7. Book Call Girls in Pune with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Pune Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Pune escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/pune-escort-service/',
+  image: '/assets/photos/luxury-escort-service-pune.jpg',
+  imageAlt: 'Pune escort service featured image',
   keywords: [
     'Pune Escort Service',
     'Pune Call Girl',
     'Call Girls in Pune',
-    'Pune Escorts services',
-    'Pune Call girls',
-    'Pune escort service',
-    'Girls of Passion Pune',
+    'Premium Pune Escort Service',
+    '24x7 Pune Escort Booking',
   ],
-  alternates: {
-    canonical: '/pune-escort-service/',
-    languages: {
-      'en-IN': '/pune-escort-service/',
-      'x-default': '/pune-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Pune Escort Service & Call Girl | Book 24/7',
-    description: 'Pune Escort Service and Pune Call Girl booking available 24/7. Book Call Girls in Pune with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/pune-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-pune.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Pune Escort Service & Call Girl | Book 24/7',
-    description: 'Pune Escort Service and Pune Call Girl booking available 24/7. Book Call Girls in Pune with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Pune companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -132,7 +112,7 @@ const companionProfiles = [
 export default function PuneEscortPage() {
   const phone = '+919999900107';
   const whatsapp = '919999900107';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Pune%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Pune%20escort%20service.`;
 
   const faqs = [
     {

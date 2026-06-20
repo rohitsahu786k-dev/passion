@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,41 +15,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Daman Escort Service & Call Girl | Book 24/7',
-  description: 'Daman Escort Service and Daman Call Girl booking available 24/7. Book Call Girls in Daman with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Daman Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Daman escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/daman-escort-service/',
+  image: '/assets/photos/luxury-escort-service-daman.jpg',
+  imageAlt: 'Daman escort service featured image',
   keywords: [
     'Daman Escort Service',
     'Daman Call Girl',
     'Call Girls in Daman',
-    'Daman Escorts services',
-    'Daman Call girls',
-    'Daman escort service',
-    'Girls of Passion Daman',
+    'Premium Daman Escort Service',
+    '24x7 Daman Escort Booking',
   ],
-  alternates: {
-    canonical: '/daman-escort-service/',
-    languages: {
-      'en-IN': '/daman-escort-service/',
-      'x-default': '/daman-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Daman Escort Service & Call Girl | Book 24/7',
-    description: 'Daman Escort Service and Daman Call Girl booking available 24/7. Book Call Girls in Daman with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/daman-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-daman.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Daman Escort Service & Call Girl | Book 24/7',
-    description: 'Daman Escort Service and Daman Call Girl booking available 24/7. Book Call Girls in Daman with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Daman companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -128,7 +108,7 @@ const companionProfiles = [
 export default function DamanEscortPage() {
   const phone = '+919999900131';
   const whatsapp = '919999900131';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Daman%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Daman%20escort%20service.`;
 
   const faqs = [
     {

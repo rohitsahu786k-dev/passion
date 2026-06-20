@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,41 +15,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Noida Escort Service & Call Girl | Book 24/7',
-  description: 'Noida Escort Service and Noida Call Girl booking available 24/7. Book Call Girls in Noida with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Noida Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Noida escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/noida-escort-service/',
+  image: '/assets/photos/luxury-escort-service-noida.jpg',
+  imageAlt: 'Noida escort service featured image',
   keywords: [
     'Noida Escort Service',
     'Noida Call Girl',
     'Call Girls in Noida',
-    'Noida Escorts services',
-    'Noida Call girls',
-    'Noida escort service',
-    'Girls of Passion Noida',
+    'Premium Noida Escort Service',
+    '24x7 Noida Escort Booking',
   ],
-  alternates: {
-    canonical: '/noida-escort-service/',
-    languages: {
-      'en-IN': '/noida-escort-service/',
-      'x-default': '/noida-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Noida Escort Service & Call Girl | Book 24/7',
-    description: 'Noida Escort Service and Noida Call Girl booking available 24/7. Book Call Girls in Noida with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/noida-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-noida.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Noida Escort Service & Call Girl | Book 24/7',
-    description: 'Noida Escort Service and Noida Call Girl booking available 24/7. Book Call Girls in Noida with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Noida companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -128,7 +108,7 @@ const companionProfiles = [
 export default function NoidaEscortPage() {
   const phone = '+919999900110';
   const whatsapp = '919999900110';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Noida%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Noida%20escort%20service.`;
 
   const faqs = [
     {

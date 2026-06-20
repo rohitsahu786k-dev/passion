@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -19,41 +20,20 @@ import { CitySchema } from '@/components/seo/CitySchema';
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Delhi Escort Service & Call Girl | Book 24/7',
-  description: 'Delhi Escort Service and Delhi Call Girl booking available 24/7. Book Call Girls in Delhi with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Delhi Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Delhi escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/delhi-escort-service/',
+  image: '/assets/photos/luxury-escort-service-delhi.jpg',
+  imageAlt: 'Delhi escort service featured image',
   keywords: [
     'Delhi Escort Service',
     'Delhi Call Girl',
     'Call Girls in Delhi',
-    'Delhi Escorts services',
-    'Delhi Call girls',
-    'Delhi escort service',
-    'Girls of Passion Delhi',
+    'Premium Delhi Escort Service',
+    '24x7 Delhi Escort Booking',
   ],
-  alternates: {
-    canonical: '/delhi-escort-service/',
-    languages: {
-      'en-IN': '/delhi-escort-service/',
-      'x-default': '/delhi-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Delhi Escort Service & Call Girl | Book 24/7',
-    description: 'Delhi Escort Service and Delhi Call Girl booking available 24/7. Book Call Girls in Delhi with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/delhi-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-delhi.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Delhi Escort Service & Call Girl | Book 24/7',
-    description: 'Delhi Escort Service and Delhi Call Girl booking available 24/7. Book Call Girls in Delhi with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Companion profile cards to add visual richness
 const companionProfiles = [
   {
@@ -133,7 +113,7 @@ const companionProfiles = [
 export default function DelhiEscortPage() {
   const phone = '+919999900101';
   const whatsapp = '919999900101';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Delhi%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Delhi%20escort%20service.`;
 
   const faqs = [
     {

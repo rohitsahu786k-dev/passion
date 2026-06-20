@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -14,55 +15,13 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 import { getSiteConfig } from '@/lib/getSiteConfig';
 
-export const metadata: Metadata = {
-  title: 'India Escort Service & Call Girl | Book 24/7',
-  description: 'India Escort Service and India Call Girl booking available 24/7. Book Call Girls in India with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  keywords: [
-    'India Escort Service',
-    'India Call Girl',
-    'Call Girls in India',
-    'India Escorts services',
-    'India Call girls',
-    'India escort service',
-    'call girl service India',
-    'Girls of Passion India',
-  ],
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-IN': '/',
-      'x-default': '/',
-    },
-  },
-  openGraph: {
-    title: 'India Escort Service & Call Girl | Book 24/7',
-    description: 'India Escort Service and India Call Girl booking available 24/7. Book Call Girls in India with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [
-      {
-        url: '/assets/photos/luxury-escort-service-india.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Girls of Passion – Premium Adult Companionship India',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'India Escort Service & Call Girl | Book 24/7',
-    description: 'India Escort Service and India Call Girl booking available 24/7. Book Call Girls in India with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    images: ['/assets/photos/luxury-escort-service-india.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
-  },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Elite India Escort Booking | 24x7 Verified Profiles',
+  description: 'Book elite India escort service 24x7 with verified profiles, discreet WhatsApp support, hotel coordination, and private adult companionship.',
+  path: '/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'India escort booking featured image',
+});
 // India companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -144,7 +103,7 @@ export default async function Home() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
   const phone = config.phone;
   const whatsapp = config.whatsapp;
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20India%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20India%20escort%20service.`;
 
   const cityPageLinks: Record<string, string> = {
     'Delhi': '/delhi-escort-service/',

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -14,41 +15,20 @@ import {
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Hyderabad Escort Service & Call Girl | Book 24/7',
-  description: 'Hyderabad Escort Service and Hyderabad Call Girl booking available 24/7. Book Call Girls in Hyderabad with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Hyderabad Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Hyderabad escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/hyderabad-escort-service/',
+  image: '/assets/photos/luxury-escort-service-hyderabad.jpg',
+  imageAlt: 'Hyderabad escort service featured image',
   keywords: [
     'Hyderabad Escort Service',
     'Hyderabad Call Girl',
     'Call Girls in Hyderabad',
-    'Hyderabad Escorts services',
-    'Hyderabad Call girls',
-    'Hyderabad escort service',
-    'Girls of Passion Hyderabad',
+    'Premium Hyderabad Escort Service',
+    '24x7 Hyderabad Escort Booking',
   ],
-  alternates: {
-    canonical: '/hyderabad-escort-service/',
-    languages: {
-      'en-IN': '/hyderabad-escort-service/',
-      'x-default': '/hyderabad-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Hyderabad Escort Service & Call Girl | Book 24/7',
-    description: 'Hyderabad Escort Service and Hyderabad Call Girl booking available 24/7. Book Call Girls in Hyderabad with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/hyderabad-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-hyderabad.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Hyderabad Escort Service & Call Girl | Book 24/7',
-    description: 'Hyderabad Escort Service and Hyderabad Call Girl booking available 24/7. Book Call Girls in Hyderabad with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-  },
-};
-
+});
 // Hyderabad companion profile cards utilizing native images
 const companionProfiles = [
   {
@@ -128,7 +108,7 @@ const companionProfiles = [
 export default function HyderabadEscortPage() {
   const phone = '+919999900129';
   const whatsapp = '919999900129';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Hyderabad%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Hyderabad%20escort%20service.`;
 
   const faqs = [
     {

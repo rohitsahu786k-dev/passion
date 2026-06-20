@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Link from 'next/link';
 import { CalendarDays, Clock, BookOpen, ChevronRight, ArrowRight } from 'lucide-react';
 import { blogSeeds } from '@/data/blogSeeds';
@@ -6,28 +7,13 @@ import { services } from '@/data/services';
 import { connectDB } from '@/lib/mongodb';
 import { Blog, type IBlog } from '@/lib/models/Blog';
 
-export const metadata: Metadata = {
-  title: 'Escort Service Guides & Blog | Girls of Passion India',
-  description: 'Expert guides on escort service booking, companion selection, privacy tips, and city-wise adult companionship information across India. Updated daily.',
-  alternates: {
-    canonical: '/blog/',
-    languages: {
-      'en-IN': '/blog/',
-      'x-default': '/blog/',
-    },
-  },
-  openGraph: {
-    title: 'Escort Service Guides & Blog | Girls of Passion India',
-    description: 'Expert companion booking guides, escort service tips, and city-wise adult companionship information across India. Updated daily.',
-    url: '/blog/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-india.jpg', width: 1200, height: 630 }],
-  },
-  robots: { index: true, follow: true },
-};
-
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Top Escort Service Guides | 24x7 India Blog',
+  description: 'Read top escort service guides with 24x7 India booking tips, verified profile advice, privacy checks, city coverage, and premium companion insights.',
+  path: '/blog/',
+  image: '/assets/photos/luxury-escort-service-india.jpg',
+  imageAlt: 'Escort service blog featured image',
+});
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
 
 export const revalidate = 86400;

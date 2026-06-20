@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -15,46 +16,24 @@ import { CitySchema } from '@/components/seo/CitySchema';
 import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
-export const metadata: Metadata = {
-  title: 'Goa Escort Service & Call Girl | Book 24/7',
-  description: 'Goa Escort Service and Goa Call Girl booking available 24/7. Book Call Girls in Goa with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Premium Goa Escort Service | 24x7 Verified Booking',
+  description: 'Book premium Goa escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
+  path: '/goa-escort-service/',
+  image: '/assets/photos/luxury-escort-service-goa.jpg',
+  imageAlt: 'Goa escort service featured image',
   keywords: [
     'Goa Escort Service',
     'Goa Call Girl',
     'Call Girls in Goa',
-    'Goa Escorts services',
-    'Goa Call girls',
-    'Goa escort service',
-    'Girls of Passion Goa',
+    'Premium Goa Escort Service',
+    '24x7 Goa Escort Booking',
   ],
-  alternates: {
-    canonical: '/goa-escort-service/',
-    languages: {
-      'en-IN': '/goa-escort-service/',
-      'x-default': '/goa-escort-service/',
-    },
-  },
-  openGraph: {
-    title: 'Goa Escort Service & Call Girl | Book 24/7',
-    description: 'Goa Escort Service and Goa Call Girl booking available 24/7. Book Call Girls in Goa with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    url: '/goa-escort-service/',
-    type: 'website',
-    locale: 'en_IN',
-    siteName: 'Girls of Passion',
-    images: [{ url: '/assets/photos/luxury-escort-service-goa.jpg', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Goa Escort Service & Call Girl | Book 24/7',
-    description: 'Goa Escort Service and Goa Call Girl booking available 24/7. Book Call Girls in Goa with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
-    images: ['/assets/photos/luxury-escort-service-goa.jpg'],
-  },
-};
-
+});
 export default function GoaEscortPage() {
   const phone = '+919999900106';
   const whatsapp = '919999900106';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Goa%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Goa%20escort%20service.`;
 
   const faqs = [
     {
