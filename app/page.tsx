@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 import { getSiteConfig } from '@/lib/getSiteConfig';
 
 export const metadata: Metadata = {
-  title: 'Girls of Passion | Premium Adult Companionship Across India 24x7',
+  title: 'Girls of Passion | Verified Escort Booking India',
   description: 'Girls of Passion – India\'s most trusted premium adult companionship platform. Verified profiles, private booking, 24x7 support across Delhi, Mumbai, Jaipur, Goa, Hyderabad, Pune, Indore and 23+ cities.',
   alternates: {
     canonical: '/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Girls of Passion | Premium Adult Companionship Across India 24x7',
+    title: 'Girls of Passion | Verified Escort Booking India',
     description: 'Girls of Passion – verified profiles, private booking, and 24x7 support for premium adult companionship across 23+ Indian cities.',
     url: '/',
     type: 'website',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Girls of Passion | Premium Adult Companionship Across India 24x7',
+    title: 'Girls of Passion | Verified Escort Booking India',
     description: 'Girls of Passion – verified profiles, private booking, and 24x7 support across 23+ Indian cities.',
     images: ['/assets/photos/luxury-escort-service-india.jpg'],
   },

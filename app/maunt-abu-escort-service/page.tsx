@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Maunt Abu Escort Service | Premium Adult Companionship 24x7',
+  title: 'Maunt Abu Escort Service | Verified Booking',
   description: 'Book a discreet Maunt Abu escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Nakki Lake, Delwara Road, resorts, villas, and hotels.',
   alternates: {
     canonical: '/maunt-abu-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Maunt Abu Escort Service | Premium Adult Companionship 24x7',
+    title: 'Maunt Abu Escort Service | Verified Booking',
     description: 'Book a discreet Maunt Abu escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Nakki Lake, Delwara Road, resorts, villas, and hotels.',
     url: '/maunt-abu-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Maunt Abu Escort Service | Premium Adult Companionship 24x7',
+    title: 'Maunt Abu Escort Service | Verified Booking',
     description: 'Book a discreet Maunt Abu escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Nakki Lake, Delwara Road, resorts, villas, and hotels.',
   },
 };

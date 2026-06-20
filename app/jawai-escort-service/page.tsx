@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Jawai Escort Service | Premium Adult Companionship 24x7',
+  title: 'Jawai Escort Service | Verified Booking',
   description: 'Book a discreet Jawai escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across safari camps, resorts, villas, and luxury retreats.',
   alternates: {
     canonical: '/jawai-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Jawai Escort Service | Premium Adult Companionship 24x7',
+    title: 'Jawai Escort Service | Verified Booking',
     description: 'Book a discreet Jawai escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across safari camps, resorts, villas, and luxury retreats.',
     url: '/jawai-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jawai Escort Service | Premium Adult Companionship 24x7',
+    title: 'Jawai Escort Service | Verified Booking',
     description: 'Book a discreet Jawai escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across safari camps, resorts, villas, and luxury retreats.',
   },
 };

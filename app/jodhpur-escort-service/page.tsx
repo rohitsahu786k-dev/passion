@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Jodhpur Escort Service | Premium Adult Companionship 24x7',
+  title: 'Jodhpur Escort Service | Verified Booking',
   description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
   alternates: {
     canonical: '/jodhpur-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Jodhpur Escort Service | Premium Adult Companionship 24x7',
+    title: 'Jodhpur Escort Service | Verified Booking',
     description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
     url: '/jodhpur-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jodhpur Escort Service | Premium Adult Companionship 24x7',
+    title: 'Jodhpur Escort Service | Verified Booking',
     description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
   },
 };

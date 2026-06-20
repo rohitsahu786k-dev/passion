@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 
 export const metadata: Metadata = {
-  title: 'India Escort Service | Premium Adult Companionship 24x7',
+  title: 'India Escort Service | Verified Booking',
   description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
   alternates: {
     canonical: '/india-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'India Escort Service | Premium Adult Companionship 24x7',
+    title: 'India Escort Service | Verified Booking',
     description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
     url: '/india-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'India Escort Service | Premium Adult Companionship 24x7',
+    title: 'India Escort Service | Verified Booking',
     description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
   },
 };

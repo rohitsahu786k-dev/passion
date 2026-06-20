@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Mumbai Escort Service | Premium Adult Companionship 24x7',
+  title: 'Mumbai Escort Service | Verified Booking',
   description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
   alternates: {
     canonical: '/mumbai-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Mumbai Escort Service | Premium Adult Companionship 24x7',
+    title: 'Mumbai Escort Service | Verified Booking',
     description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
     url: '/mumbai-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mumbai Escort Service | Premium Adult Companionship 24x7',
+    title: 'Mumbai Escort Service | Verified Booking',
     description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
   },
 };

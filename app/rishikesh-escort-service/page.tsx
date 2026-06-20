@@ -19,7 +19,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Rishikesh Escort Service | Premium Adult Companionship 24x7',
+  title: 'Rishikesh Escort Service | Verified Booking',
   description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
   alternates: {
     canonical: '/rishikesh-escort-service/',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Rishikesh Escort Service | Premium Adult Companionship 24x7',
+    title: 'Rishikesh Escort Service | Verified Booking',
     description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
     url: '/rishikesh-escort-service/',
     type: 'website',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rishikesh Escort Service | Premium Adult Companionship 24x7',
+    title: 'Rishikesh Escort Service | Verified Booking',
     description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
   },
 };

@@ -19,7 +19,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Pune Escort Service | Premium Adult Companionship 24x7',
+  title: 'Pune Escort Service | Verified Booking',
   description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
   alternates: {
     canonical: '/pune-escort-service/',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Pune Escort Service | Premium Adult Companionship 24x7',
+    title: 'Pune Escort Service | Verified Booking',
     description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
     url: '/pune-escort-service/',
     type: 'website',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pune Escort Service | Premium Adult Companionship 24x7',
+    title: 'Pune Escort Service | Verified Booking',
     description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
   },
 };

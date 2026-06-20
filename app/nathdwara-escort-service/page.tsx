@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Nathdwara Escort Service | Premium Adult Companionship 24x7',
+  title: 'Nathdwara Escort Service | Verified Booking',
   description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
   alternates: {
     canonical: '/nathdwara-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Nathdwara Escort Service | Premium Adult Companionship 24x7',
+    title: 'Nathdwara Escort Service | Verified Booking',
     description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
     url: '/nathdwara-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nathdwara Escort Service | Premium Adult Companionship 24x7',
+    title: 'Nathdwara Escort Service | Verified Booking',
     description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
   },
 };

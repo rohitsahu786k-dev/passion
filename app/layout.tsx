@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { Footer } from '@/components/layout/Footer';
@@ -9,14 +8,6 @@ import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { RentalStrip } from '@/components/ui/RentalStrip';
 import { getSiteConfig } from '@/lib/getSiteConfig';
 import { getSiteUrl } from '@/lib/seo/site';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-poppins',
-  preload: true,
-});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -32,13 +23,13 @@ const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID || 'G-L8JE09MSYM';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Girls of Passion | Premium Adult Companionship Across India',
+    default: 'Girls of Passion | Verified Escort Booking India',
     template: '%s',
   },
   description:
     'Girls of Passion offers discreet, verified adult companionship across India. Premium profiles, private booking, and 24x7 support in all major cities.',
   openGraph: {
-    title: 'Girls of Passion | Premium Adult Companionship Across India',
+    title: 'Girls of Passion | Verified Escort Booking India',
     description:
       'Discreet, verified adult companionship with Girls of Passion. Premium booking, privacy-first, available 24x7 across India.',
     type: 'website',
@@ -56,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Girls of Passion | Premium Adult Companionship Across India',
+    title: 'Girls of Passion | Verified Escort Booking India',
     description:
       'Discreet, verified adult companionship with Girls of Passion. Premium booking, privacy-first, available 24x7 across India.',
     images: ['/assets/photos/luxury-escort-service-india.jpg'],
@@ -141,16 +132,16 @@ const navSchema = {
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const config = await getSiteConfig();
   return (
-    <html lang="en-IN" className={poppins.variable}>
+    <html lang="en-IN">
       <head>
         {googleAnalyticsId && (
           <>
             <Script
               async
               src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -160,10 +151,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             </Script>
           </>
         )}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -190,7 +177,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(navSchema) }}
         />
       </head>
-      <body className={`${poppins.className} bg-brand-bg text-brand-text`}>
+      <body className="bg-brand-bg text-brand-text">
         <RentalStrip />
         <Navbar phone={config.phone} whatsapp={config.whatsapp} />
         <main>{children}</main>

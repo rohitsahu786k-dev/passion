@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Lucknow Escort Service | Premium Adult Companionship 24x7',
+  title: 'Lucknow Escort Service | Verified Booking',
   description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
   alternates: {
     canonical: '/lucknow-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Lucknow Escort Service | Premium Adult Companionship 24x7',
+    title: 'Lucknow Escort Service | Verified Booking',
     description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
     url: '/lucknow-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lucknow Escort Service | Premium Adult Companionship 24x7',
+    title: 'Lucknow Escort Service | Verified Booking',
     description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
   },
 };

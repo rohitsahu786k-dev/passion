@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Hyderabad Escort Service | Premium Adult Companionship 24x7',
+  title: 'Hyderabad Escort Service | Verified Booking',
   description: 'Book a discreet Hyderabad escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, hotels, and residences.',
   alternates: {
     canonical: '/hyderabad-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Hyderabad Escort Service | Premium Adult Companionship 24x7',
+    title: 'Hyderabad Escort Service | Verified Booking',
     description: 'Book a discreet Hyderabad escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, hotels, and residences.',
     url: '/hyderabad-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hyderabad Escort Service | Premium Adult Companionship 24x7',
+    title: 'Hyderabad Escort Service | Verified Booking',
     description: 'Book a discreet Hyderabad escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, hotels, and residences.',
   },
 };

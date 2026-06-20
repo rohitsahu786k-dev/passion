@@ -26,6 +26,7 @@ export async function getIndexableUrls(limit = 100): Promise<IndexableUrl[]> {
     { url: absoluteUrl('/blog/'), priority: 0.8, source: 'brand' },
     { url: absoluteUrl('/contact/'), priority: 0.75, source: 'brand' },
     { url: absoluteUrl('/about/'), priority: 0.7, source: 'brand' },
+    { url: absoluteUrl('/disclaimer/'), priority: 0.25, source: 'legal' },
   ];
 
   for (const city of cities) {

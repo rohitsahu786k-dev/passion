@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Indore Escort Service | Premium Adult Companionship 24x7',
+  title: 'Indore Escort Service | Verified Booking',
   description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
   alternates: {
     canonical: '/indore-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Indore Escort Service | Premium Adult Companionship 24x7',
+    title: 'Indore Escort Service | Verified Booking',
     description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
     url: '/indore-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Indore Escort Service | Premium Adult Companionship 24x7',
+    title: 'Indore Escort Service | Verified Booking',
     description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
   },
 };

@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Manali Escort Service | Premium Adult Companionship 24x7',
+  title: 'Manali Escort Service | Verified Booking',
   description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
   alternates: {
     canonical: '/manali-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Manali Escort Service | Premium Adult Companionship 24x7',
+    title: 'Manali Escort Service | Verified Booking',
     description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
     url: '/manali-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manali Escort Service | Premium Adult Companionship 24x7',
+    title: 'Manali Escort Service | Verified Booking',
     description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
   },
 };

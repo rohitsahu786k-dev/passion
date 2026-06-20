@@ -79,7 +79,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const blog = await getUnifiedBlog(slug);
   if (!blog) return {};
   const ogImage = `/assets/photos/luxury-escort-service-${blog.city}.jpg`;
-  const metaTitle = `${blog.title} | Girls of Passion Guide`;
+  const postNumber = blog.slug.match(/(\d+)$/)?.[1];
+  const metaTitle = `${blog.cityName || 'India'} Escort Guide${postNumber ? ` ${postNumber}` : ''} | GOP`;
   return {
     title: metaTitle,
     description: blog.excerpt,

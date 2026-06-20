@@ -20,7 +20,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Delhi Escort Service | Premium Adult Companionship in New Delhi',
+  title: 'Delhi Escort Service | Verified Booking',
   description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
   alternates: {
     canonical: '/delhi-escort-service/',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Delhi Escort Service | Premium Adult Companionship in New Delhi',
+    title: 'Delhi Escort Service | Verified Booking',
     description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
     url: '/delhi-escort-service/',
     type: 'website',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Delhi Escort Service | Premium Adult Companionship in New Delhi',
+    title: 'Delhi Escort Service | Verified Booking',
     description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
   },
 };

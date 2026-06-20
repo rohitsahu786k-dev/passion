@@ -19,7 +19,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Udaipur Escort Service | Premium Adult Companionship 24x7',
+  title: 'Udaipur Escort Service | Verified Booking',
   description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
   alternates: {
     canonical: '/udaipur-escort-service/',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Udaipur Escort Service | Premium Adult Companionship 24x7',
+    title: 'Udaipur Escort Service | Verified Booking',
     description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
     url: '/udaipur-escort-service/',
     type: 'website',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Udaipur Escort Service | Premium Adult Companionship 24x7',
+    title: 'Udaipur Escort Service | Verified Booking',
     description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
   },
 };

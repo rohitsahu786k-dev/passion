@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Guwahati Escort Service | Premium Adult Companionship 24x7',
+  title: 'Guwahati Escort Service | Verified Booking',
   description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
   alternates: {
     canonical: '/guwahati-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Guwahati Escort Service | Premium Adult Companionship 24x7',
+    title: 'Guwahati Escort Service | Verified Booking',
     description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
     url: '/guwahati-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Guwahati Escort Service | Premium Adult Companionship 24x7',
+    title: 'Guwahati Escort Service | Verified Booking',
     description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
   },
 };

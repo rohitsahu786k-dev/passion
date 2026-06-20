@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Noida Escort Service | Premium Adult Companionship 24x7',
+  title: 'Noida Escort Service | Verified Booking',
   description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
   alternates: {
     canonical: '/noida-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Noida Escort Service | Premium Adult Companionship 24x7',
+    title: 'Noida Escort Service | Verified Booking',
     description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
     url: '/noida-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Noida Escort Service | Premium Adult Companionship 24x7',
+    title: 'Noida Escort Service | Verified Booking',
     description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
   },
 };

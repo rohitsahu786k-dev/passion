@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Jaipur Escort Service | Premium Adult Companionship 24x7',
+  title: 'Jaipur Escort Service | Verified Booking',
   description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
   alternates: {
     canonical: '/jaipur-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Jaipur Escort Service | Premium Adult Companionship 24x7',
+    title: 'Jaipur Escort Service | Verified Booking',
     description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
     url: '/jaipur-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jaipur Escort Service | Premium Adult Companionship 24x7',
+    title: 'Jaipur Escort Service | Verified Booking',
     description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
   },
 };

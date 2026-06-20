@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Ajmer Escort Service | Premium Adult Companionship 24x7',
+  title: 'Ajmer Escort Service | Verified Booking',
   description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
   alternates: {
     canonical: '/ajmer-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Ajmer Escort Service | Premium Adult Companionship 24x7',
+    title: 'Ajmer Escort Service | Verified Booking',
     description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
     url: '/ajmer-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ajmer Escort Service | Premium Adult Companionship 24x7',
+    title: 'Ajmer Escort Service | Verified Booking',
     description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
   },
 };

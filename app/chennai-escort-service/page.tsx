@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Chennai Escort Service | Premium Adult Companionship 24x7',
+  title: 'Chennai Escort Service | Verified Booking',
   description: 'Book a discreet Chennai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across T. Nagar, Anna Nagar, OMR, ECR, hotels, and residences.',
   alternates: {
     canonical: '/chennai-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Chennai Escort Service | Premium Adult Companionship 24x7',
+    title: 'Chennai Escort Service | Verified Booking',
     description: 'Book a discreet Chennai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across T. Nagar, Anna Nagar, OMR, ECR, hotels, and residences.',
     url: '/chennai-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chennai Escort Service | Premium Adult Companionship 24x7',
+    title: 'Chennai Escort Service | Verified Booking',
     description: 'Book a discreet Chennai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across T. Nagar, Anna Nagar, OMR, ECR, hotels, and residences.',
   },
 };

@@ -15,7 +15,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Dehradun Escort Service | Premium Adult Companionship 24x7',
+  title: 'Dehradun Escort Service | Verified Booking',
   description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
   alternates: {
     canonical: '/dehradun-escort-service/',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Dehradun Escort Service | Premium Adult Companionship 24x7',
+    title: 'Dehradun Escort Service | Verified Booking',
     description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
     url: '/dehradun-escort-service/',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dehradun Escort Service | Premium Adult Companionship 24x7',
+    title: 'Dehradun Escort Service | Verified Booking',
     description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
   },
 };

@@ -16,7 +16,7 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Goa Escort Service | Premium Adult Companionship 24x7',
+  title: 'Goa Escort Service | Verified Booking',
   description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
   alternates: {
     canonical: '/goa-escort-service/',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Goa Escort Service | Premium Adult Companionship 24x7',
+    title: 'Goa Escort Service | Verified Booking',
     description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
     url: '/goa-escort-service/',
     type: 'website',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Goa Escort Service | Premium Adult Companionship 24x7',
+    title: 'Goa Escort Service | Verified Booking',
     description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
     images: ['/assets/photos/luxury-escort-service-goa.jpg'],
   },

@@ -50,6 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const legalPages: MetadataRoute.Sitemap = [
     { url: absoluteUrl('/privacy-policy/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.30 },
     { url: absoluteUrl('/terms/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.30 },
+    { url: absoluteUrl('/disclaimer/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.25 },
   ];
 
   // Fetch AI-generated blogs from MongoDB
@@ -77,7 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Static seed blogs not yet in DB
   const staticBlogPages: MetadataRoute.Sitemap = blogSeeds
-    .filter(b => !dbBlogSlugs.has(b.slug))
+    .filter(b => !dbBlogSlugs.has(b.slug) && new Date(b.publishedAt) <= now)
     .map(blog => ({
       url: absoluteUrl(`/blog/${blog.slug}/`),
       lastModified: new Date(blog.publishedAt),
