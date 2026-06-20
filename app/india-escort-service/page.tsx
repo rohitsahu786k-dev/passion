@@ -15,8 +15,8 @@ import { LeadForm } from '@/components/ui/LeadForm';
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 
 export const metadata: Metadata = {
-  title: 'India Call Girl | Book Call Girls in India 24/7',
-  description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
+  title: 'India Escort Service | India Call Girl Booking 24/7',
+  description: 'India Escort Service for adults seeking India Call Girl booking, Call Girls in India, cash payment, quick deals, free hotel coordination, escorts services and call girls 24/7.',
   keywords: [
     'India Call Girl',
     'Call Girls in India',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'India Call Girl | Book Call Girls in India 24/7',
-    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
+    title: 'India Escort Service | India Call Girl Booking 24/7',
+    description: 'India Escort Service for adults seeking India Call Girl booking, Call Girls in India, cash payment, quick deals, free hotel coordination, escorts services and call girls 24/7.',
     url: '/india-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'India Call Girl | Book Call Girls in India 24/7',
-    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
+    title: 'India Escort Service | India Call Girl Booking 24/7',
+    description: 'India Escort Service for adults seeking India Call Girl booking, Call Girls in India, cash payment, quick deals, free hotel coordination, escorts services and call girls 24/7.',
   },
 };
 
@@ -185,7 +185,7 @@ export default function IndiaEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion India',
-    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
+    description: 'India Escort Service for adults seeking India Call Girl booking, Call Girls in India, cash payment, quick deals, free hotel coordination, escorts services and call girls 24/7.',
     url: '/india-escort-service/',
     telephone: phone,
     address: {
@@ -295,15 +295,22 @@ export default function IndiaEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                India Escort Service
+                India Call Girl Booking Across India 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship Across India
+                  India Escort Service with Call Girls in India
                 </span>
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
                 <strong className="text-amber-400">India Call Girl</strong> booking is available 24/7 for adults who want Call Girls in India, cash payment service, quick deals, free hotel coordination, India escorts services and call girls with private support.
               </p>
-              {/* Intro paragraphs */}
+              {/* Intro paragraphs */}              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
+                <p>
+                  <strong className="text-amber-400">India Call Girl</strong> is the primary booking keyword for this page. Adults can use Girls of Passion to check Call Girls in India, India escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
+                </p>
+                <p className="mt-3">
+                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for India Call Girl or Call Girls in India can find relevant city-specific information here.
+                </p>
+              </div>
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
                   Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, a trusted and professional platform for adults looking for a premium <strong className="text-white">India escort service</strong> with privacy, comfort, and smooth companionship support. We are designed for clients who value discretion, verified profiles, clear communication, and a reliable experience across major cities and travel destinations in India.

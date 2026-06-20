@@ -111,7 +111,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
                 Verified Companion Service
               </div>
               <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
-                {service.name} in {city.name} | {city.name} Call Girl 24/7
+                {city.name} Call Girl - {service.name} Booking 24/7
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-7 text-[#B8B8B8]">
                 {city.name} Call Girl and {service.name} booking is available 24/7 with Girls of Passion.

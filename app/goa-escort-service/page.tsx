@@ -188,7 +188,14 @@ export default function GoaEscortPage() {
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
                 <strong className="text-amber-400">Goa Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Goa, cash payment service, quick deals, free hotel coordination, Goa escorts services and call girls with private support.
-              </p>
+              </p>              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
+                <p>
+                  <strong className="text-amber-400">Goa Call Girl</strong> is the primary booking keyword for this page. Adults can use Girls of Passion to check Call Girls in Goa, Goa escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
+                </p>
+                <p className="mt-3">
+                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Goa Call Girl or Call Girls in Goa can find relevant city-specific information here.
+                </p>
+              </div>
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
                   Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, the most trusted platform for adults seeking a premium <strong className="text-white">Goa escort service</strong>. Goa is one of India's most popular destinations for leisure, nightlife, beach resorts, and premium experiences. We provide verified, discreet companion booking across all key areas of Goa.
