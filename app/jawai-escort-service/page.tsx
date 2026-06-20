@@ -15,9 +15,10 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Jawai Call Girl | Book Call Girls in Jawai 24/7',
-  description: 'Jawai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jawai Book Cash Payment Service 24/7 Available, Jawai Escorts services and Call girls.',
+  title: 'Jawai Escort Service & Call Girl | Book 24/7',
+  description: 'Jawai Escort Service and Jawai Call Girl booking available 24/7. Book Call Girls in Jawai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
   keywords: [
+    'Jawai Escort Service',
     'Jawai Call Girl',
     'Call Girls in Jawai',
     'Jawai Escorts services',
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Jawai Call Girl | Book Call Girls in Jawai 24/7',
-    description: 'Jawai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jawai Book Cash Payment Service 24/7 Available, Jawai Escorts services and Call girls.',
+    title: 'Jawai Escort Service & Call Girl | Book 24/7',
+    description: 'Jawai Escort Service and Jawai Call Girl booking available 24/7. Book Call Girls in Jawai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
     url: '/jawai-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jawai Call Girl | Book Call Girls in Jawai 24/7',
-    description: 'Jawai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jawai Book Cash Payment Service 24/7 Available, Jawai Escorts services and Call girls.',
+    title: 'Jawai Escort Service & Call Girl | Book 24/7',
+    description: 'Jawai Escort Service and Jawai Call Girl booking available 24/7. Book Call Girls in Jawai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
   },
 };
 
@@ -185,7 +186,7 @@ export default function JawaiEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Jawai',
-    description: 'Jawai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jawai Book Cash Payment Service 24/7 Available, Jawai Escorts services and Call girls.',
+    description: 'Jawai Escort Service and Jawai Call Girl booking available 24/7. Book Call Girls in Jawai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
     url: '/jawai-escort-service/',
     telephone: phone,
     address: {
@@ -296,14 +297,14 @@ export default function JawaiEscortPage() {
                 </span>
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
-                <strong className="text-amber-400">Jawai Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Jawai, cash payment service, quick deals, free hotel coordination, Jawai escorts services and call girls with private support.
+                <strong className="text-amber-400">Jawai Escort Service</strong> and <strong className="text-white">Jawai Call Girl</strong> booking are available 24/7 for adults who want Call Girls in Jawai, cash payment service, quick deals, free hotel coordination, escorts services and call girls with private support.
               </p>
               {/* Intro paragraphs */}              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
                 <p>
-                  <strong className="text-amber-400">Jawai Call Girl</strong> is the primary booking keyword for this page. Adults can use Girls of Passion to check Call Girls in Jawai, Jawai escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
+                  <strong className="text-amber-400">Jawai Escort Service</strong> and <strong className="text-white">Jawai Call Girl</strong> are the primary booking keywords for this page. Adults can use Girls of Passion to check Call Girls in Jawai, escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
                 </p>
                 <p className="mt-3">
-                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Jawai Call Girl or Call Girls in Jawai can find relevant city-specific information here.
+                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Jawai Escort Service, Jawai Call Girl or Call Girls in Jawai can find relevant city-specific information here.
                 </p>
               </div>
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">

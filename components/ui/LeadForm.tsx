@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { Send, CheckCircle, AlertCircle, Lock } from 'lucide-react';
 import { cities } from '@/data/cities';
 import { services } from '@/data/services';
@@ -13,6 +13,8 @@ const selectCls =
 
 export function LeadForm({ defaultCity, defaultService }: { defaultCity?: string; defaultService?: string }) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const citySelectId = useId();
+  const serviceSelectId = useId();
 
   async function submit(formData: FormData) {
     setStatus('loading');
@@ -80,10 +82,15 @@ export function LeadForm({ defaultCity, defaultService }: { defaultCity?: string
 
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="relative">
+          <label htmlFor={citySelectId} className="sr-only">
+            Select city
+          </label>
           <select
+            id={citySelectId}
             name="city"
             defaultValue={defaultCity || ''}
             required
+            aria-label="Select city"
             className={selectCls}
           >
             <option value="" disabled className="text-[#555]">
@@ -101,9 +108,14 @@ export function LeadForm({ defaultCity, defaultService }: { defaultCity?: string
         </div>
 
         <div className="relative">
+          <label htmlFor={serviceSelectId} className="sr-only">
+            Companion type
+          </label>
           <select
+            id={serviceSelectId}
             name="service"
             defaultValue={defaultService || ''}
+            aria-label="Companion type"
             className={selectCls}
           >
             <option value="" className="text-[#555]">

@@ -40,26 +40,32 @@ export function ListingForm() {
         <input name="phone" required placeholder="Phone" className="focus-ring rounded-md border border-line px-3 py-3 text-sm" />
         <input name="whatsapp" required placeholder="WhatsApp number" className="focus-ring rounded-md border border-line px-3 py-3 text-sm" />
         <input name="website" placeholder="Website or profile link" className="focus-ring rounded-md border border-line px-3 py-3 text-sm" />
-        <select name="city" required defaultValue="" className="focus-ring rounded-md border border-line px-3 py-3 text-sm">
-          <option value="" disabled>
-            Select city
-          </option>
-          {cities.map((city) => (
-            <option key={city.slug} value={city.slug}>
-              {city.name}
+        <label className="grid gap-1 text-xs font-medium text-muted">
+          Select city
+          <select name="city" required defaultValue="" className="focus-ring rounded-md border border-line px-3 py-3 text-sm">
+            <option value="" disabled>
+              Select city
             </option>
-          ))}
-        </select>
-        <select name="service" required defaultValue="" className="focus-ring rounded-md border border-line px-3 py-3 text-sm">
-          <option value="" disabled>
-            Select service
-          </option>
-          {services.map((service) => (
-            <option key={service.slug} value={service.slug}>
-              {service.name}
+            {cities.map((city) => (
+              <option key={city.slug} value={city.slug}>
+                {city.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="grid gap-1 text-xs font-medium text-muted">
+          Select service
+          <select name="service" required defaultValue="" className="focus-ring rounded-md border border-line px-3 py-3 text-sm">
+            <option value="" disabled>
+              Select service
             </option>
-          ))}
-        </select>
+            {services.map((service) => (
+              <option key={service.slug} value={service.slug}>
+                {service.name}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
       <textarea name="description" required rows={5} placeholder="Describe your legal service, experience, coverage area, and pricing." className="focus-ring rounded-md border border-line px-3 py-3 text-sm" />
       <div className="grid gap-3 md:grid-cols-4">

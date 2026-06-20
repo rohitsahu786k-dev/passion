@@ -15,9 +15,10 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Kanpur Call Girl | Book Call Girls in Kanpur 24/7',
-  description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
+  title: 'Kanpur Escort Service & Call Girl | Book 24/7',
+  description: 'Kanpur Escort Service and Kanpur Call Girl booking available 24/7. Book Call Girls in Kanpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
   keywords: [
+    'Kanpur Escort Service',
     'Kanpur Call Girl',
     'Call Girls in Kanpur',
     'Kanpur Escorts services',
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Kanpur Call Girl | Book Call Girls in Kanpur 24/7',
-    description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
+    title: 'Kanpur Escort Service & Call Girl | Book 24/7',
+    description: 'Kanpur Escort Service and Kanpur Call Girl booking available 24/7. Book Call Girls in Kanpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
     url: '/kanpur-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kanpur Call Girl | Book Call Girls in Kanpur 24/7',
-    description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
+    title: 'Kanpur Escort Service & Call Girl | Book 24/7',
+    description: 'Kanpur Escort Service and Kanpur Call Girl booking available 24/7. Book Call Girls in Kanpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
   },
 };
 
@@ -185,7 +186,7 @@ export default function KanpurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Kanpur',
-    description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
+    description: 'Kanpur Escort Service and Kanpur Call Girl booking available 24/7. Book Call Girls in Kanpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
     url: '/kanpur-escort-service/',
     telephone: phone,
     address: {
@@ -292,20 +293,20 @@ export default function KanpurEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Kanpur Call Girl | Book Call Girls in Kanpur 24/7
+                Kanpur Escort Service & Call Girl Booking 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Kanpur Escorts services and Call girls
+                  Kanpur Escort Service with Call Girls in Kanpur
                 </span>
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
-                <strong className="text-amber-400">Kanpur Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Kanpur, cash payment service, quick deals, free hotel coordination, Kanpur escorts services and call girls with private support.
+                <strong className="text-amber-400">Kanpur Escort Service</strong> and <strong className="text-white">Kanpur Call Girl</strong> booking are available 24/7 for adults who want Call Girls in Kanpur, cash payment service, quick deals, free hotel coordination, escorts services and call girls with private support.
               </p>
               {/* Intro paragraphs */}              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
                 <p>
-                  <strong className="text-amber-400">Kanpur Call Girl</strong> is the primary booking keyword for this page. Adults can use Girls of Passion to check Call Girls in Kanpur, Kanpur escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
+                  <strong className="text-amber-400">Kanpur Escort Service</strong> and <strong className="text-white">Kanpur Call Girl</strong> are the primary booking keywords for this page. Adults can use Girls of Passion to check Call Girls in Kanpur, escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
                 </p>
                 <p className="mt-3">
-                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Kanpur Call Girl or Call Girls in Kanpur can find relevant city-specific information here.
+                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Kanpur Escort Service, Kanpur Call Girl or Call Girls in Kanpur can find relevant city-specific information here.
                 </p>
               </div>
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
