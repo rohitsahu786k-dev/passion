@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
   alternates: {
     canonical: '/goa-escort-service/',
+    languages: {
+      'en-IN': '/goa-escort-service/',
+      'x-default': '/goa-escort-service/',
+    },
   },
   openGraph: {
     title: 'Goa Escort Service | Premium Adult Companionship 24x7',

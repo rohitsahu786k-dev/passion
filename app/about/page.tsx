@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   title: 'About Girls of Passion | India\'s Premium Adult Companionship Platform',
   description:
     'Girls of Passion is India\'s trusted premium adult companionship platform with verified profiles, privacy-first booking, 24x7 professional support, and coverage across 23+ cities.',
-  alternates: { canonical: '/about/' },
+  alternates: {
+    canonical: '/about/',
+    languages: {
+      'en-IN': '/about/',
+      'x-default': '/about/',
+    },
+  },
   openGraph: {
     title: 'About Girls of Passion | India\'s Premium Adult Companionship Platform',
     description: 'Learn about Girls of Passion – India\'s most trusted escort service platform. Verified profiles, discreet booking, 24x7 support across Delhi, Mumbai, Jaipur, Goa and 20+ cities.',
@@ -209,7 +215,7 @@ export default function AboutPage() {
             <a
               href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="btn-whatsapp"
             >
               <MessageCircle size={16} />

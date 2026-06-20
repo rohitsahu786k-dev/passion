@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
   alternates: {
     canonical: '/delhi-escort-service/',
+    languages: {
+      'en-IN': '/delhi-escort-service/',
+      'x-default': '/delhi-escort-service/',
+    },
   },
   openGraph: {
     title: 'Delhi Escort Service | Premium Adult Companionship in New Delhi',

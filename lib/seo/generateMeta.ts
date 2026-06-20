@@ -50,7 +50,13 @@ export function generateCityMeta({
       `girls of passion ${cityName}`,
       ...(serviceName ? [`${serviceName.toLowerCase()} ${cityName}`, `${cityName} ${serviceName.toLowerCase()}`] : []),
     ],
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: {
+        'en-IN': canonical,
+        'x-default': canonical,
+      },
+    },
     openGraph: {
       title,
       description,

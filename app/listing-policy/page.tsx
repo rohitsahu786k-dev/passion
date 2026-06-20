@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Listing Policy | Girls of Passion',
   description:
     'Listing and moderation policy for Girls of Passion covering profile quality, verification, prohibited content, and sponsored visibility.',
-  alternates: { canonical: '/listing-policy/' },
+  alternates: {
+    canonical: '/listing-policy/',
+    languages: {
+      'en-IN': '/listing-policy/',
+      'x-default': '/listing-policy/',
+    },
+  },
   robots: { index: false, follow: true },
 };
 

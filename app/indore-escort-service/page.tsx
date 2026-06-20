@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
   alternates: {
     canonical: '/indore-escort-service/',
+    languages: {
+      'en-IN': '/indore-escort-service/',
+      'x-default': '/indore-escort-service/',
+    },
   },
   openGraph: {
     title: 'Indore Escort Service | Premium Adult Companionship 24x7',

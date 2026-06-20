@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
   alternates: {
     canonical: '/manali-escort-service/',
+    languages: {
+      'en-IN': '/manali-escort-service/',
+      'x-default': '/manali-escort-service/',
+    },
   },
   openGraph: {
     title: 'Manali Escort Service | Premium Adult Companionship 24x7',

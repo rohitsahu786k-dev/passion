@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
   alternates: {
     canonical: '/india-escort-service/',
+    languages: {
+      'en-IN': '/india-escort-service/',
+      'x-default': '/india-escort-service/',
+    },
   },
   openGraph: {
     title: 'India Escort Service | Premium Adult Companionship 24x7',

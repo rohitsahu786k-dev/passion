@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Refund Policy | Girls of Passion',
   description:
     'Refund policy for Girls of Passion covering paid placements, moderation decisions, failed transactions, and support requests.',
-  alternates: { canonical: '/refund-policy/' },
+  alternates: {
+    canonical: '/refund-policy/',
+    languages: {
+      'en-IN': '/refund-policy/',
+      'x-default': '/refund-policy/',
+    },
+  },
   robots: { index: false, follow: true },
 };
 

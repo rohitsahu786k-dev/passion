@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Daman escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Devka Beach, Jampore Beach, hotels, resorts, and private stays.',
   alternates: {
     canonical: '/daman-escort-service/',
+    languages: {
+      'en-IN': '/daman-escort-service/',
+      'x-default': '/daman-escort-service/',
+    },
   },
   openGraph: {
     title: 'Daman Escort Service | Premium Adult Companionship 24x7',

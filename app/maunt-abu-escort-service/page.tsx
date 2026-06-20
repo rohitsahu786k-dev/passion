@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Maunt Abu escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Nakki Lake, Delwara Road, resorts, villas, and hotels.',
   alternates: {
     canonical: '/maunt-abu-escort-service/',
+    languages: {
+      'en-IN': '/maunt-abu-escort-service/',
+      'x-default': '/maunt-abu-escort-service/',
+    },
   },
   openGraph: {
     title: 'Maunt Abu Escort Service | Premium Adult Companionship 24x7',

@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Kanpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Swaroop Nagar, hotels, and residences.',
   alternates: {
     canonical: '/kanpur-escort-service/',
+    languages: {
+      'en-IN': '/kanpur-escort-service/',
+      'x-default': '/kanpur-escort-service/',
+    },
   },
   openGraph: {
     title: 'Kanpur Escort Service | Premium Adult Companionship 24x7',

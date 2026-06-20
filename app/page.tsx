@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Girls of Passion – India\'s most trusted premium adult companionship platform. Verified profiles, private booking, 24x7 support across Delhi, Mumbai, Jaipur, Goa, Hyderabad, Pune, Indore and 23+ cities.',
   alternates: {
     canonical: '/',
+    languages: {
+      'en-IN': '/',
+      'x-default': '/',
+    },
   },
   openGraph: {
     title: 'Girls of Passion | Premium Adult Companionship Across India 24x7',

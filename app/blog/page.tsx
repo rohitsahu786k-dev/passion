@@ -9,7 +9,13 @@ import { Blog, type IBlog } from '@/lib/models/Blog';
 export const metadata: Metadata = {
   title: 'Escort Service Guides & Blog | Girls of Passion India',
   description: 'Expert guides on escort service booking, companion selection, privacy tips, and city-wise adult companionship information across India. Updated daily.',
-  alternates: { canonical: '/blog/' },
+  alternates: {
+    canonical: '/blog/',
+    languages: {
+      'en-IN': '/blog/',
+      'x-default': '/blog/',
+    },
+  },
   openGraph: {
     title: 'Escort Service Guides & Blog | Girls of Passion India',
     description: 'Expert companion booking guides, escort service tips, and city-wise adult companionship information across India. Updated daily.',

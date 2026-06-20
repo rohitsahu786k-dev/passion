@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
   alternates: {
     canonical: '/jodhpur-escort-service/',
+    languages: {
+      'en-IN': '/jodhpur-escort-service/',
+      'x-default': '/jodhpur-escort-service/',
+    },
   },
   openGraph: {
     title: 'Jodhpur Escort Service | Premium Adult Companionship 24x7',

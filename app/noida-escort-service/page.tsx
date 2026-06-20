@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
   alternates: {
     canonical: '/noida-escort-service/',
+    languages: {
+      'en-IN': '/noida-escort-service/',
+      'x-default': '/noida-escort-service/',
+    },
   },
   openGraph: {
     title: 'Noida Escort Service | Premium Adult Companionship 24x7',

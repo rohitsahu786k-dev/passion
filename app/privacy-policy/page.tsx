@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Girls of Passion',
   description:
     'Privacy policy for Girls of Passion covering enquiries, analytics, cookies, contact details, and adult-only service communications.',
-  alternates: { canonical: '/privacy-policy/' },
+  alternates: {
+    canonical: '/privacy-policy/',
+    languages: {
+      'en-IN': '/privacy-policy/',
+      'x-default': '/privacy-policy/',
+    },
+  },
   robots: { index: true, follow: true },
 };
 

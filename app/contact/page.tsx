@@ -9,7 +9,13 @@ export const metadata: Metadata = {
   title: 'Contact Girls of Passion | 24x7 Escort Booking Support India',
   description:
     'Contact Girls of Passion 24x7 for discreet adult companionship booking across India. Call or WhatsApp for verified escort service in Delhi, Mumbai, Jaipur, Goa and 20+ cities.',
-  alternates: { canonical: '/contact/' },
+  alternates: {
+    canonical: '/contact/',
+    languages: {
+      'en-IN': '/contact/',
+      'x-default': '/contact/',
+    },
+  },
   openGraph: {
     title: 'Contact Girls of Passion | 24x7 Escort Booking Support India',
     description: 'Reach Girls of Passion 24x7 for premium, discreet companion booking anywhere in India.',

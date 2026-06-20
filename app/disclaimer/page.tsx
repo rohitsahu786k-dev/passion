@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Disclaimer | Girls of Passion',
   description:
     'Legal disclaimer for Girls of Passion – adult-only service for users aged 18 and above. Read our service disclaimer, terms of use, and legal notices.',
-  alternates: { canonical: '/disclaimer/' },
+  alternates: {
+    canonical: '/disclaimer/',
+    languages: {
+      'en-IN': '/disclaimer/',
+      'x-default': '/disclaimer/',
+    },
+  },
   robots: { index: false, follow: false },
 };
 

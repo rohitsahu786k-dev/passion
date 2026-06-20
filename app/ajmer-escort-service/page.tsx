@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
   alternates: {
     canonical: '/ajmer-escort-service/',
+    languages: {
+      'en-IN': '/ajmer-escort-service/',
+      'x-default': '/ajmer-escort-service/',
+    },
   },
   openGraph: {
     title: 'Ajmer Escort Service | Premium Adult Companionship 24x7',

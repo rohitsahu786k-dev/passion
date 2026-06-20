@@ -89,7 +89,7 @@ export function Footer() {
             <a
               href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="btn-whatsapp text-xs px-4 py-2"
               aria-label="WhatsApp Booking"
             >

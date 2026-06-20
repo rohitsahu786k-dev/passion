@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
   alternates: {
     canonical: '/mumbai-escort-service/',
+    languages: {
+      'en-IN': '/mumbai-escort-service/',
+      'x-default': '/mumbai-escort-service/',
+    },
   },
   openGraph: {
     title: 'Mumbai Escort Service | Premium Adult Companionship 24x7',

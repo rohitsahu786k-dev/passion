@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
   alternates: {
     canonical: '/udaipur-escort-service/',
+    languages: {
+      'en-IN': '/udaipur-escort-service/',
+      'x-default': '/udaipur-escort-service/',
+    },
   },
   openGraph: {
     title: 'Udaipur Escort Service | Premium Adult Companionship 24x7',

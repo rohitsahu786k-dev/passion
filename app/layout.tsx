@@ -35,7 +35,13 @@ export const metadata: Metadata = {
   },
   description:
     'Girls of Passion offers discreet, verified adult companionship across India. Premium profiles, private booking, and 24x7 support in all major cities.',
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-IN': '/',
+      'x-default': '/',
+    },
+  },
   openGraph: {
     title: 'Girls of Passion | Premium Adult Companionship Across India',
     description:
@@ -168,8 +174,8 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="alternate" type="application/rss+xml" title="Girls of Passion — Escort Service Guides" href="/rss/" />
-        <link rel="alternate" hrefLang="en-IN" href={siteUrl} />
-        <link rel="alternate" hrefLang="x-default" href={siteUrl} />
+
+
         <meta name="color-scheme" content="dark" />
         <meta name="geo.region" content="IN" />
         <meta name="geo.placename" content="India" />

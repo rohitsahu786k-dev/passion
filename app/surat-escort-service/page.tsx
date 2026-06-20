@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Surat escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Surat.',
   alternates: {
     canonical: '/surat-escort-service/',
+    languages: {
+      'en-IN': '/surat-escort-service/',
+      'x-default': '/surat-escort-service/',
+    },
   },
   openGraph: {
     title: 'Surat Escort Service | Premium Adult Companionship 24x7',

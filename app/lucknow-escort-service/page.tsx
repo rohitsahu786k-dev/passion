@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
   alternates: {
     canonical: '/lucknow-escort-service/',
+    languages: {
+      'en-IN': '/lucknow-escort-service/',
+      'x-default': '/lucknow-escort-service/',
+    },
   },
   openGraph: {
     title: 'Lucknow Escort Service | Premium Adult Companionship 24x7',

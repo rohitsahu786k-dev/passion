@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
   alternates: {
     canonical: '/rishikesh-escort-service/',
+    languages: {
+      'en-IN': '/rishikesh-escort-service/',
+      'x-default': '/rishikesh-escort-service/',
+    },
   },
   openGraph: {
     title: 'Rishikesh Escort Service | Premium Adult Companionship 24x7',

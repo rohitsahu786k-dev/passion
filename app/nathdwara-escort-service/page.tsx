@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
   alternates: {
     canonical: '/nathdwara-escort-service/',
+    languages: {
+      'en-IN': '/nathdwara-escort-service/',
+      'x-default': '/nathdwara-escort-service/',
+    },
   },
   openGraph: {
     title: 'Nathdwara Escort Service | Premium Adult Companionship 24x7',

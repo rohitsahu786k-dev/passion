@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
   alternates: {
     canonical: '/pune-escort-service/',
+    languages: {
+      'en-IN': '/pune-escort-service/',
+      'x-default': '/pune-escort-service/',
+    },
   },
   openGraph: {
     title: 'Pune Escort Service | Premium Adult Companionship 24x7',

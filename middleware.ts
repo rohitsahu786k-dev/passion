@@ -8,6 +8,20 @@ const BAD_BOTS = [
 ];
 
 export function middleware(req: NextRequest) {
+  const host = req.headers.get('host') || '';
+  const pathname = req.nextUrl.pathname;
+  const isWww = host.startsWith('www.');
+  const needsTrailingSlash = !pathname.endsWith('/') && !pathname.includes('.');
+
+  if (isWww || needsTrailingSlash) {
+    let targetPathname = pathname;
+    if (needsTrailingSlash) {
+      targetPathname += '/';
+    }
+    const target = new URL(targetPathname + req.nextUrl.search, 'https://girlsofpassion.in');
+    return NextResponse.redirect(target, 301);
+  }
+
   const ua = (req.headers.get('user-agent') || '').toLowerCase();
 
   // Block known bad bots and security scanners

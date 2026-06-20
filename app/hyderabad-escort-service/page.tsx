@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Hyderabad escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, hotels, and residences.',
   alternates: {
     canonical: '/hyderabad-escort-service/',
+    languages: {
+      'en-IN': '/hyderabad-escort-service/',
+      'x-default': '/hyderabad-escort-service/',
+    },
   },
   openGraph: {
     title: 'Hyderabad Escort Service | Premium Adult Companionship 24x7',

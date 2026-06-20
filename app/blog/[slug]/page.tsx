@@ -82,7 +82,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: `${blog.title} | Girls of Passion`,
     description: blog.excerpt,
     keywords: blog.keywords.join(', '),
-    alternates: { canonical: `/blog/${blog.slug}/` },
+    alternates: {
+    canonical: `/blog/${blog.slug}/`,
+    languages: {
+      'en-IN': `/blog/${blog.slug}/`,
+      'x-default': `/blog/${blog.slug}/`,
+    },
+  },
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
@@ -435,7 +441,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <a
                   href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20want%20to%20book%20${encodeURIComponent(blog.serviceName)}%20in%20${encodeURIComponent(blog.cityName)}`}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="btn-whatsapp justify-center text-sm"
                 >
                   <MessageCircle size={15} />

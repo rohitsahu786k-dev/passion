@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Jawai escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across safari camps, resorts, villas, and luxury retreats.',
   alternates: {
     canonical: '/jawai-escort-service/',
+    languages: {
+      'en-IN': '/jawai-escort-service/',
+      'x-default': '/jawai-escort-service/',
+    },
   },
   openGraph: {
     title: 'Jawai Escort Service | Premium Adult Companionship 24x7',

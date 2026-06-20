@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Terms and Conditions | Girls of Passion',
   description:
     'Terms and conditions for using Girls of Passion, an adult-only companionship information and enquiry platform.',
-  alternates: { canonical: '/terms/' },
+  alternates: {
+    canonical: '/terms/',
+    languages: {
+      'en-IN': '/terms/',
+      'x-default': '/terms/',
+    },
+  },
   robots: { index: true, follow: true },
 };
 

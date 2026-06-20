@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Chennai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across T. Nagar, Anna Nagar, OMR, ECR, hotels, and residences.',
   alternates: {
     canonical: '/chennai-escort-service/',
+    languages: {
+      'en-IN': '/chennai-escort-service/',
+      'x-default': '/chennai-escort-service/',
+    },
   },
   openGraph: {
     title: 'Chennai Escort Service | Premium Adult Companionship 24x7',

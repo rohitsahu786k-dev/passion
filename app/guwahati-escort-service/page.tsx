@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
   alternates: {
     canonical: '/guwahati-escort-service/',
+    languages: {
+      'en-IN': '/guwahati-escort-service/',
+      'x-default': '/guwahati-escort-service/',
+    },
   },
   openGraph: {
     title: 'Guwahati Escort Service | Premium Adult Companionship 24x7',

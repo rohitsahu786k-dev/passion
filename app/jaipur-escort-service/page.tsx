@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
   alternates: {
     canonical: '/jaipur-escort-service/',
+    languages: {
+      'en-IN': '/jaipur-escort-service/',
+      'x-default': '/jaipur-escort-service/',
+    },
   },
   openGraph: {
     title: 'Jaipur Escort Service | Premium Adult Companionship 24x7',

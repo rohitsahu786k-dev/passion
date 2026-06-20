@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
   alternates: {
     canonical: '/dehradun-escort-service/',
+    languages: {
+      'en-IN': '/dehradun-escort-service/',
+      'x-default': '/dehradun-escort-service/',
+    },
   },
   openGraph: {
     title: 'Dehradun Escort Service | Premium Adult Companionship 24x7',
