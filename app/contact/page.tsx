@@ -41,7 +41,7 @@ const contactMethods = [
     icon: MessageCircle,
     title: 'WhatsApp',
     desc: 'Send us a WhatsApp message for quick, discreet booking support.',
-    action: `https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`,
+    action: `/go/whatsapp?phone=${whatsapp}&text=Hi%2C%20I%20am%20interested%20in%20your%20services`,
     label: 'Message Us',
     className: 'btn-whatsapp',
     external: true,

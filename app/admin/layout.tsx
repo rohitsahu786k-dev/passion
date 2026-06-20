@@ -10,6 +10,7 @@ import {
   Star,
   LogOut,
   Sparkles,
+  Send,
 } from 'lucide-react';
 
 const navItems = [
@@ -19,6 +20,7 @@ const navItems = [
   { label: 'Leads', href: '/admin/leads/', icon: Inbox },
   { label: 'Listings', href: '/admin/listings/', icon: Store },
   { label: 'Reviews', href: '/admin/reviews/', icon: Star },
+  { label: 'Indexing', href: '/admin/indexing/', icon: Send },
   { label: 'Settings', href: '/admin/settings/', icon: Settings },
 ];
 

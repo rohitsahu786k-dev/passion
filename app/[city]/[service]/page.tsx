@@ -12,6 +12,7 @@ import { blogSeeds } from '@/data/blogSeeds';
 import { cities, getCity } from '@/data/cities';
 import { getService, services } from '@/data/services';
 import { absoluteUrl, cityLandingPath, cityServicePath, generateCityMeta } from '@/lib/seo/generateMeta';
+import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -45,7 +46,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
   const service = getService(serviceSlug);
   if (!city || !service) notFound();
 
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hi%2C%20I%20want%20to%20book%20${encodeURIComponent(service.name)}%20in%20${encodeURIComponent(city.name)}`;
+  const whatsappUrl = createWhatsAppUrl(whatsapp, `Hi, I want to book ${service.name} in ${city.name}`);
 
   const faqs = [
     {
@@ -110,7 +111,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
                 Verified Companion Service
               </div>
               <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
-                {service.name} in {city.name}
+                Verified {service.name} Booking in {city.name}
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-7 text-[#B8B8B8]">
                 Book a discreet {service.name.toLowerCase()} in {city.name} with Girls of Passion.
@@ -142,6 +143,47 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
             </div>
             <div>
               <LeadForm defaultCity={city.slug} defaultService={service.slug} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service content */}
+      <section className="section-pad bg-[#050505]">
+        <div className="container-shell">
+          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">{service.name} Details for {city.name}</h2>
+              <div className="h-1 w-16 rounded-full bg-[#D4AF37] mb-6" />
+              <div className="space-y-4 text-sm leading-7 text-[#B8B8B8]">
+                <p>
+                  Girls of Passion provides structured booking assistance for {service.name.toLowerCase()} in {city.name},
+                  helping adults check verified companion options, current availability, service expectations, and
+                  location suitability before confirming anything.
+                </p>
+                <p>
+                  This service is commonly requested around {city.landmarks.join(', ')}, hotels, apartments, resorts,
+                  and private residences. Our support team keeps communication discreet, shares clear information,
+                  and helps clients choose a suitable option based on timing, category, and comfort.
+                </p>
+              </div>
+            </div>
+            <div className="rounded-xl border border-[#2A2A2A] bg-[#151515] p-6">
+              <h3 className="font-semibold text-white mb-4">Booking Checklist</h3>
+              <ul className="space-y-3 text-sm text-[#B8B8B8]">
+                {[
+                  `Confirm your preferred area in ${city.name}`,
+                  `Share timing and duration for ${service.shortName}`,
+                  'Review available verified profile options',
+                  'Check pricing and coordination details upfront',
+                  'Use respectful, adult-only communication',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

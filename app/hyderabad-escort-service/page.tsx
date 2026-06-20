@@ -119,7 +119,7 @@ const companionProfiles = [
 export default function HyderabadEscortPage() {
   const phone = '+919999900129';
   const whatsapp = '919999900129';
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Hyderabad%20escort%20service.`;
+  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Hyderabad%20escort%20service.`;
 
   const faqs = [
     {

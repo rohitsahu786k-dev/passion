@@ -79,8 +79,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const blog = await getUnifiedBlog(slug);
   if (!blog) return {};
   const ogImage = `/assets/photos/luxury-escort-service-${blog.city}.jpg`;
+  const metaTitle = `${blog.title} | Girls of Passion Guide`;
   return {
-    title: blog.title,
+    title: metaTitle,
     description: blog.excerpt,
     keywords: blog.keywords.join(', '),
     alternates: {
@@ -91,7 +92,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
   },
     openGraph: {
-      title: blog.title,
+      title: metaTitle,
       description: blog.excerpt,
       type: 'article',
       publishedTime: blog.publishedAt,
@@ -103,7 +104,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     },
     twitter: {
       card: 'summary_large_image',
-      title: blog.title,
+      title: metaTitle,
       description: blog.excerpt,
       images: [ogImage],
     },

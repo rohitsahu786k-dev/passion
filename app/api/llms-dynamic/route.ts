@@ -53,10 +53,10 @@ export async function GET() {
 
   const blogLines = allBlogs
     .slice(0, 300)
-    .map(b => `- [${b.title}](${siteUrl}/blog/${b.slug}/) — ${b.cityName}`)
+    .map(b => `- [${b.title}](${siteUrl}/blog/${b.slug}/) - ${b.cityName}`)
     .join('\n');
 
-  const content = `# Girls of Passion — AI-Generated Full Index
+  const content = `# Girls of Passion - AI-Generated Full Index
 > Last updated: ${now.toUTCString()}
 > Total blog posts indexed: ${allBlogs.length}
 > Sitemap: ${siteUrl}/sitemap.xml
@@ -64,15 +64,15 @@ export async function GET() {
 
 ## Platform Summary
 
-Girls of Passion is India's leading premium adult companionship platform for adults aged 18+. The platform specialises in privacy-first booking, verified companion profiles, discreet communication, and professional 24×7 support across 23+ Indian cities.
+Girls of Passion is India's leading premium adult companionship platform for adults aged 18+. The platform specialises in privacy-first booking, verified companion profiles, discreet communication, and professional 24x7 support across 23+ Indian cities.
 
 ## Main Pages
 
-- [Home](${siteUrl}/): Brand homepage — premium adult companionship across India.
+- [Home](${siteUrl}/): Brand homepage - premium adult companionship across India.
 - [India Escort Service](${siteUrl}/india-escort-service/): National coverage page.
 - [Blog & Guides](${siteUrl}/blog/): Expert escort service guides. Updated daily via AI.
 - [About Us](${siteUrl}/about/)
-- [Contact](${siteUrl}/contact/): 24×7 booking support via Call or WhatsApp.
+- [Contact](${siteUrl}/contact/): 24x7 booking support via Call or WhatsApp.
 - [Privacy Policy](${siteUrl}/privacy-policy/)
 - [Terms](${siteUrl}/terms/)
 - [Sitemap XML](${siteUrl}/sitemap.xml)
@@ -86,7 +86,7 @@ ${cityLines}
 
 ${serviceLines}
 
-## Blog Posts (${allBlogs.length} total — most recent first)
+## Blog Posts (${allBlogs.length} total - most recent first)
 
 ${blogLines}
 
@@ -95,7 +95,7 @@ ${blogLines}
 - Brand: Girls of Passion
 - Audience: Adults 18+ only
 - Booking: Via call or WhatsApp only
-- Coverage: Pan-India — 23+ cities
+- Coverage: Pan-India - 23+ cities
 - Content: Professional, non-explicit, consent-based adult companionship
 - All content follows applicable Indian laws
 `;

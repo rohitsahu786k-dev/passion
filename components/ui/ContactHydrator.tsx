@@ -19,12 +19,14 @@ export function ContactHydrator() {
           });
         }
 
-        const whatsapp = config.whatsapp;
+        const whatsapp = config.whatsapp?.replace(/\D/g, '');
         if (whatsapp) {
-          document.querySelectorAll<HTMLAnchorElement>('a[href*="wa.me/"]').forEach((link) => {
-            const url = new URL(link.href);
+          document.querySelectorAll<HTMLAnchorElement>('a[href^="/go/whatsapp"]').forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
             const text = url.searchParams.get('text');
-            link.href = `https://wa.me/${whatsapp.replace(/\D/g, '')}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
+            url.searchParams.set('phone', whatsapp);
+            if (text) url.searchParams.set('text', text);
+            link.href = `${url.pathname}?${url.searchParams.toString()}`;
           });
         }
       } catch {

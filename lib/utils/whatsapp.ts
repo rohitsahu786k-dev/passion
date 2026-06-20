@@ -1,4 +1,6 @@
 export function createWhatsAppUrl(number: string, message: string) {
-  const cleaned = number.replace(/\D/g, '');
-  return `https://wa.me/${cleaned}?text=${encodeURIComponent(message)}`;
+  const params = new URLSearchParams();
+  params.set('text', message);
+  if (number) params.set('phone', number.replace(/\D/g, ''));
+  return `/go/whatsapp?${params.toString()}`;
 }

@@ -39,7 +39,7 @@ export default function NotFound() {
           Call Now
         </a>
         <a
-          href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20need%20help`}
+          href={`/go/whatsapp?phone=${whatsapp}&text=Hi%2C%20I%20need%20help`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-whatsapp"
