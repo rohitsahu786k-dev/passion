@@ -245,13 +245,13 @@ export default function DamanEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Daman Escort Service',
-        item: 'https://girlsofpassion.in/daman-escort-service/'
+        item: 'https://www.girlsofpassion.in/daman-escort-service/'
       }
     ]
   };

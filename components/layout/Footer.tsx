@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, MessageCircle, Shield, Clock } from 'lucide-react';
+import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
+const whatsappUrl = createWhatsAppUrl(whatsapp, 'Hi, I am interested in your services');
 
 const topCities = [
   { name: 'Delhi Escort Service', href: '/delhi-escort-service/' },
@@ -87,9 +89,9 @@ export function Footer() {
               Call Now
             </a>
             <a
-              href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
+              href={whatsappUrl}
               target="_blank"
-              rel="nofollow noopener noreferrer"
+              rel="noopener noreferrer"
               className="btn-whatsapp text-xs px-4 py-2"
               aria-label="WhatsApp Booking"
             >

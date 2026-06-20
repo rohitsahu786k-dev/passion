@@ -240,13 +240,13 @@ export default function MumbaiEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Mumbai Escort Service',
-        item: 'https://girlsofpassion.in/mumbai-escort-service/'
+        item: 'https://www.girlsofpassion.in/mumbai-escort-service/'
       }
     ]
   };

@@ -48,7 +48,7 @@ const contactMethods = [
   },
 ];
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
 
 const contactPageSchema = {
   '@context': 'https://schema.org',

@@ -87,7 +87,7 @@ export default function GoaEscortPage() {
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Goa',
     description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Goa.',
-    url: 'https://girlsofpassion.in/goa-escort-service/',
+    url: 'https://www.girlsofpassion.in/goa-escort-service/',
     telephone: phone,
     address: {
       '@type': 'PostalAddress',
@@ -134,8 +134,8 @@ export default function GoaEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://girlsofpassion.in/' },
-      { '@type': 'ListItem', position: 2, name: 'Goa Escort Service', item: 'https://girlsofpassion.in/goa-escort-service/' }
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.girlsofpassion.in/' },
+      { '@type': 'ListItem', position: 2, name: 'Goa Escort Service', item: 'https://www.girlsofpassion.in/goa-escort-service/' }
     ]
   };
 

@@ -8,6 +8,7 @@ import { ContactHydrator } from '@/components/ui/ContactHydrator';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { RentalStrip } from '@/components/ui/RentalStrip';
 import { getSiteConfig } from '@/lib/getSiteConfig';
+import { getSiteUrl } from '@/lib/seo/site';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,7 +25,7 @@ export const viewport: Viewport = {
   themeColor: '#050505',
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
+const siteUrl = getSiteUrl();
 const siteName = 'Girls of Passion';
 const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID || 'G-L8JE09MSYM';
 
@@ -32,17 +33,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: 'Girls of Passion | Premium Adult Companionship Across India',
-    template: '%s | Girls of Passion',
+    template: '%s',
   },
   description:
     'Girls of Passion offers discreet, verified adult companionship across India. Premium profiles, private booking, and 24x7 support in all major cities.',
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-IN': '/',
-      'x-default': '/',
-    },
-  },
   openGraph: {
     title: 'Girls of Passion | Premium Adult Companionship Across India',
     description:

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone, MessageCircle, ChevronDown } from 'lucide-react';
+import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 
 const DEFAULT_PHONE = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const DEFAULT_WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -53,6 +54,7 @@ export function Navbar({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: N
   const [mobileLocOpen, setMobileLocOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const whatsappUrl = createWhatsAppUrl(whatsapp, 'Hi, I am interested in your services');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -160,9 +162,9 @@ export function Navbar({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: N
             Call Now
           </a>
           <a
-            href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
+            href={whatsappUrl}
             target="_blank"
-            rel="nofollow noopener noreferrer"
+            rel="noopener noreferrer"
             className="btn-whatsapp text-sm px-4 py-2"
             aria-label="WhatsApp Booking"
           >
@@ -257,9 +259,9 @@ export function Navbar({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: N
               Call Now
             </a>
             <a
-              href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
+              href={whatsappUrl}
               target="_blank"
-              rel="nofollow noopener noreferrer"
+              rel="noopener noreferrer"
               className="btn-whatsapp flex-1 justify-center text-sm py-2.5"
             >
               <MessageCircle size={14} />

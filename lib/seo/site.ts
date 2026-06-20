@@ -7,7 +7,9 @@ const CITY_SLUG_ALIASES: Record<string, string> = {
 
 export function getSiteUrl(): string {
   return (process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL)
+    .replace('http://localhost:3000', DEFAULT_SITE_URL)
     .replace('http://127.0.0.1:3000', DEFAULT_SITE_URL)
+    .replace('https://www.girlsofpassion.in', DEFAULT_SITE_URL)
     .replace(/\/$/, '');
 }
 

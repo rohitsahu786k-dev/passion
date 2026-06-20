@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { MessageCircle, Phone } from 'lucide-react';
+import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 
 const DEFAULT_PHONE = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const DEFAULT_WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -13,6 +14,7 @@ interface FloatingCTAProps {
 
 export function FloatingCTA({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: FloatingCTAProps) {
   const [desktopVisible, setDesktopVisible] = useState(false);
+  const whatsappUrl = createWhatsAppUrl(whatsapp, 'Hi, I am interested in your services');
 
   useEffect(() => {
     const handleScroll = () => setDesktopVisible(window.scrollY > 300);
@@ -34,9 +36,9 @@ export function FloatingCTA({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP
           Call Now
         </a>
         <a
-          href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
+          href={whatsappUrl}
           target="_blank"
-          rel="nofollow noopener noreferrer"
+          rel="noopener noreferrer"
           className="flex h-14 items-center justify-center gap-2 text-sm font-semibold text-white bg-[#25D366] hover:bg-[#1ebe5a] transition-colors"
           aria-label="WhatsApp Booking"
         >
@@ -57,9 +59,9 @@ export function FloatingCTA({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP
             <Phone size={20} />
           </a>
           <a
-            href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
+            href={whatsappUrl}
             target="_blank"
-            rel="nofollow noopener noreferrer"
+            rel="noopener noreferrer"
             className="floating-btn floating-wa"
             aria-label="WhatsApp Booking"
             title="WhatsApp Booking"

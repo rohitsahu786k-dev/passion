@@ -244,13 +244,13 @@ export default function GuwahatiEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Guwahati Escort Service',
-        item: 'https://girlsofpassion.in/guwahati-escort-service/'
+        item: 'https://www.girlsofpassion.in/guwahati-escort-service/'
       }
     ]
   };

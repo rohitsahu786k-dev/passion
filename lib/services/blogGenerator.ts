@@ -150,8 +150,8 @@ INTERNAL LINKS - place 5 naturally in the article body:
 ${internalLinks.map((link) => `- ${link}`).join('\n')}
 
 EXTERNAL LINKS - place exactly 2 in the article body:
-- Wikipedia page for ${city.name} with target="_blank" rel="noopener noreferrer nofollow"
-- One relevant Indian tourism or government site for ${city.name} with target="_blank" rel="noopener noreferrer nofollow"
+- Wikipedia page for ${city.name} with target="_blank" rel="noopener noreferrer"
+- One relevant Indian tourism or government site for ${city.name} with target="_blank" rel="noopener noreferrer"
 
 LSI / SEMANTIC KEYWORDS:
 ${service.keywords.join(', ')}, escort in ${city.name.toLowerCase()}, ${city.name.toLowerCase()} companions, verified escorts ${city.name.toLowerCase()}, discreet ${city.name.toLowerCase()} escort, independent companion ${city.name.toLowerCase()}

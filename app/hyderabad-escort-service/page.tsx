@@ -241,13 +241,13 @@ export default function HyderabadEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Hyderabad Escort Service',
-        item: 'https://girlsofpassion.in/hyderabad-escort-service/'
+        item: 'https://www.girlsofpassion.in/hyderabad-escort-service/'
       }
     ]
   };

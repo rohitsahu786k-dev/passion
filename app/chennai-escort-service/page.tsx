@@ -249,13 +249,13 @@ export default function ChennaiEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Chennai Escort Service',
-        item: 'https://girlsofpassion.in/chennai-escort-service/'
+        item: 'https://www.girlsofpassion.in/chennai-escort-service/'
       }
     ]
   };

@@ -41,7 +41,7 @@ export default function NotFound() {
         <a
           href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20need%20help`}
           target="_blank"
-          rel="nofollow noopener noreferrer"
+          rel="noopener noreferrer"
           className="btn-whatsapp"
         >
           <MessageCircle size={16} />

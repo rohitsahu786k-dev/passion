@@ -50,7 +50,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const legalPages: MetadataRoute.Sitemap = [
     { url: absoluteUrl('/privacy-policy/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.30 },
     { url: absoluteUrl('/terms/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.30 },
-    { url: absoluteUrl('/disclaimer/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.20 },
   ];
 
   // Fetch AI-generated blogs from MongoDB

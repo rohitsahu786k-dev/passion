@@ -248,13 +248,13 @@ export default function IndoreEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Indore Escort Service',
-        item: 'https://girlsofpassion.in/indore-escort-service/'
+        item: 'https://www.girlsofpassion.in/indore-escort-service/'
       }
     ]
   };

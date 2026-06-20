@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { Shield, CheckCircle, Clock, Lock, MapPin, Star, Phone, MessageCircle } from 'lucide-react';
+import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
+import { getSiteUrl } from '@/lib/seo/site';
 
 export const metadata: Metadata = {
-  title: 'About Girls of Passion | India\'s Premium Adult Companionship Platform',
+  title: 'About Girls of Passion | Premium Adult Companionship',
   description:
     'Girls of Passion is India\'s trusted premium adult companionship platform with verified profiles, privacy-first booking, 24x7 professional support, and coverage across 23+ cities.',
   alternates: {
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'About Girls of Passion | India\'s Premium Adult Companionship Platform',
+    title: 'About Girls of Passion | Premium Adult Companionship',
     description: 'Learn about Girls of Passion – India\'s most trusted escort service platform. Verified profiles, discreet booking, 24x7 support across Delhi, Mumbai, Jaipur, Goa and 20+ cities.',
     url: '/about/',
     type: 'website',
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
+const siteUrl = getSiteUrl();
 
 const aboutSchema = {
   '@context': 'https://schema.org',
@@ -53,6 +55,7 @@ const aboutSchema = {
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
+const whatsappUrl = createWhatsAppUrl(whatsapp, 'Hi, I am interested in your services');
 
 export default function AboutPage() {
   const values = [
@@ -213,9 +216,9 @@ export default function AboutPage() {
               Call Now
             </a>
             <a
-              href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`}
+              href={whatsappUrl}
               target="_blank"
-              rel="nofollow noopener noreferrer"
+              rel="noopener noreferrer"
               className="btn-whatsapp"
             >
               <MessageCircle size={16} />

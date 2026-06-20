@@ -9,6 +9,7 @@ import { blogSeeds, getBlog } from '@/data/blogSeeds';
 import { getCity } from '@/data/cities';
 import { getSeoVideo } from '@/data/videos';
 import { cityLandingPath, cityServicePath } from '@/lib/seo/site';
+import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 interface UnifiedBlog {
   slug: string;
   title: string;
@@ -69,7 +70,7 @@ export function generateStaticParams() {
 
 type BlogPostPageProps = { params: Promise<{ slug: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://girlsofpassion.in';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
 
@@ -79,7 +80,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (!blog) return {};
   const ogImage = `/assets/photos/luxury-escort-service-${blog.city}.jpg`;
   return {
-    title: `${blog.title} | Girls of Passion`,
+    title: blog.title,
     description: blog.excerpt,
     keywords: blog.keywords.join(', '),
     alternates: {
@@ -439,9 +440,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   Call Now
                 </a>
                 <a
-                  href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20want%20to%20book%20${encodeURIComponent(blog.serviceName)}%20in%20${encodeURIComponent(blog.cityName)}`}
+                  href={createWhatsAppUrl(whatsapp, `Hi, I want to book ${blog.serviceName} in ${blog.cityName}`)}
                   target="_blank"
-                  rel="nofollow noopener noreferrer"
+                  rel="noopener noreferrer"
                   className="btn-whatsapp justify-center text-sm"
                 >
                   <MessageCircle size={15} />

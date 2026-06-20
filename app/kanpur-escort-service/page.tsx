@@ -239,13 +239,13 @@ export default function KanpurEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Kanpur Escort Service',
-        item: 'https://girlsofpassion.in/kanpur-escort-service/'
+        item: 'https://www.girlsofpassion.in/kanpur-escort-service/'
       }
     ]
   };

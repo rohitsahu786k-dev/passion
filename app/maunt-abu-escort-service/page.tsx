@@ -239,13 +239,13 @@ export default function MauntAbuEscortPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://girlsofpassion.in/'
+        item: 'https://www.girlsofpassion.in/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Maunt Abu Escort Service',
-        item: 'https://girlsofpassion.in/maunt-abu-escort-service/'
+        item: 'https://www.girlsofpassion.in/maunt-abu-escort-service/'
       }
     ]
   };
