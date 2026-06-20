@@ -10,15 +10,17 @@ const BAD_BOTS = [
 export function middleware(req: NextRequest) {
   const host = req.headers.get('host') || '';
   const pathname = req.nextUrl.pathname;
-  const isWww = host.startsWith('www.');
+  const isLocalhost = host.includes('localhost') || host.includes('127.0.0.1');
+  const needsWww = !isLocalhost && !host.startsWith('www.');
   const needsTrailingSlash = !pathname.endsWith('/') && !pathname.includes('.');
 
-  if (isWww || needsTrailingSlash) {
+  if (needsWww || needsTrailingSlash) {
     let targetPathname = pathname;
     if (needsTrailingSlash) {
       targetPathname += '/';
     }
-    const target = new URL(targetPathname + req.nextUrl.search, 'https://girlsofpassion.in');
+    const targetHost = needsWww ? 'www.girlsofpassion.in' : host;
+    const target = new URL(targetPathname + req.nextUrl.search, `https://${targetHost}`);
     return NextResponse.redirect(target, 301);
   }
 

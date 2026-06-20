@@ -1,5 +1,5 @@
 export const SITE_NAME = 'Girls of Passion';
-export const DEFAULT_SITE_URL = 'https://girlsofpassion.in';
+export const DEFAULT_SITE_URL = 'https://www.girlsofpassion.in';
 
 const CITY_SLUG_ALIASES: Record<string, string> = {
   'mount-abu': 'maunt-abu',
