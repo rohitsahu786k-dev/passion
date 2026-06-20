@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 
 export const metadata: Metadata = {
-  title: 'India Escort Service | Verified Booking',
-  description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
+  title: 'India Call Girl | Book Call Girls in India 24/7',
+  description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
+  keywords: [
+    'India Call Girl',
+    'Call Girls in India',
+    'India Escorts services',
+    'India Call girls',
+    'India escort service',
+    'Girls of Passion India',
+  ],
   alternates: {
     canonical: '/india-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'India Escort Service | Verified Booking',
-    description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
+    title: 'India Call Girl | Book Call Girls in India 24/7',
+    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
     url: '/india-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'India Escort Service | Verified Booking',
-    description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across major Indian cities, hotels, resorts, and private stays.',
+    title: 'India Call Girl | Book Call Girls in India 24/7',
+    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
   },
 };
 
@@ -177,7 +185,7 @@ export default function IndiaEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion India',
-    description: 'Book a discreet India escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across India.',
+    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
     url: '/india-escort-service/',
     telephone: phone,
     address: {
@@ -292,7 +300,9 @@ export default function IndiaEscortPage() {
                   Premium Adult Companionship Across India
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">India Call Girl</strong> booking is available 24/7 for adults who want Call Girls in India, cash payment service, quick deals, free hotel coordination, India escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

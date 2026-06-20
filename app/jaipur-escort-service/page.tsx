@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Jaipur Escort Service | Verified Booking',
-  description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
+  title: 'Jaipur Call Girl | Book Call Girls in Jaipur 24/7',
+  description: 'Jaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jaipur Book Cash Payment Service 24/7 Available, Jaipur Escorts services and Call girls.',
+  keywords: [
+    'Jaipur Call Girl',
+    'Call Girls in Jaipur',
+    'Jaipur Escorts services',
+    'Jaipur Call girls',
+    'Jaipur escort service',
+    'Girls of Passion Jaipur',
+  ],
   alternates: {
     canonical: '/jaipur-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Jaipur Escort Service | Verified Booking',
-    description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
+    title: 'Jaipur Call Girl | Book Call Girls in Jaipur 24/7',
+    description: 'Jaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jaipur Book Cash Payment Service 24/7 Available, Jaipur Escorts services and Call girls.',
     url: '/jaipur-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jaipur Escort Service | Verified Booking',
-    description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across C-Scheme, Malviya Nagar, Vaishali Nagar, hotels, resorts, and villas.',
+    title: 'Jaipur Call Girl | Book Call Girls in Jaipur 24/7',
+    description: 'Jaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jaipur Book Cash Payment Service 24/7 Available, Jaipur Escorts services and Call girls.',
   },
 };
 
@@ -177,7 +185,7 @@ export default function JaipurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Jaipur',
-    description: 'Book a discreet Jaipur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Jaipur.',
+    description: 'Jaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jaipur Book Cash Payment Service 24/7 Available, Jaipur Escorts services and Call girls.',
     url: '/jaipur-escort-service/',
     telephone: phone,
     address: {
@@ -285,12 +293,14 @@ export default function JaipurEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Jaipur Escort Service
+                Jaipur Call Girl | Book Call Girls in Jaipur 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship with Privacy & Trust
+                  Jaipur Escorts services and Call girls
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Jaipur Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Jaipur, cash payment service, quick deals, free hotel coordination, Jaipur escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

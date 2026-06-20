@@ -15,8 +15,17 @@ import { LeadForm } from '@/components/ui/LeadForm';
 import { getSiteConfig } from '@/lib/getSiteConfig';
 
 export const metadata: Metadata = {
-  title: 'Girls of Passion | Verified Escort Booking India',
-  description: 'Girls of Passion – India\'s most trusted premium adult companionship platform. Verified profiles, private booking, 24x7 support across Delhi, Mumbai, Jaipur, Goa, Hyderabad, Pune, Indore and 23+ cities.',
+  title: 'India Call Girl | Book Call Girls in India 24/7',
+  description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
+  keywords: [
+    'India Call Girl',
+    'Call Girls in India',
+    'India Escorts services',
+    'India Call girls',
+    'India escort service',
+    'call girl service India',
+    'Girls of Passion India',
+  ],
   alternates: {
     canonical: '/',
     languages: {
@@ -25,8 +34,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Girls of Passion | Verified Escort Booking India',
-    description: 'Girls of Passion – verified profiles, private booking, and 24x7 support for premium adult companionship across 23+ Indian cities.',
+    title: 'India Call Girl | Book Call Girls in India 24/7',
+    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
     url: '/',
     type: 'website',
     locale: 'en_IN',
@@ -42,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Girls of Passion | Verified Escort Booking India',
-    description: 'Girls of Passion – verified profiles, private booking, and 24x7 support across 23+ Indian cities.',
+    title: 'India Call Girl | Book Call Girls in India 24/7',
+    description: 'India Call Girl - 100% Quick Deals and Free Hotel, Call Girls in India Book Cash Payment Service 24/7 Available, India Escorts services and Call girls.',
     images: ['/assets/photos/luxury-escort-service-india.jpg'],
   },
   robots: {
@@ -353,16 +362,16 @@ export default async function Home() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                India Escort Service
+                India Call Girl | Book Call Girls in India 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship Across India
+                  India Escorts services and Call girls
                 </span>
               </h1>
 
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
-                  Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, a trusted and professional platform for adults looking for a premium <strong className="text-white">India escort service</strong> with privacy, comfort, and smooth companionship support. We are designed for clients who value discretion, verified profiles, clear communication, and a reliable experience across major cities and travel destinations in India.
+                  <strong className="text-amber-400 font-semibold">India Call Girl</strong> booking is available 24/7 with Girls of Passion for adults who want <strong className="text-white">Call Girls in India</strong>, cash payment service, quick deals, free hotel coordination, India escorts services and call girls with privacy, comfort, and smooth companionship support.
                 </p>
                 <p>
                   India is a diverse country with luxury hotels, business hubs, tourist destinations, private residences, resorts, nightlife zones, and fast-growing lifestyle cities. Whether you are travelling for business, exploring a new city, staying in a premium hotel, or looking for private companionship, the right platform should offer quality, privacy, and professional coordination.

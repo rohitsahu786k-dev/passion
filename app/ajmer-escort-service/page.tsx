@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Ajmer Escort Service | Verified Booking',
-  description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
+  title: 'Ajmer Call Girl | Book Call Girls in Ajmer 24/7',
+  description: 'Ajmer Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Ajmer Book Cash Payment Service 24/7 Available, Ajmer Escorts services and Call girls.',
+  keywords: [
+    'Ajmer Call Girl',
+    'Call Girls in Ajmer',
+    'Ajmer Escorts services',
+    'Ajmer Call girls',
+    'Ajmer escort service',
+    'Girls of Passion Ajmer',
+  ],
   alternates: {
     canonical: '/ajmer-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Ajmer Escort Service | Verified Booking',
-    description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
+    title: 'Ajmer Call Girl | Book Call Girls in Ajmer 24/7',
+    description: 'Ajmer Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Ajmer Book Cash Payment Service 24/7 Available, Ajmer Escorts services and Call girls.',
     url: '/ajmer-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ajmer Escort Service | Verified Booking',
-    description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Vaishali Nagar, Pushkar Road, hotels, resorts, and apartments.',
+    title: 'Ajmer Call Girl | Book Call Girls in Ajmer 24/7',
+    description: 'Ajmer Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Ajmer Book Cash Payment Service 24/7 Available, Ajmer Escorts services and Call girls.',
   },
 };
 
@@ -181,7 +189,7 @@ export default function AjmerEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Ajmer',
-    description: 'Book a discreet Ajmer escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Ajmer.',
+    description: 'Ajmer Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Ajmer Book Cash Payment Service 24/7 Available, Ajmer Escorts services and Call girls.',
     url: '/ajmer-escort-service/',
     telephone: phone,
     address: {
@@ -290,12 +298,14 @@ export default function AjmerEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Ajmer Escort Service
+                Ajmer Call Girl | Book Call Girls in Ajmer 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship with Privacy & Trust
+                  Ajmer Escorts services and Call girls
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Ajmer Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Ajmer, cash payment service, quick deals, free hotel coordination, Ajmer escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

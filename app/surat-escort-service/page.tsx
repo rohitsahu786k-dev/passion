@@ -19,8 +19,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Surat Escort Service | Verified Booking',
-  description: 'Book a discreet Surat escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Surat.',
+  title: 'Surat Call Girl | Book Call Girls in Surat 24/7',
+  description: 'Surat Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Surat Book Cash Payment Service 24/7 Available, Surat Escorts services and Call girls.',
+  keywords: [
+    'Surat Call Girl',
+    'Call Girls in Surat',
+    'Surat Escorts services',
+    'Surat Call girls',
+    'Surat escort service',
+    'Girls of Passion Surat',
+  ],
   alternates: {
     canonical: '/surat-escort-service/',
     languages: {
@@ -29,8 +37,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Surat Escort Service | Verified Booking',
-    description: 'Book a discreet Surat escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Surat.',
+    title: 'Surat Call Girl | Book Call Girls in Surat 24/7',
+    description: 'Surat Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Surat Book Cash Payment Service 24/7 Available, Surat Escorts services and Call girls.',
     url: '/surat-surat-service/',
     type: 'website',
     locale: 'en_IN',
@@ -39,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Surat Escort Service | Verified Booking',
-    description: 'Book a discreet Surat escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Surat.',
+    title: 'Surat Call Girl | Book Call Girls in Surat 24/7',
+    description: 'Surat Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Surat Book Cash Payment Service 24/7 Available, Surat Escorts services and Call girls.',
   },
 };
 
@@ -173,7 +181,7 @@ export default function SuratEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Surat',
-    description: 'Book a discreet Surat escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Surat.',
+    description: 'Surat Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Surat Book Cash Payment Service 24/7 Available, Surat Escorts services and Call girls.',
     url: '/surat-escort-service/',
     telephone: phone,
     address: {
@@ -285,7 +293,9 @@ export default function SuratEscortPage() {
                   Premium Adult Companionship with Privacy & Elegance
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Surat Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Surat, cash payment service, quick deals, free hotel coordination, Surat escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

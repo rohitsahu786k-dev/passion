@@ -19,8 +19,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Pune Escort Service | Verified Booking',
-  description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
+  title: 'Pune Call Girl | Book Call Girls in Pune 24/7',
+  description: 'Pune Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Pune Book Cash Payment Service 24/7 Available, Pune Escorts services and Call girls.',
+  keywords: [
+    'Pune Call Girl',
+    'Call Girls in Pune',
+    'Pune Escorts services',
+    'Pune Call girls',
+    'Pune escort service',
+    'Girls of Passion Pune',
+  ],
   alternates: {
     canonical: '/pune-escort-service/',
     languages: {
@@ -29,8 +37,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Pune Escort Service | Verified Booking',
-    description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
+    title: 'Pune Call Girl | Book Call Girls in Pune 24/7',
+    description: 'Pune Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Pune Book Cash Payment Service 24/7 Available, Pune Escorts services and Call girls.',
     url: '/pune-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -39,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pune Escort Service | Verified Booking',
-    description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
+    title: 'Pune Call Girl | Book Call Girls in Pune 24/7',
+    description: 'Pune Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Pune Book Cash Payment Service 24/7 Available, Pune Escorts services and Call girls.',
   },
 };
 
@@ -173,7 +181,7 @@ export default function PuneEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Pune',
-    description: 'Book a discreet Pune escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Pune.',
+    description: 'Pune Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Pune Book Cash Payment Service 24/7 Available, Pune Escorts services and Call girls.',
     url: '/pune-escort-service/',
     telephone: phone,
     address: {
@@ -285,7 +293,9 @@ export default function PuneEscortPage() {
                   Premium Adult Companionship with Privacy & Style
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Pune Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Pune, cash payment service, quick deals, free hotel coordination, Pune escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

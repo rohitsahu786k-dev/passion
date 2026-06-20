@@ -112,11 +112,11 @@ export default async function CityPage({ params }: CityPageProps) {
                 {city.state}
               </div>
               <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
-                Verified {city.name} Escort Service Booking
+                {city.name} Call Girl | Book Call Girls in {city.name} 24/7
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-7 text-[#B8B8B8]">
-                Book a discreet companion in {city.name} with Girls of Passion. Verified profiles, private booking,
-                and premium adult companionship across {city.landmarks.join(', ')} and all key areas of {city.name}.
+                {city.name} Call Girl booking is available 24/7 with Girls of Passion for adults who want Call Girls in {city.name},
+                cash payment service, quick deals, free hotel coordination, {city.name} escorts services and call girls across {city.landmarks.join(', ')}.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#B8B8B8]">
                 <span className="flex items-center gap-1.5">
@@ -157,7 +157,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="h-1 w-16 rounded-full bg-[#D4AF37] mb-6" />
               <div className="space-y-4 text-sm leading-7 text-[#B8B8B8]">
                 <p>
-                  Girls of Passion helps adults find discreet, verified companion booking support in {city.name}.
+                  {city.name} Call Girl service by Girls of Passion helps adults find discreet, verified companion booking support in {city.name}.
                   Our team focuses on clear communication, respectful coordination, privacy-first handling, and
                   availability across well-known local areas including {city.landmarks.join(', ')}.
                 </p>

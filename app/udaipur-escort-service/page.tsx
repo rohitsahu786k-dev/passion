@@ -19,8 +19,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Udaipur Escort Service | Verified Booking',
-  description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
+  title: 'Udaipur Call Girl | Book Call Girls in Udaipur 24/7',
+  description: 'Udaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Udaipur Book Cash Payment Service 24/7 Available, Udaipur Escorts services and Call girls.',
+  keywords: [
+    'Udaipur Call Girl',
+    'Call Girls in Udaipur',
+    'Udaipur Escorts services',
+    'Udaipur Call girls',
+    'Udaipur escort service',
+    'Girls of Passion Udaipur',
+  ],
   alternates: {
     canonical: '/udaipur-escort-service/',
     languages: {
@@ -29,8 +37,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Udaipur Escort Service | Verified Booking',
-    description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
+    title: 'Udaipur Call Girl | Book Call Girls in Udaipur 24/7',
+    description: 'Udaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Udaipur Book Cash Payment Service 24/7 Available, Udaipur Escorts services and Call girls.',
     url: '/udaipur-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -39,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Udaipur Escort Service | Verified Booking',
-    description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
+    title: 'Udaipur Call Girl | Book Call Girls in Udaipur 24/7',
+    description: 'Udaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Udaipur Book Cash Payment Service 24/7 Available, Udaipur Escorts services and Call girls.',
   },
 };
 
@@ -173,7 +181,7 @@ export default function UdaipurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Udaipur',
-    description: 'Book a discreet Udaipur escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Udaipur.',
+    description: 'Udaipur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Udaipur Book Cash Payment Service 24/7 Available, Udaipur Escorts services and Call girls.',
     url: '/udaipur-escort-service/',
     telephone: phone,
     address: {
@@ -285,7 +293,9 @@ export default function UdaipurEscortPage() {
                   Premium Adult Companionship in the City of Lakes
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Udaipur Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Udaipur, cash payment service, quick deals, free hotel coordination, Udaipur escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Mumbai Escort Service | Verified Booking',
-  description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
+  title: 'Mumbai Call Girl | Book Call Girls in Mumbai 24/7',
+  description: 'Mumbai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Mumbai Book Cash Payment Service 24/7 Available, Mumbai Escorts services and Call girls.',
+  keywords: [
+    'Mumbai Call Girl',
+    'Call Girls in Mumbai',
+    'Mumbai Escorts services',
+    'Mumbai Call girls',
+    'Mumbai escort service',
+    'Girls of Passion Mumbai',
+  ],
   alternates: {
     canonical: '/mumbai-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Mumbai Escort Service | Verified Booking',
-    description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
+    title: 'Mumbai Call Girl | Book Call Girls in Mumbai 24/7',
+    description: 'Mumbai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Mumbai Book Cash Payment Service 24/7 Available, Mumbai Escorts services and Call girls.',
     url: '/mumbai-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mumbai Escort Service | Verified Booking',
-    description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Bandra, Juhu, Andheri, BKC, and South Mumbai.',
+    title: 'Mumbai Call Girl | Book Call Girls in Mumbai 24/7',
+    description: 'Mumbai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Mumbai Book Cash Payment Service 24/7 Available, Mumbai Escorts services and Call girls.',
   },
 };
 
@@ -177,7 +185,7 @@ export default function MumbaiEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Mumbai',
-    description: 'Book a discreet Mumbai escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mumbai.',
+    description: 'Mumbai Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Mumbai Book Cash Payment Service 24/7 Available, Mumbai Escorts services and Call girls.',
     url: '/mumbai-escort-service/',
     telephone: phone,
     address: {
@@ -290,7 +298,9 @@ export default function MumbaiEscortPage() {
                   Premium Adult Companionship with Privacy & Elegance
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Mumbai Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Mumbai, cash payment service, quick deals, free hotel coordination, Mumbai escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

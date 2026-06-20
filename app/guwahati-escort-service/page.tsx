@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Guwahati Escort Service | Verified Booking',
-  description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
+  title: 'Guwahati Call Girl | Book Call Girls in Guwahati 24/7',
+  description: 'Guwahati Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Guwahati Book Cash Payment Service 24/7 Available, Guwahati Escorts services and Call girls.',
+  keywords: [
+    'Guwahati Call Girl',
+    'Call Girls in Guwahati',
+    'Guwahati Escorts services',
+    'Guwahati Call girls',
+    'Guwahati escort service',
+    'Girls of Passion Guwahati',
+  ],
   alternates: {
     canonical: '/guwahati-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Guwahati Escort Service | Verified Booking',
-    description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
+    title: 'Guwahati Call Girl | Book Call Girls in Guwahati 24/7',
+    description: 'Guwahati Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Guwahati Book Cash Payment Service 24/7 Available, Guwahati Escorts services and Call girls.',
     url: '/guwahati-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Guwahati Escort Service | Verified Booking',
-    description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across GS Road, Paltan Bazaar, Dispur, hotels, and residences.',
+    title: 'Guwahati Call Girl | Book Call Girls in Guwahati 24/7',
+    description: 'Guwahati Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Guwahati Book Cash Payment Service 24/7 Available, Guwahati Escorts services and Call girls.',
   },
 };
 
@@ -181,7 +189,7 @@ export default function GuwahatiEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Guwahati',
-    description: 'Book a discreet Guwahati escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Guwahati.',
+    description: 'Guwahati Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Guwahati Book Cash Payment Service 24/7 Available, Guwahati Escorts services and Call girls.',
     url: '/guwahati-escort-service/',
     telephone: phone,
     address: {
@@ -294,7 +302,9 @@ export default function GuwahatiEscortPage() {
                   Premium Adult Companionship with Privacy & Comfort
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Guwahati Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Guwahati, cash payment service, quick deals, free hotel coordination, Guwahati escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

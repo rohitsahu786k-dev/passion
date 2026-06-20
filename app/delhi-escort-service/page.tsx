@@ -20,8 +20,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Delhi Escort Service | Verified Booking',
-  description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
+  title: 'Delhi Call Girl | Book Call Girls in Delhi 24/7',
+  description: 'Delhi Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Delhi Book Cash Payment Service 24/7 Available, Delhi Escorts services and Call girls.',
+  keywords: [
+    'Delhi Call Girl',
+    'Call Girls in Delhi',
+    'Delhi Escorts services',
+    'Delhi Call girls',
+    'Delhi escort service',
+    'Girls of Passion Delhi',
+  ],
   alternates: {
     canonical: '/delhi-escort-service/',
     languages: {
@@ -30,8 +38,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Delhi Escort Service | Verified Booking',
-    description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
+    title: 'Delhi Call Girl | Book Call Girls in Delhi 24/7',
+    description: 'Delhi Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Delhi Book Cash Payment Service 24/7 Available, Delhi Escorts services and Call girls.',
     url: '/delhi-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -40,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Delhi Escort Service | Verified Booking',
-    description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
+    title: 'Delhi Call Girl | Book Call Girls in Delhi 24/7',
+    description: 'Delhi Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Delhi Book Cash Payment Service 24/7 Available, Delhi Escorts services and Call girls.',
   },
 };
 
@@ -174,7 +182,7 @@ export default function DelhiEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Delhi',
-    description: 'Book a discreet Delhi escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Delhi NCR.',
+    description: 'Delhi Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Delhi Book Cash Payment Service 24/7 Available, Delhi Escorts services and Call girls.',
     url: '/delhi-escort-service/',
     telephone: phone,
     address: {
@@ -288,7 +296,9 @@ export default function DelhiEscortPage() {
                   Premium Adult Companionship in New Delhi
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Delhi Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Delhi, cash payment service, quick deals, free hotel coordination, Delhi escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

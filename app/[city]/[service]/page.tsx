@@ -111,11 +111,11 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
                 Verified Companion Service
               </div>
               <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl">
-                Verified {service.name} Booking in {city.name}
+                {service.name} in {city.name} | {city.name} Call Girl 24/7
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-7 text-[#B8B8B8]">
-                Book a discreet {service.name.toLowerCase()} in {city.name} with Girls of Passion.
-                Verified profiles, private booking, 24x7 support across {city.landmarks.join(', ')} and more.
+                {city.name} Call Girl and {service.name} booking is available 24/7 with Girls of Passion.
+                Book call girls in {city.name} with cash payment, quick deals, free hotel coordination, verified profiles, and private support across {city.landmarks.join(', ')}.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-[#B8B8B8]">
                 <span className="flex items-center gap-1.5">
@@ -157,7 +157,7 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
               <div className="h-1 w-16 rounded-full bg-[#D4AF37] mb-6" />
               <div className="space-y-4 text-sm leading-7 text-[#B8B8B8]">
                 <p>
-                  Girls of Passion provides structured booking assistance for {service.name.toLowerCase()} in {city.name},
+                  {city.name} Call Girl service by Girls of Passion provides structured booking assistance for {service.name.toLowerCase()} in {city.name},
                   helping adults check verified companion options, current availability, service expectations, and
                   location suitability before confirming anything.
                 </p>

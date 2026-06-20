@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Kanpur Escort Service | Verified Booking',
-  description: 'Book a discreet Kanpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Swaroop Nagar, hotels, and residences.',
+  title: 'Kanpur Call Girl | Book Call Girls in Kanpur 24/7',
+  description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
+  keywords: [
+    'Kanpur Call Girl',
+    'Call Girls in Kanpur',
+    'Kanpur Escorts services',
+    'Kanpur Call girls',
+    'Kanpur escort service',
+    'Girls of Passion Kanpur',
+  ],
   alternates: {
     canonical: '/kanpur-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Kanpur Escort Service | Verified Booking',
-    description: 'Book a discreet Kanpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Swaroop Nagar, hotels, and residences.',
+    title: 'Kanpur Call Girl | Book Call Girls in Kanpur 24/7',
+    description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
     url: '/kanpur-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kanpur Escort Service | Verified Booking',
-    description: 'Book a discreet Kanpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Civil Lines, Swaroop Nagar, hotels, and residences.',
+    title: 'Kanpur Call Girl | Book Call Girls in Kanpur 24/7',
+    description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
   },
 };
 
@@ -177,7 +185,7 @@ export default function KanpurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Kanpur',
-    description: 'Book a discreet Kanpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Kanpur.',
+    description: 'Kanpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Kanpur Book Cash Payment Service 24/7 Available, Kanpur Escorts services and Call girls.',
     url: '/kanpur-escort-service/',
     telephone: phone,
     address: {
@@ -284,12 +292,14 @@ export default function KanpurEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Kanpur Escort Service
+                Kanpur Call Girl | Book Call Girls in Kanpur 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship with Privacy & Trust
+                  Kanpur Escorts services and Call girls
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Kanpur Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Kanpur, cash payment service, quick deals, free hotel coordination, Kanpur escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

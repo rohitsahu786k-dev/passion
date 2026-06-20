@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Lucknow Escort Service | Verified Booking',
-  description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
+  title: 'Lucknow Call Girl | Book Call Girls in Lucknow 24/7',
+  description: 'Lucknow Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Lucknow Book Cash Payment Service 24/7 Available, Lucknow Escorts services and Call girls.',
+  keywords: [
+    'Lucknow Call Girl',
+    'Call Girls in Lucknow',
+    'Lucknow Escorts services',
+    'Lucknow Call girls',
+    'Lucknow escort service',
+    'Girls of Passion Lucknow',
+  ],
   alternates: {
     canonical: '/lucknow-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Lucknow Escort Service | Verified Booking',
-    description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
+    title: 'Lucknow Call Girl | Book Call Girls in Lucknow 24/7',
+    description: 'Lucknow Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Lucknow Book Cash Payment Service 24/7 Available, Lucknow Escorts services and Call girls.',
     url: '/lucknow-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lucknow Escort Service | Verified Booking',
-    description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Gomti Nagar, Hazratganj, hotels, and residences.',
+    title: 'Lucknow Call Girl | Book Call Girls in Lucknow 24/7',
+    description: 'Lucknow Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Lucknow Book Cash Payment Service 24/7 Available, Lucknow Escorts services and Call girls.',
   },
 };
 
@@ -181,7 +189,7 @@ export default function LucknowEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Lucknow',
-    description: 'Book a discreet Lucknow escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Lucknow.',
+    description: 'Lucknow Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Lucknow Book Cash Payment Service 24/7 Available, Lucknow Escorts services and Call girls.',
     url: '/lucknow-escort-service/',
     telephone: phone,
     address: {
@@ -293,7 +301,9 @@ export default function LucknowEscortPage() {
                   Premium Adult Companionship with Privacy & Elegance
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Lucknow Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Lucknow, cash payment service, quick deals, free hotel coordination, Lucknow escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

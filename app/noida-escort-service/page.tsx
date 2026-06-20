@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Noida Escort Service | Verified Booking',
-  description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
+  title: 'Noida Call Girl | Book Call Girls in Noida 24/7',
+  description: 'Noida Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Noida Book Cash Payment Service 24/7 Available, Noida Escorts services and Call girls.',
+  keywords: [
+    'Noida Call Girl',
+    'Call Girls in Noida',
+    'Noida Escorts services',
+    'Noida Call girls',
+    'Noida escort service',
+    'Girls of Passion Noida',
+  ],
   alternates: {
     canonical: '/noida-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Noida Escort Service | Verified Booking',
-    description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
+    title: 'Noida Call Girl | Book Call Girls in Noida 24/7',
+    description: 'Noida Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Noida Book Cash Payment Service 24/7 Available, Noida Escorts services and Call girls.',
     url: '/noida-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Noida Escort Service | Verified Booking',
-    description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
+    title: 'Noida Call Girl | Book Call Girls in Noida 24/7',
+    description: 'Noida Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Noida Book Cash Payment Service 24/7 Available, Noida Escorts services and Call girls.',
   },
 };
 
@@ -161,7 +169,7 @@ export default function NoidaEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Noida',
-    description: 'Book a discreet Noida escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Noida.',
+    description: 'Noida Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Noida Book Cash Payment Service 24/7 Available, Noida Escorts services and Call girls.',
     url: '/noida-escort-service/',
     telephone: phone,
     address: {
@@ -274,7 +282,9 @@ export default function NoidaEscortPage() {
                   Premium, Discreet & Modern Experience by Girls of Passion
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Noida Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Noida, cash payment service, quick deals, free hotel coordination, Noida escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

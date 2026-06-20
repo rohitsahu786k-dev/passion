@@ -22,18 +22,18 @@ export function generateCityMeta({
 }: CityMetaOptions): Metadata {
   const label = serviceName
     ? `${serviceName} in ${cityName}`
-    : `${cityName} Escort Service`;
+    : `${cityName} Call Girl`;
 
   const path = serviceSlug ? cityServicePath(citySlug, serviceSlug) : cityLandingPath(citySlug);
   const canonical = absoluteUrl(path);
 
   const title = serviceName
-    ? `${serviceName} in ${cityName} | Girls of Passion`
-    : `${cityName} Escort Service | Girls of Passion`;
+    ? `${serviceName} in ${cityName} | ${cityName} Call Girl 24/7`
+    : `${cityName} Call Girl | Book Call Girls in ${cityName} 24/7`;
 
   const description = serviceName
-    ? `Book a discreet ${label.toLowerCase()} with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship in ${cityName}.`
-    : `Book a discreet ${cityName} escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across ${cityName} hotels, residences, and key areas.`;
+    ? `${cityName} Call Girl and ${serviceName} booking available 24/7. Book call girls in ${cityName} with cash payment, quick deals, free hotel coordination, escorts services and call girls.`
+    : `${cityName} Call Girl - 100% Quick Deals and Free Hotel, Call Girls in ${cityName} Book Cash Payment Service 24/7 Available, ${cityName} Escorts services and Call girls.`;
 
   const ogImage = `/assets/photos/luxury-escort-service-${publicCitySlug(citySlug)}.jpg`;
 
@@ -41,10 +41,13 @@ export function generateCityMeta({
     title,
     description,
     keywords: [
+      `${cityName} Call Girl`,
+      `Call Girls in ${cityName}`,
+      `${cityName} Escorts services`,
+      `${cityName} Call girls`,
       `${cityName} escort service`,
       `escort service ${cityName}`,
       `call girl ${cityName}`,
-      `${cityName} call girl`,
       `escort in ${cityName}`,
       `${cityName} companion service`,
       `girls of passion ${cityName}`,

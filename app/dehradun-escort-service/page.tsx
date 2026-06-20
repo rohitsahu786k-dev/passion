@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Dehradun Escort Service | Verified Booking',
-  description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
+  title: 'Dehradun Call Girl | Book Call Girls in Dehradun 24/7',
+  description: 'Dehradun Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Dehradun Book Cash Payment Service 24/7 Available, Dehradun Escorts services and Call girls.',
+  keywords: [
+    'Dehradun Call Girl',
+    'Call Girls in Dehradun',
+    'Dehradun Escorts services',
+    'Dehradun Call girls',
+    'Dehradun escort service',
+    'Girls of Passion Dehradun',
+  ],
   alternates: {
     canonical: '/dehradun-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Dehradun Escort Service | Verified Booking',
-    description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
+    title: 'Dehradun Call Girl | Book Call Girls in Dehradun 24/7',
+    description: 'Dehradun Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Dehradun Book Cash Payment Service 24/7 Available, Dehradun Escorts services and Call girls.',
     url: '/dehradun-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dehradun Escort Service | Verified Booking',
-    description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Rajpur Road, Sahastradhara Road, hotels, resorts, and residences.',
+    title: 'Dehradun Call Girl | Book Call Girls in Dehradun 24/7',
+    description: 'Dehradun Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Dehradun Book Cash Payment Service 24/7 Available, Dehradun Escorts services and Call girls.',
   },
 };
 
@@ -181,7 +189,7 @@ export default function DehradunEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Dehradun',
-    description: 'Book a discreet Dehradun escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Dehradun.',
+    description: 'Dehradun Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Dehradun Book Cash Payment Service 24/7 Available, Dehradun Escorts services and Call girls.',
     url: '/dehradun-escort-service/',
     telephone: phone,
     address: {
@@ -297,7 +305,9 @@ export default function DehradunEscortPage() {
                   Premium Adult Companionship with Privacy & Comfort
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Dehradun Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Dehradun, cash payment service, quick deals, free hotel coordination, Dehradun escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

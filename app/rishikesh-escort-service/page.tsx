@@ -19,8 +19,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Rishikesh Escort Service | Verified Booking',
-  description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
+  title: 'Rishikesh Call Girl | Book Call Girls in Rishikesh 24/7',
+  description: 'Rishikesh Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Rishikesh Book Cash Payment Service 24/7 Available, Rishikesh Escorts services and Call girls.',
+  keywords: [
+    'Rishikesh Call Girl',
+    'Call Girls in Rishikesh',
+    'Rishikesh Escorts services',
+    'Rishikesh Call girls',
+    'Rishikesh escort service',
+    'Girls of Passion Rishikesh',
+  ],
   alternates: {
     canonical: '/rishikesh-escort-service/',
     languages: {
@@ -29,8 +37,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Rishikesh Escort Service | Verified Booking',
-    description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
+    title: 'Rishikesh Call Girl | Book Call Girls in Rishikesh 24/7',
+    description: 'Rishikesh Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Rishikesh Book Cash Payment Service 24/7 Available, Rishikesh Escorts services and Call girls.',
     url: '/rishikesh-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -39,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rishikesh Escort Service | Verified Booking',
-    description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
+    title: 'Rishikesh Call Girl | Book Call Girls in Rishikesh 24/7',
+    description: 'Rishikesh Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Rishikesh Book Cash Payment Service 24/7 Available, Rishikesh Escorts services and Call girls.',
   },
 };
 
@@ -173,7 +181,7 @@ export default function RishikeshEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Rishikesh',
-    description: 'Book a discreet Rishikesh escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Tapovan, Shivpuri, resorts, and villas.',
+    description: 'Rishikesh Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Rishikesh Book Cash Payment Service 24/7 Available, Rishikesh Escorts services and Call girls.',
     url: '/rishikesh-escort-service/',
     telephone: phone,
     address: {
@@ -285,7 +293,9 @@ export default function RishikeshEscortPage() {
                   Premium Adult Companionship for Private Getaways
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Rishikesh Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Rishikesh, cash payment service, quick deals, free hotel coordination, Rishikesh escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

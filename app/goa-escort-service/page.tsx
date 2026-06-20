@@ -16,8 +16,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Goa Escort Service | Verified Booking',
-  description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
+  title: 'Goa Call Girl | Book Call Girls in Goa 24/7',
+  description: 'Goa Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Goa Book Cash Payment Service 24/7 Available, Goa Escorts services and Call girls.',
+  keywords: [
+    'Goa Call Girl',
+    'Call Girls in Goa',
+    'Goa Escorts services',
+    'Goa Call girls',
+    'Goa escort service',
+    'Girls of Passion Goa',
+  ],
   alternates: {
     canonical: '/goa-escort-service/',
     languages: {
@@ -26,8 +34,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Goa Escort Service | Verified Booking',
-    description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
+    title: 'Goa Call Girl | Book Call Girls in Goa 24/7',
+    description: 'Goa Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Goa Book Cash Payment Service 24/7 Available, Goa Escorts services and Call girls.',
     url: '/goa-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -36,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Goa Escort Service | Verified Booking',
-    description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Panaji, Calangute, Baga, North Goa, and South Goa.',
+    title: 'Goa Call Girl | Book Call Girls in Goa 24/7',
+    description: 'Goa Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Goa Book Cash Payment Service 24/7 Available, Goa Escorts services and Call girls.',
     images: ['/assets/photos/luxury-escort-service-goa.jpg'],
   },
 };
@@ -86,7 +94,7 @@ export default function GoaEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Goa',
-    description: 'Book a discreet Goa escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium adult companionship across Goa.',
+    description: 'Goa Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Goa Book Cash Payment Service 24/7 Available, Goa Escorts services and Call girls.',
     url: 'https://www.girlsofpassion.in/goa-escort-service/',
     telephone: phone,
     address: {
@@ -178,7 +186,9 @@ export default function GoaEscortPage() {
                   Premium Adult Companionship in Goa
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Goa Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Goa, cash payment service, quick deals, free hotel coordination, Goa escorts services and call girls with private support.
+              </p>
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
                   Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, the most trusted platform for adults seeking a premium <strong className="text-white">Goa escort service</strong>. Goa is one of India's most popular destinations for leisure, nightlife, beach resorts, and premium experiences. We provide verified, discreet companion booking across all key areas of Goa.

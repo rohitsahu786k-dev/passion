@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Nathdwara Escort Service | Verified Booking',
-  description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
+  title: 'Nathdwara Call Girl | Book Call Girls in Nathdwara 24/7',
+  description: 'Nathdwara Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Nathdwara Book Cash Payment Service 24/7 Available, Nathdwara Escorts services and Call girls.',
+  keywords: [
+    'Nathdwara Call Girl',
+    'Call Girls in Nathdwara',
+    'Nathdwara Escorts services',
+    'Nathdwara Call girls',
+    'Nathdwara escort service',
+    'Girls of Passion Nathdwara',
+  ],
   alternates: {
     canonical: '/nathdwara-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Nathdwara Escort Service | Verified Booking',
-    description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
+    title: 'Nathdwara Call Girl | Book Call Girls in Nathdwara 24/7',
+    description: 'Nathdwara Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Nathdwara Book Cash Payment Service 24/7 Available, Nathdwara Escorts services and Call girls.',
     url: '/nathdwara-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nathdwara Escort Service | Verified Booking',
-    description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across hotels, guest houses, and private stays.',
+    title: 'Nathdwara Call Girl | Book Call Girls in Nathdwara 24/7',
+    description: 'Nathdwara Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Nathdwara Book Cash Payment Service 24/7 Available, Nathdwara Escorts services and Call girls.',
   },
 };
 
@@ -169,7 +177,7 @@ export default function NathdwaraEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Nathdwara',
-    description: 'Book a discreet Nathdwara escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Nathdwara.',
+    description: 'Nathdwara Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Nathdwara Book Cash Payment Service 24/7 Available, Nathdwara Escorts services and Call girls.',
     url: '/nathdwara-escort-service/',
     telephone: phone,
     address: {
@@ -280,7 +288,9 @@ export default function NathdwaraEscortPage() {
                   Premium Adult Companionship with Privacy & Discretion
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Nathdwara Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Nathdwara, cash payment service, quick deals, free hotel coordination, Nathdwara escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

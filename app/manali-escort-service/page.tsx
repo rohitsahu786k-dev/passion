@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Manali Escort Service | Verified Booking',
-  description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
+  title: 'Manali Call Girl | Book Call Girls in Manali 24/7',
+  description: 'Manali Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Manali Book Cash Payment Service 24/7 Available, Manali Escorts services and Call girls.',
+  keywords: [
+    'Manali Call Girl',
+    'Call Girls in Manali',
+    'Manali Escorts services',
+    'Manali Call girls',
+    'Manali escort service',
+    'Girls of Passion Manali',
+  ],
   alternates: {
     canonical: '/manali-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Manali Escort Service | Verified Booking',
-    description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
+    title: 'Manali Call Girl | Book Call Girls in Manali 24/7',
+    description: 'Manali Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Manali Book Cash Payment Service 24/7 Available, Manali Escorts services and Call girls.',
     url: '/manali-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manali Escort Service | Verified Booking',
-    description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Mall Road, Old Manali, resorts, villas, and hotels.',
+    title: 'Manali Call Girl | Book Call Girls in Manali 24/7',
+    description: 'Manali Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Manali Book Cash Payment Service 24/7 Available, Manali Escorts services and Call girls.',
   },
 };
 
@@ -177,7 +185,7 @@ export default function ManaliEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Manali',
-    description: 'Book a discreet Manali escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Manali.',
+    description: 'Manali Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Manali Book Cash Payment Service 24/7 Available, Manali Escorts services and Call girls.',
     url: '/manali-escort-service/',
     telephone: phone,
     address: {
@@ -289,7 +297,9 @@ export default function ManaliEscortPage() {
                   Premium Adult Companionship with Privacy & Comfort
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Manali Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Manali, cash payment service, quick deals, free hotel coordination, Manali escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

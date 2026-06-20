@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Indore Escort Service | Verified Booking',
-  description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
+  title: 'Indore Call Girl | Book Call Girls in Indore 24/7',
+  description: 'Indore Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Indore Book Cash Payment Service 24/7 Available, Indore Escorts services and Call girls.',
+  keywords: [
+    'Indore Call Girl',
+    'Call Girls in Indore',
+    'Indore Escorts services',
+    'Indore Call girls',
+    'Indore escort service',
+    'Girls of Passion Indore',
+  ],
   alternates: {
     canonical: '/indore-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Indore Escort Service | Verified Booking',
-    description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
+    title: 'Indore Call Girl | Book Call Girls in Indore 24/7',
+    description: 'Indore Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Indore Book Cash Payment Service 24/7 Available, Indore Escorts services and Call girls.',
     url: '/indore-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Indore Escort Service | Verified Booking',
-    description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Vijay Nagar, Palasia, MG Road, AB Road, hotels, and residences.',
+    title: 'Indore Call Girl | Book Call Girls in Indore 24/7',
+    description: 'Indore Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Indore Book Cash Payment Service 24/7 Available, Indore Escorts services and Call girls.',
   },
 };
 
@@ -181,7 +189,7 @@ export default function IndoreEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Indore',
-    description: 'Book a discreet Indore escort service with Girls of Passion. Verified profiles, VIP companions, private booking, 24x7 support, and premium companionship across Indore.',
+    description: 'Indore Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Indore Book Cash Payment Service 24/7 Available, Indore Escorts services and Call girls.',
     url: '/indore-escort-service/',
     telephone: phone,
     address: {
@@ -298,7 +306,9 @@ export default function IndoreEscortPage() {
                   Premium Adult Companionship with Privacy & VIP Comfort
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Indore Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Indore, cash payment service, quick deals, free hotel coordination, Indore escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>

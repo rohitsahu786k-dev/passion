@@ -15,8 +15,16 @@ import { LeadForm } from '@/components/ui/LeadForm';
 
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
 export const metadata: Metadata = {
-  title: 'Jodhpur Escort Service | Verified Booking',
-  description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
+  title: 'Jodhpur Call Girl | Book Call Girls in Jodhpur 24/7',
+  description: 'Jodhpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jodhpur Book Cash Payment Service 24/7 Available, Jodhpur Escorts services and Call girls.',
+  keywords: [
+    'Jodhpur Call Girl',
+    'Call Girls in Jodhpur',
+    'Jodhpur Escorts services',
+    'Jodhpur Call girls',
+    'Jodhpur escort service',
+    'Girls of Passion Jodhpur',
+  ],
   alternates: {
     canonical: '/jodhpur-escort-service/',
     languages: {
@@ -25,8 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Jodhpur Escort Service | Verified Booking',
-    description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
+    title: 'Jodhpur Call Girl | Book Call Girls in Jodhpur 24/7',
+    description: 'Jodhpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jodhpur Book Cash Payment Service 24/7 Available, Jodhpur Escorts services and Call girls.',
     url: '/jodhpur-escort-service/',
     type: 'website',
     locale: 'en_IN',
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jodhpur Escort Service | Verified Booking',
-    description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Sardarpura, Ratanada, hotels, resorts, and heritage stays.',
+    title: 'Jodhpur Call Girl | Book Call Girls in Jodhpur 24/7',
+    description: 'Jodhpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jodhpur Book Cash Payment Service 24/7 Available, Jodhpur Escorts services and Call girls.',
   },
 };
 
@@ -181,7 +189,7 @@ export default function JodhpurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Jodhpur',
-    description: 'Book a discreet Jodhpur escort service with Girls of Passion. Verified profiles, private booking, 24x7 support, and premium companionship across Jodhpur.',
+    description: 'Jodhpur Call Girl - 100% Quick Deals and Free Hotel, Call Girls in Jodhpur Book Cash Payment Service 24/7 Available, Jodhpur Escorts services and Call girls.',
     url: '/jodhpur-escort-service/',
     telephone: phone,
     address: {
@@ -288,12 +296,14 @@ export default function JodhpurEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Jodhpur Escort Service
+                Jodhpur Call Girl | Book Call Girls in Jodhpur 24/7
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship with Privacy & Trust
+                  Jodhpur Escorts services and Call girls
                 </span>
               </h1>
-
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
+                <strong className="text-amber-400">Jodhpur Call Girl</strong> booking is available 24/7 for adults who want Call Girls in Jodhpur, cash payment service, quick deals, free hotel coordination, Jodhpur escorts services and call girls with private support.
+              </p>
               {/* Intro paragraphs */}
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
