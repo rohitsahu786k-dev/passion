@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
 import { ContactHydrator } from '@/components/ui/ContactHydrator';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
+import { RentalStrip } from '@/components/ui/RentalStrip';
 import { getSiteConfig } from '@/lib/getSiteConfig';
 
 const poppins = Poppins({
@@ -196,6 +197,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         />
       </head>
       <body className={`${poppins.className} bg-brand-bg text-brand-text`}>
+        <RentalStrip />
         <Navbar phone={config.phone} whatsapp={config.whatsapp} />
         <main>{children}</main>
         <Footer />
