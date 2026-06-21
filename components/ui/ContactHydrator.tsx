@@ -8,7 +8,7 @@ export function ContactHydrator() {
 
     async function hydrateContacts() {
       try {
-        const res = await fetch('/api/site-config/', { cache: 'no-store' });
+        const res = await fetch(`/api/site-config/?path=${encodeURIComponent(window.location.pathname)}`, { cache: 'no-store' });
         if (!res.ok) return;
         const config = (await res.json()) as { phone?: string; whatsapp?: string };
         if (cancelled) return;
@@ -16,6 +16,16 @@ export function ContactHydrator() {
         if (config.phone) {
           document.querySelectorAll<HTMLAnchorElement>('a[href^="tel:"]').forEach((link) => {
             link.href = `tel:${config.phone}`;
+            link.childNodes.forEach((node) => {
+              if (node.nodeType === Node.TEXT_NODE && /\+?\d[\d\s-]{7,}/.test(node.textContent || '')) {
+                node.textContent = (node.textContent || '').replace(/\+?\d[\d\s-]{7,}/, config.phone || '');
+              }
+            });
+            if (/call/i.test(link.textContent || '') || /\+?\d[\d\s-]{7,}/.test(link.textContent || '')) {
+              link.querySelectorAll('span').forEach((span) => {
+                if (/\+?\d[\d\s-]{7,}/.test(span.textContent || '')) span.textContent = config.phone || '';
+              });
+            }
           });
         }
 
@@ -27,6 +37,12 @@ export function ContactHydrator() {
             url.searchParams.set('phone', whatsapp);
             if (text) url.searchParams.set('text', text);
             link.href = `${url.pathname}?${url.searchParams.toString()}`;
+          });
+          document.querySelectorAll<HTMLAnchorElement>('a[href^="https://wa.me/"], a[href^="http://wa.me/"]').forEach((link) => {
+            const url = new URL(link.href);
+            url.hostname = 'wa.me';
+            url.pathname = `/${whatsapp}`;
+            link.href = url.toString();
           });
         }
       } catch {

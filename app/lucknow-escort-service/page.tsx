@@ -108,7 +108,7 @@ const companionProfiles = [
 export default function LucknowEscortPage() {
   const phone = '+919999900124';
   const whatsapp = '919999900124';
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Lucknow%20escort%20service.`;
+  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Lucknow%20escort%20service.`;
 
   const faqs = [
     {
@@ -170,7 +170,7 @@ export default function LucknowEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Lucknow',
-    description: 'Lucknow Escort Service and Lucknow Call Girl booking available 24/7. Book Call Girls in Lucknow with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+    description: 'Premium Lucknow escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
     url: '/lucknow-escort-service/',
     telephone: phone,
     address: {

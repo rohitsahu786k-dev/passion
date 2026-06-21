@@ -59,7 +59,8 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
+function buildOrganizationSchema(phone: string) {
+  return {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: siteName,
@@ -91,8 +92,9 @@ const organizationSchema = {
       },
     },
   ],
-  sameAs: [],
-};
+    sameAs: [],
+  };
+}
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -131,6 +133,7 @@ const navSchema = {
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const config = await getSiteConfig();
+  const organizationSchema = buildOrganizationSchema(config.phone);
   return (
     <html lang="en-IN">
       <head>
@@ -178,10 +181,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         />
       </head>
       <body className="bg-brand-bg text-brand-text">
-        <RentalStrip />
+        {config.topStripEnabled && (
+          <RentalStrip text={config.topStripText} email={config.topStripEmail} />
+        )}
         <Navbar phone={config.phone} whatsapp={config.whatsapp} />
         <main>{children}</main>
-        <Footer />
+        <Footer phone={config.phone} whatsapp={config.whatsapp} />
         <FloatingCTA phone={config.phone} whatsapp={config.whatsapp} />
         <ContactHydrator />
       </body>

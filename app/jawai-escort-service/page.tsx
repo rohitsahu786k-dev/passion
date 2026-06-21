@@ -108,7 +108,7 @@ const companionProfiles = [
 export default function JawaiEscortPage() {
   const phone = '+919999900127';
   const whatsapp = '919999900127';
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Jawai%20escort%20service.`;
+  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Jawai%20escort%20service.`;
 
   const faqs = [
     {
@@ -166,7 +166,7 @@ export default function JawaiEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Jawai',
-    description: 'Jawai Escort Service and Jawai Call Girl booking available 24/7. Book Call Girls in Jawai with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+    description: 'Premium Jawai escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
     url: '/jawai-escort-service/',
     telephone: phone,
     address: {

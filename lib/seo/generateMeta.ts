@@ -28,12 +28,12 @@ export function generateCityMeta({
   const path = serviceSlug ? cityServicePath(citySlug, serviceSlug) : cityLandingPath(citySlug);
 
   const title = serviceName
-    ? `Premium ${serviceName} ${cityName} | 24x7 Booking`
-    : `Premium ${cityName} Escort Service | 24x7 Verified Booking`;
+    ? `Premium ${serviceName} ${cityName} | Call Girl 24x7`
+    : `Premium ${cityName} Escort Service & Call Girl 24x7`;
 
   const description = serviceName
-    ? `Book premium ${serviceName.toLowerCase()} in ${cityName} 24x7 with verified profiles, discreet WhatsApp support, hotel coordination, and private booking.`
-    : `Book premium ${cityName} escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.`;
+    ? `Book premium ${serviceName.toLowerCase()} and call girl service in ${cityName} 24x7 with verified profiles, WhatsApp support, hotel coordination, and private booking.`
+    : `Book premium ${cityName} escort service and call girl booking 24x7 with verified profiles, WhatsApp support, hotel coordination, and private booking.`;
 
   const ogImage = `/assets/photos/luxury-escort-service-${publicCitySlug(citySlug)}.jpg`;
 

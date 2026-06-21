@@ -112,7 +112,7 @@ const companionProfiles = [
 export default function UdaipurEscortPage() {
   const phone = '+919999900103';
   const whatsapp = '919999900103';
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Udaipur%20escort%20service.`;
+  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Udaipur%20escort%20service.`;
 
   const faqs = [
     {
@@ -162,7 +162,7 @@ export default function UdaipurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Udaipur',
-    description: 'Udaipur Escort Service and Udaipur Call Girl booking available 24/7. Book Call Girls in Udaipur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+    description: 'Premium Udaipur escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
     url: '/udaipur-escort-service/',
     telephone: phone,
     address: {

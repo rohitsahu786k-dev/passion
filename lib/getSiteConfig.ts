@@ -11,6 +11,16 @@ export type SiteConfigData = {
   siteTagline: string;
   instagram: string;
   telegram: string;
+  topStripEnabled: boolean;
+  topStripText: string;
+  topStripEmail: string;
+  pageContacts: PageContactConfig[];
+};
+
+export type PageContactConfig = {
+  path: string;
+  phone: string;
+  whatsapp: string;
 };
 
 const defaults: SiteConfigData = {
@@ -22,7 +32,25 @@ const defaults: SiteConfigData = {
   siteTagline: 'Premium Escort Service Across India',
   instagram: '',
   telegram: '',
+  topStripEnabled: true,
+  topStripText: 'This website / page is available for rent! Drive targeted leads & calls to your business.',
+  topStripEmail: 'pws1753@gmail.com',
+  pageContacts: [],
 };
+
+function normalizePath(path = '/') {
+  const clean = path.split('?')[0].split('#')[0].trim() || '/';
+  return clean.endsWith('/') ? clean : `${clean}/`;
+}
+
+export function resolvePageContact(config: SiteConfigData, path = '/') {
+  const normalizedPath = normalizePath(path);
+  const override = config.pageContacts.find((item) => normalizePath(item.path) === normalizedPath);
+  return {
+    phone: override?.phone || config.phone,
+    whatsapp: override?.whatsapp || config.whatsapp,
+  };
+}
 
 export const getSiteConfig = unstable_cache(
   async (): Promise<SiteConfigData> => {
@@ -39,6 +67,18 @@ export const getSiteConfig = unstable_cache(
         siteTagline: config.siteTagline || defaults.siteTagline,
         instagram: config.instagram || defaults.instagram,
         telegram: config.telegram || defaults.telegram,
+        topStripEnabled: config.topStripEnabled ?? defaults.topStripEnabled,
+        topStripText: config.topStripText || defaults.topStripText,
+        topStripEmail: config.topStripEmail || defaults.topStripEmail,
+        pageContacts: Array.isArray(config.pageContacts)
+          ? config.pageContacts
+              .filter((item) => item?.path)
+              .map((item) => ({
+                path: normalizePath(item.path),
+                phone: item.phone || '',
+                whatsapp: item.whatsapp || '',
+              }))
+          : defaults.pageContacts,
       };
     } catch {
       return defaults;

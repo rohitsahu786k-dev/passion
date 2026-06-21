@@ -108,7 +108,7 @@ const companionProfiles = [
 export default function MauntAbuEscortPage() {
   const phone = '+919999900121';
   const whatsapp = '919999900121';
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Maunt%20Abu%20escort%20service.`;
+  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Maunt%20Abu%20escort%20service.`;
 
   const faqs = [
     {
@@ -166,7 +166,7 @@ export default function MauntAbuEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Maunt Abu',
-    description: 'Maunt Abu Escort Service and Maunt Abu Call Girl booking available 24/7. Book Call Girls in Maunt Abu with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+    description: 'Premium Maunt Abu escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
     url: '/maunt-abu-escort-service/',
     telephone: phone,
     address: {

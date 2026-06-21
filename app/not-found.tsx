@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
+const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hi%2C%20I%20need%20help`;
 
 export default function NotFound() {
   const cities = [
@@ -39,7 +40,7 @@ export default function NotFound() {
           Call Now
         </a>
         <a
-          href={`https://wa.me/${whatsapp}?text=Hi%2C%20I%20need%20help`}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-whatsapp"

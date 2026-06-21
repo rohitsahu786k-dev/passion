@@ -3,9 +3,8 @@ import Image from 'next/image';
 import { Phone, MessageCircle, Shield, Clock } from 'lucide-react';
 import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 
-const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
-const whatsappUrl = createWhatsAppUrl(whatsapp, 'Hi, I am interested in your services');
+const DEFAULT_PHONE = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
+const DEFAULT_WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
 
 const topCities = [
   { name: 'Delhi Escort Service', href: '/delhi-escort-service/' },
@@ -48,7 +47,14 @@ const quickLinks = [
   { label: 'Sitemap', href: '/sitemap.xml' },
 ];
 
-export function Footer() {
+type FooterProps = {
+  phone?: string;
+  whatsapp?: string;
+};
+
+export function Footer({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: FooterProps) {
+  const whatsappUrl = createWhatsAppUrl(whatsapp, 'Hi, I am interested in your services');
+
   return (
     <footer
       className="bg-[#0D0D0D] border-t border-[#2A2A2A]"

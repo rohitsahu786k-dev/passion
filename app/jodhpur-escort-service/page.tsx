@@ -108,7 +108,7 @@ const companionProfiles = [
 export default function JodhpurEscortPage() {
   const phone = '+919999900126';
   const whatsapp = '919999900126';
-  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Jodhpur%20escort%20service.`;
+  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Jodhpur%20escort%20service.`;
 
   const faqs = [
     {
@@ -170,7 +170,7 @@ export default function JodhpurEscortPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Girls of Passion Jodhpur',
-    description: 'Jodhpur Escort Service and Jodhpur Call Girl booking available 24/7. Book Call Girls in Jodhpur with cash payment, quick deals, free hotel coordination, escorts services and call girls.',
+    description: 'Premium Jodhpur escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
     url: '/jodhpur-escort-service/',
     telephone: phone,
     address: {

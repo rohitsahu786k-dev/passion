@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Clock, MapPin } from 'lucide-react';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
+const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hi%2C%20I%20am%20interested%20in%20your%20services`;
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Contact Girls of Passion | 24x7 Verified Support',
@@ -26,7 +27,7 @@ const contactMethods = [
     icon: MessageCircle,
     title: 'WhatsApp',
     desc: 'Send us a WhatsApp message for quick, discreet booking support.',
-    action: `https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`,
+    action: whatsappUrl,
     label: 'Message Us',
     className: 'btn-whatsapp',
     external: true,

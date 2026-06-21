@@ -15,6 +15,14 @@ type PageMetaOptions = {
 
 export const DEFAULT_OG_IMAGE = '/assets/photos/luxury-escort-service-india.jpg';
 
+function limitMetaText(value: string, maxLength: number) {
+  const compact = value.replace(/\s+/g, ' ').trim();
+  if (compact.length <= maxLength) return compact;
+  const sliced = compact.slice(0, maxLength - 1);
+  const lastSpace = sliced.lastIndexOf(' ');
+  return `${sliced.slice(0, lastSpace > 40 ? lastSpace : maxLength - 1).trim()}…`;
+}
+
 export function buildPageMetadata({
   title,
   description,
@@ -28,10 +36,12 @@ export function buildPageMetadata({
 }: PageMetaOptions): Metadata {
   const canonical = absoluteUrl(path);
   const imageUrl = image.startsWith('http') ? image : absoluteUrl(image);
+  const safeTitle = limitMetaText(title, 60);
+  const safeDescription = limitMetaText(description, 160);
 
   return {
-    title,
-    description,
+    title: safeTitle,
+    description: safeDescription,
     keywords,
     alternates: {
       canonical,
@@ -41,8 +51,8 @@ export function buildPageMetadata({
       },
     },
     openGraph: {
-      title,
-      description,
+      title: safeTitle,
+      description: safeDescription,
       url: canonical,
       type,
       locale: 'en_IN',
@@ -59,8 +69,8 @@ export function buildPageMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: safeTitle,
+      description: safeDescription,
       images: [imageUrl],
     },
     robots: {
