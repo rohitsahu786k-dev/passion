@@ -11,13 +11,13 @@ ADMIN_EMAIL=your-email@example.com
 
 # NextAuth
 NEXTAUTH_SECRET=<run: openssl rand -base64 32>
-NEXTAUTH_URL=https://girlsofpassion.in
+NEXTAUTH_URL=https://www.girlsofpassion.in
 
 # MongoDB Atlas
 MONGODB_URI=mongodb+srv://...
 
 # Site
-NEXT_PUBLIC_SITE_URL=https://girlsofpassion.in
+NEXT_PUBLIC_SITE_URL=https://www.girlsofpassion.in
 NEXT_PUBLIC_PHONE=+91XXXXXXXXXX
 NEXT_PUBLIC_WHATSAPP=91XXXXXXXXXX
 ```
@@ -27,14 +27,14 @@ NEXT_PUBLIC_WHATSAPP=91XXXXXXXXXX
 | Variable | Value |
 |----------|-------|
 | `MONGODB_URI` | MongoDB Atlas connection string |
-| `NEXT_PUBLIC_SITE_URL` | `https://girlsofpassion.in` |
+| `NEXT_PUBLIC_SITE_URL` | `https://www.girlsofpassion.in` |
 | `NEXT_PUBLIC_PHONE` | `+91XXXXXXXXXX` |
 | `NEXT_PUBLIC_WHATSAPP` | `91XXXXXXXXXX` |
 | `ADMIN_USERNAME` | your admin username |
 | `ADMIN_PASSWORD` | strong password (min 16 chars) |
 | `ADMIN_EMAIL` | your admin email |
 | `NEXTAUTH_SECRET` | random 32-byte base64 string |
-| `NEXTAUTH_URL` | `https://girlsofpassion.in` |
+| `NEXTAUTH_URL` | `https://www.girlsofpassion.in` |
 
 ## Vercel Deployment Steps
 
@@ -49,7 +49,7 @@ NEXT_PUBLIC_WHATSAPP=91XXXXXXXXXX
 
 ## Post-Launch SEO Checklist
 
-- [ ] Submit sitemap to Google Search Console: `https://girlsofpassion.in/sitemap.xml`
+- [ ] Submit sitemap to Google Search Console: `https://www.girlsofpassion.in/sitemap.xml`
 - [ ] Submit sitemap to Bing Webmaster Tools
 - [ ] Verify Google Search Console ownership via HTML meta tag
 - [ ] Set geographic target to India in Google Search Console
