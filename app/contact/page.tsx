@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { Phone, MessageCircle, Clock, MapPin } from 'lucide-react';
+import { getSiteUrl } from '@/lib/seo/site';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
@@ -34,7 +35,7 @@ const contactMethods = [
   },
 ];
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
+const siteUrl = getSiteUrl();
 
 const contactPageSchema = {
   '@context': 'https://schema.org',

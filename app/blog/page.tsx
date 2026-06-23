@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import Link from 'next/link';
+import { getSiteUrl } from '@/lib/seo/site';
 import { CalendarDays, Clock, BookOpen, ChevronRight, ArrowRight } from 'lucide-react';
 import { blogSeeds } from '@/data/blogSeeds';
 import { services } from '@/data/services';
@@ -14,7 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
   image: '/assets/photos/luxury-escort-service-india.jpg',
   imageAlt: 'Escort service blog featured image',
 });
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
+const siteUrl = getSiteUrl();
 
 export const revalidate = 86400;
 

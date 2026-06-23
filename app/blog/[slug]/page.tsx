@@ -8,7 +8,7 @@ import { VideoBlock } from '@/components/seo/VideoBlock';
 import { blogSeeds, getBlog } from '@/data/blogSeeds';
 import { getCity } from '@/data/cities';
 import { getSeoVideo } from '@/data/videos';
-import { cityLandingPath, cityServicePath } from '@/lib/seo/site';
+import { cityLandingPath, cityServicePath, getSiteUrl } from '@/lib/seo/site';
 import { buildPageMetadata } from '@/lib/seo/metadata';
 import { createWhatsAppUrl } from '@/lib/utils/whatsapp';
 interface UnifiedBlog {
@@ -71,7 +71,7 @@ export function generateStaticParams() {
 
 type BlogPostPageProps = { params: Promise<{ slug: string }> };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
+const siteUrl = getSiteUrl();
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
 

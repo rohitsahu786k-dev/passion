@@ -1,4 +1,4 @@
-import { cityPhotoSlug } from '@/lib/seo/site';
+import { cityPhotoSlug, getSiteUrl } from '@/lib/seo/site';
 
 type CitySchemaProps = {
   cityName: string;
@@ -24,7 +24,7 @@ export function CitySchema({
   imageUrl,
 }: CitySchemaProps) {
   const brand = 'Girls of Passion';
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
+  const siteUrl = getSiteUrl();
   const label = serviceName ? `${serviceName} in ${cityName}` : `${cityName} Escort Service`;
   const citySlug = cityPhotoSlug(cityName.toLowerCase().replace(/\s+/g, '-'));
 

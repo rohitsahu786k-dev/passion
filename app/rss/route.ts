@@ -1,15 +1,13 @@
 import { blogSeeds } from '@/data/blogSeeds';
 import { connectDB } from '@/lib/mongodb';
 import { Blog } from '@/lib/models/Blog';
+import { getSiteUrl } from '@/lib/seo/site';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 3600;
 
 export async function GET() {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in').replace(
-    'http://127.0.0.1:3000',
-    'https://www.girlsofpassion.in'
-  );
+  const siteUrl = getSiteUrl();
   const now = new Date();
 
   // Fetch AI-generated blogs from MongoDB

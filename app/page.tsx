@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { LeadForm } from '@/components/ui/LeadForm';
 import { getSiteConfig } from '@/lib/getSiteConfig';
+import { getSiteUrl } from '@/lib/seo/site';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Elite India Escort Booking | 24x7 Verified Profiles',
@@ -100,7 +101,7 @@ const companionProfiles = [
 
 export default async function Home() {
   const config = await getSiteConfig();
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.girlsofpassion.in';
+  const siteUrl = getSiteUrl();
   const phone = config.phone;
   const whatsapp = config.whatsapp;
   const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20India%20escort%20service.`;
