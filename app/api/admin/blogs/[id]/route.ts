@@ -51,6 +51,8 @@ export async function PUT(req: NextRequest, { params }: Params) {
     if (!blog) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     revalidatePath('/blog/');
     revalidatePath(`/blog/${(blog.slug as string)}/`);
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss/');
     return NextResponse.json({ success: true });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Server error';
@@ -68,6 +70,9 @@ export async function DELETE(_req: NextRequest, { params }: Params) {
     const blog = await Blog.findByIdAndDelete(id);
     if (!blog) return NextResponse.json({ error: 'Not found' }, { status: 404 });
     revalidatePath('/blog/');
+    revalidatePath(`/blog/${(blog.slug as string)}/`);
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss/');
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });

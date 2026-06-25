@@ -59,6 +59,8 @@ export async function POST(req: NextRequest) {
     revalidatePath('/blog/');
     revalidatePath(`/blog/${blog.slug}/`);
     revalidatePath(`/${blogData.city}-escort-service/`);
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss/');
 
     return NextResponse.json({
       published: true,

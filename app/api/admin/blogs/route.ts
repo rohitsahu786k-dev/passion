@@ -63,6 +63,8 @@ export async function POST(req: NextRequest) {
 
     revalidatePath('/blog/');
     revalidatePath(`/blog/${blog.slug}/`);
+    revalidatePath('/sitemap.xml');
+    revalidatePath('/rss/');
     return NextResponse.json({ success: true, id: blog._id }, { status: 201 });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Server error';

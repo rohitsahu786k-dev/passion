@@ -7,7 +7,7 @@ import { Blog } from '@/lib/models/Blog';
 import { absoluteUrl, cityLandingPath, cityServicePath } from '@/lib/seo/site';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 3600;
+export const revalidate = 0;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const launchDate = new Date('2026-04-01T00:00:00Z');
