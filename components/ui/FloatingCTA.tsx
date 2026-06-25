@@ -38,7 +38,7 @@ export function FloatingCTA({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP
         <a
           href={whatsappUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           className="flex h-14 items-center justify-center gap-2 text-sm font-semibold text-white bg-[#25D366] hover:bg-[#1ebe5a] transition-colors"
           aria-label="WhatsApp Booking"
         >
@@ -61,7 +61,7 @@ export function FloatingCTA({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP
           <a
             href={whatsappUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="floating-btn floating-wa"
             aria-label="WhatsApp Booking"
             title="WhatsApp Booking"

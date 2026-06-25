@@ -6,7 +6,7 @@ import { getSiteUrl } from '@/lib/seo/site';
 
 const phone = process.env.NEXT_PUBLIC_PHONE || '+919999900101';
 const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '919999900101';
-const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hi%2C%20I%20am%20interested%20in%20your%20services`;
+const whatsappUrl = `https://wa.me/${whatsapp}?text=Hi%2C%20I%20am%20interested%20in%20your%20services`;
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Contact Girls of Passion | 24x7 Verified Support',

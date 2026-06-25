@@ -135,7 +135,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   <Phone size={16} />
                   Call Now
                 </a>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+                <a href={whatsappUrl} target="_blank" rel="nofollow noopener noreferrer" className="btn-whatsapp">
                   <MessageCircle size={16} />
                   WhatsApp Booking
                 </a>
@@ -331,7 +331,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <Phone size={16} />
               Call Now
             </a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+            <a href={whatsappUrl} target="_blank" rel="nofollow noopener noreferrer" className="btn-whatsapp">
               <MessageCircle size={16} />
               WhatsApp Booking
             </a>

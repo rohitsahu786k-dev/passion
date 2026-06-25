@@ -17,7 +17,7 @@ export function CTAButton({ phone, whatsapp, label = 'Get verified options' }: C
       <a
         href={createWhatsAppUrl(whatsapp, `Hello Girls of Passion, I want help with ${label}.`)}
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noopener noreferrer"
         className="focus-ring inline-flex items-center gap-2 rounded-md border border-line bg-white px-5 py-3 text-sm font-semibold text-ink"
       >
         <MessageCircle size={17} />

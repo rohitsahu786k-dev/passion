@@ -104,7 +104,7 @@ export default async function Home() {
   const siteUrl = getSiteUrl();
   const phone = config.phone;
   const whatsapp = config.whatsapp;
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20India%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20India%20escort%20service.`;
 
   const cityPageLinks: Record<string, string> = {
     'Delhi': '/delhi-escort-service/',
@@ -357,7 +357,7 @@ export default async function Home() {
                 <a 
                   href={whatsappUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="inline-flex items-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900/80 px-7 py-4 text-sm font-bold text-white transition-all hover:bg-neutral-800 hover:border-neutral-600"
                 >
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -1478,7 +1478,7 @@ export default async function Home() {
                   <a 
                     href={whatsappUrl}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="nofollow noopener noreferrer"
                     className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
                   >
                     <MessageCircle size={18} className="text-emerald-500" />

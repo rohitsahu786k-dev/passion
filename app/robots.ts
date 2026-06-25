@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/api/admin/', '/api/cron/', '/api/auth/', '/api/leads', '/listing-policy/', '/refund-policy/', '/list-your-service/'],
+        disallow: ['/admin/', '/api/admin/', '/api/cron/', '/api/auth/', '/api/leads', '/go/', '/listing-policy/', '/refund-policy/', '/list-your-service/'],
       },
       // Search engine crawlers — explicit allow
       { userAgent: 'Googlebot', allow: '/' },

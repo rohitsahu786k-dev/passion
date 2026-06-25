@@ -164,7 +164,7 @@ export function Navbar({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: N
           <a
             href={whatsappUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="btn-whatsapp text-sm px-4 py-2"
             aria-label="WhatsApp Booking"
           >
@@ -261,7 +261,7 @@ export function Navbar({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: N
             <a
               href={whatsappUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="btn-whatsapp flex-1 justify-center text-sm py-2.5"
             >
               <MessageCircle size={14} />

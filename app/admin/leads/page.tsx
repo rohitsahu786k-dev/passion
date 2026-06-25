@@ -104,7 +104,7 @@ export default function AdminLeadsPage() {
                         <a href={`tel:${lead.phone}`} className="p-1.5 rounded bg-[#D4AF37]/10 text-[#D4AF37] hover:bg-[#D4AF37]/20" title="Call">
                           <Phone size={13} />
                         </a>
-                        <a href={`https://wa.me/${lead.phone.replace(/\D/g, '')}?text=Hi+${encodeURIComponent(lead.name)}`} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded bg-green-950/40 text-green-400 hover:bg-green-950/60" title="WhatsApp">
+                        <a href={`https://wa.me/${lead.phone.replace(/\D/g, '')}?text=Hi+${encodeURIComponent(lead.name)}`} target="_blank" rel="nofollow noopener noreferrer" className="p-1.5 rounded bg-green-950/40 text-green-400 hover:bg-green-950/60" title="WhatsApp">
                           <MessageCircle size={13} />
                         </a>
                       </div>

@@ -429,7 +429,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <a
                   href={createWhatsAppUrl(whatsapp, `Hi, I want to book ${blog.serviceName} in ${blog.cityName}`)}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="btn-whatsapp justify-center text-sm"
                 >
                   <MessageCircle size={15} />

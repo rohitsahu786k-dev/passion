@@ -34,14 +34,16 @@ export function ContactHydrator() {
           document.querySelectorAll<HTMLAnchorElement>('a[href^="/go/whatsapp"]').forEach((link) => {
             const url = new URL(link.href, window.location.origin);
             const text = url.searchParams.get('text');
-            url.searchParams.set('phone', whatsapp);
-            if (text) url.searchParams.set('text', text);
-            link.href = `${url.pathname}?${url.searchParams.toString()}`;
+            const directUrl = new URL(`https://wa.me/${whatsapp}`);
+            if (text) directUrl.searchParams.set('text', text);
+            link.href = directUrl.toString();
           });
           document.querySelectorAll<HTMLAnchorElement>('a[href^="https://wa.me/"], a[href^="http://wa.me/"]').forEach((link) => {
             const url = new URL(link.href);
+            const text = url.searchParams.get('text');
             url.hostname = 'wa.me';
             url.pathname = `/${whatsapp}`;
+            if (text) url.searchParams.set('text', text);
             link.href = url.toString();
           });
         }

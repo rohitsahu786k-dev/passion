@@ -33,7 +33,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function GoaEscortPage() {
   const phone = '+919999900106';
   const whatsapp = '919999900106';
-  const whatsappUrl = `/go/whatsapp?phone=${whatsapp}&text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Goa%20escort%20service.`;
+  const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Goa%20escort%20service.`;
 
   const faqs = [
     {
@@ -193,7 +193,7 @@ export default function GoaEscortPage() {
                   <Phone size={18} />
                   Call Now: {phone}
                 </a>
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900/80 px-7 py-4 text-sm font-bold text-white transition-all hover:bg-neutral-800 hover:border-neutral-600">
+                <a href={whatsappUrl} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900/80 px-7 py-4 text-sm font-bold text-white transition-all hover:bg-neutral-800 hover:border-neutral-600">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
                   WhatsApp Booking
                 </a>
@@ -387,7 +387,7 @@ export default function GoaEscortPage() {
                 <a href={`tel:${phone}`} className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-3 text-sm font-bold text-black hover:bg-amber-400 transition-all">
                   <Phone size={16} /> Call Now
                 </a>
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-bold text-white hover:bg-[#1ebe5a] transition-all">
+                <a href={whatsappUrl} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-bold text-white hover:bg-[#1ebe5a] transition-all">
                   <MessageCircle size={16} /> WhatsApp
                 </a>
               </div>
@@ -437,7 +437,7 @@ export default function GoaEscortPage() {
               <a href={`tel:${phone}`} className="inline-flex items-center gap-3 rounded-lg bg-amber-500 px-8 py-4 text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg">
                 <Phone size={18} /> Call Us Now
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-lg bg-[#25D366] px-8 py-4 text-sm font-bold text-white hover:bg-[#1ebe5a] transition-all">
+              <a href={whatsappUrl} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-3 rounded-lg bg-[#25D366] px-8 py-4 text-sm font-bold text-white hover:bg-[#1ebe5a] transition-all">
                 <MessageCircle size={18} /> WhatsApp Booking
               </a>
             </div>

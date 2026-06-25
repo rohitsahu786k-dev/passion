@@ -12,5 +12,11 @@ export async function GET(request: NextRequest) {
   const redirectUrl = new URL(`https://wa.me/${phone}`);
   redirectUrl.searchParams.set('text', text);
 
-  return NextResponse.redirect(redirectUrl, 302);
+  return NextResponse.redirect(redirectUrl, {
+    status: 302,
+    headers: {
+      'X-Robots-Tag': 'noindex, nofollow, noarchive',
+      'Cache-Control': 'no-store',
+    },
+  });
 }

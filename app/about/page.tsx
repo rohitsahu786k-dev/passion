@@ -203,7 +203,7 @@ export default function AboutPage() {
             <a
               href={whatsappUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="btn-whatsapp"
             >
               <MessageCircle size={16} />

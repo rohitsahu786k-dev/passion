@@ -97,7 +97,7 @@ export function Footer({ phone = DEFAULT_PHONE, whatsapp = DEFAULT_WHATSAPP }: F
             <a
               href={whatsappUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="btn-whatsapp text-xs px-4 py-2"
               aria-label="WhatsApp Booking"
             >
