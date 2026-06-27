@@ -27,10 +27,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   const { city: citySlug } = await params;
   const city = getCity(citySlug);
   if (!city) return {};
-  return {
-    ...generateCityMeta({ cityName: city.name, citySlug: city.slug, rating: city.rating, reviewCount: city.reviewCount }),
-    robots: { index: false, follow: false },
-  };
+  return generateCityMeta({ cityName: city.name, citySlug: city.slug, rating: city.rating, reviewCount: city.reviewCount });
 }
 
 export default async function CityPage({ params }: CityPageProps) {

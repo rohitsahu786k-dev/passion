@@ -45,6 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: absoluteUrl('/about/'), lastModified: launchDate, changeFrequency: 'monthly', priority: 0.70 },
     { url: absoluteUrl('/contact/'), lastModified: launchDate, changeFrequency: 'monthly', priority: 0.75 },
     { url: absoluteUrl('/blog/'), lastModified: now, changeFrequency: 'daily', priority: 0.80 },
+    { url: absoluteUrl('/sitemap/'), lastModified: now, changeFrequency: 'weekly', priority: 0.65 },
   ];
 
   const legalPages: MetadataRoute.Sitemap = [

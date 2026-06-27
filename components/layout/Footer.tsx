@@ -44,7 +44,7 @@ const quickLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy/' },
   { label: 'Terms & Conditions', href: '/terms/' },
   { label: 'Disclaimer', href: '/disclaimer/' },
-  { label: 'Sitemap', href: '/sitemap.xml' },
+  { label: 'Sitemap', href: '/sitemap/' },
 ];
 
 type FooterProps = {
