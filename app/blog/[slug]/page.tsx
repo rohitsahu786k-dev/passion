@@ -520,5 +520,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </>
   );
 }
-
-export const revalidate = 86400;

@@ -285,5 +285,3 @@ export default async function CityServicePage({ params }: CityServicePageProps) 
     </>
   );
 }
-
-export const revalidate = 86400;

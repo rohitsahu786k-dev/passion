@@ -6,8 +6,9 @@ import { Navbar } from '@/components/layout/Navbar';
 import { ContactHydrator } from '@/components/ui/ContactHydrator';
 import { FloatingCTA } from '@/components/ui/FloatingCTA';
 import { RentalStrip } from '@/components/ui/RentalStrip';
+import { cities } from '@/data/cities';
 import { getSiteConfig } from '@/lib/getSiteConfig';
-import { getSiteUrl } from '@/lib/seo/site';
+import { cityLandingPath, getSiteUrl } from '@/lib/seo/site';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -118,23 +119,26 @@ const websiteSchema = {
   },
 };
 
+const navSchemaUrls = [
+  { name: 'Home', url: siteUrl },
+  { name: 'India Escort Service', url: `${siteUrl}/india-escort-service/` },
+  ...cities
+    .filter((city) => city.slug !== 'india')
+    .map((city) => ({
+      name: `${city.name} Escort Service`,
+      url: `${siteUrl}${cityLandingPath(city.slug)}`,
+    })),
+  { name: 'Blog', url: `${siteUrl}/blog/` },
+  { name: 'HTML Sitemap', url: `${siteUrl}/sitemap/` },
+  { name: 'About Us', url: `${siteUrl}/about/` },
+  { name: 'Contact Us', url: `${siteUrl}/contact/` },
+];
+
 const navSchema = {
   '@context': 'https://schema.org',
   '@type': 'SiteNavigationElement',
-  name: [
-    'Home', 'India Escort Service', 'Delhi Escort Service', 'Mumbai Escort Service',
-    'Jaipur Escort Service', 'Goa Escort Service', 'About Us', 'Contact Us',
-  ],
-  url: [
-    siteUrl,
-    `${siteUrl}/india-escort-service/`,
-    `${siteUrl}/delhi-escort-service/`,
-    `${siteUrl}/mumbai-escort-service/`,
-    `${siteUrl}/jaipur-escort-service/`,
-    `${siteUrl}/goa-escort-service/`,
-    `${siteUrl}/about/`,
-    `${siteUrl}/contact/`,
-  ],
+  name: navSchemaUrls.map((item) => item.name),
+  url: navSchemaUrls.map((item) => item.url),
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

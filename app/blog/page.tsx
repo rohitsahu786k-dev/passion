@@ -17,8 +17,6 @@ export const metadata: Metadata = buildPageMetadata({
 });
 const siteUrl = getSiteUrl();
 
-export const revalidate = 86400;
-
 interface BlogItem {
   slug: string;
   title: string;

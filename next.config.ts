@@ -63,18 +63,18 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=3600' },
         ],
       },
-      // City escort pages: ISR + CDN cache
+      // City escort pages: No cache for Google crawling
       {
         source: '/:city-escort-service/',
         headers: [
-          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=3600' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
         ],
       },
-      // Blog pages
+      // Blog pages: No cache for Google crawling
       {
         source: '/blog/(.*)',
         headers: [
-          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=3600' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
         ],
       },
       // RSS feed
