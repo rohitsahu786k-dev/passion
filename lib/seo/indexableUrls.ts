@@ -23,6 +23,7 @@ export async function getIndexableUrls(limit = 100): Promise<IndexableUrl[]> {
   const urls: IndexableUrl[] = [
     { url: absoluteUrl('/'), priority: 1, source: 'core' },
     { url: absoluteUrl('/india-escort-service/'), priority: 0.98, source: 'city' },
+    { url: absoluteUrl('/sitemap/'), priority: 0.86, source: 'brand' },
     { url: absoluteUrl('/blog/'), priority: 0.8, source: 'brand' },
     { url: absoluteUrl('/contact/'), priority: 0.75, source: 'brand' },
     { url: absoluteUrl('/about/'), priority: 0.7, source: 'brand' },
@@ -35,16 +36,6 @@ export async function getIndexableUrls(limit = 100): Promise<IndexableUrl[]> {
       priority: cityPriority[city.slug] ?? 0.9,
       source: 'city',
     });
-  }
-
-  for (const city of cities) {
-    for (const service of services) {
-      urls.push({
-        url: absoluteUrl(cityServicePath(city.slug, service.slug)),
-        priority: (cityPriority[city.slug] ?? 0.88) - 0.1,
-        source: 'service',
-      });
-    }
   }
 
   urls.push(
@@ -72,6 +63,16 @@ export async function getIndexableUrls(limit = 100): Promise<IndexableUrl[]> {
   for (const blog of blogSeeds) {
     if (!dbBlogSlugs.has(blog.slug)) {
       urls.push({ url: absoluteUrl(`/blog/${blog.slug}/`), priority: 0.65, source: 'blog' });
+    }
+  }
+
+  for (const city of cities) {
+    for (const service of services) {
+      urls.push({
+        url: absoluteUrl(cityServicePath(city.slug, service.slug)),
+        priority: Math.max(0.45, (cityPriority[city.slug] ?? 0.88) - 0.38),
+        source: 'service',
+      });
     }
   }
 

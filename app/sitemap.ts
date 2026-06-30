@@ -1,16 +1,16 @@
 import type { MetadataRoute } from 'next';
 import { blogSeeds } from '@/data/blogSeeds';
 import { cities } from '@/data/cities';
-import { services } from '@/data/services';
 import { connectDB } from '@/lib/mongodb';
 import { Blog } from '@/lib/models/Blog';
-import { absoluteUrl, cityLandingPath, cityServicePath } from '@/lib/seo/site';
+import { absoluteUrl, cityLandingPath } from '@/lib/seo/site';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
+const INDEXATION_REFRESH_DATE = new Date('2026-06-30T00:00:00.000Z');
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const launchDate = new Date('2026-04-01T00:00:00Z');
   const now = new Date();
 
   const cityPriority: Record<string, number> = {
@@ -27,31 +27,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: absoluteUrl(cityLandingPath(city.slug)),
-    lastModified: launchDate,
+    lastModified: INDEXATION_REFRESH_DATE,
     changeFrequency: city.slug === 'india' ? 'daily' : 'weekly',
     priority: cityPriority[city.slug] ?? 0.9,
   }));
 
-  const servicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
-    services.map((service) => ({
-      url: absoluteUrl(cityServicePath(city.slug, service.slug)),
-      lastModified: launchDate,
-      changeFrequency: 'monthly' as const,
-      priority: (cityPriority[city.slug] ?? 0.88) - 0.10,
-    }))
-  );
-
   const brandPages: MetadataRoute.Sitemap = [
-    { url: absoluteUrl('/about/'), lastModified: launchDate, changeFrequency: 'monthly', priority: 0.70 },
-    { url: absoluteUrl('/contact/'), lastModified: launchDate, changeFrequency: 'monthly', priority: 0.75 },
+    { url: absoluteUrl('/about/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'monthly', priority: 0.70 },
+    { url: absoluteUrl('/contact/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'monthly', priority: 0.75 },
     { url: absoluteUrl('/blog/'), lastModified: now, changeFrequency: 'daily', priority: 0.80 },
-    { url: absoluteUrl('/sitemap/'), lastModified: now, changeFrequency: 'weekly', priority: 0.65 },
+    { url: absoluteUrl('/sitemap/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'weekly', priority: 0.65 },
   ];
 
   const legalPages: MetadataRoute.Sitemap = [
-    { url: absoluteUrl('/privacy-policy/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.30 },
-    { url: absoluteUrl('/terms/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.30 },
-    { url: absoluteUrl('/disclaimer/'), lastModified: launchDate, changeFrequency: 'yearly', priority: 0.25 },
+    { url: absoluteUrl('/privacy-policy/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'yearly', priority: 0.30 },
+    { url: absoluteUrl('/terms/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'yearly', priority: 0.30 },
+    { url: absoluteUrl('/disclaimer/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'yearly', priority: 0.25 },
   ];
 
   // Fetch AI-generated blogs from MongoDB
@@ -90,7 +81,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...corePagesHigh,
     ...staticCityPages,
-    ...servicePages,
     ...brandPages,
     ...legalPages,
     ...dbBlogPages,

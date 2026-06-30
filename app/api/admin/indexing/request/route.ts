@@ -33,6 +33,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'No URLs found for indexing request' }, { status: 400 });
   }
 
+  if (!body.dryRun && process.env.ALLOW_UNSUPPORTED_INDEXING_API !== 'true') {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: 'Google Indexing API is not supported for regular city, service, or blog pages',
+        note:
+          'Use the XML sitemap and Google Search Console URL Inspection for these pages. Set ALLOW_UNSUPPORTED_INDEXING_API=true only if the URLs contain supported JobPosting or livestream VideoObject structured data.',
+        count: urls.length,
+        urls,
+      },
+      { status: 400 }
+    );
+  }
+
   if (body.dryRun) {
     return NextResponse.json({
       ok: true,
