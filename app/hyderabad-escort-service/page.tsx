@@ -8,13 +8,15 @@ import {
   Phone, 
   MessageCircle,
   ShieldCheck, 
+  Clock, 
   Check, 
   ChevronRight, 
   Lock
 } from 'lucide-react';
 import { LeadForm } from '@/components/ui/LeadForm';
-
+import { CitySchema } from '@/components/seo/CitySchema';
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
+
 export const metadata: Metadata = buildPageMetadata({
   title: 'Premium Hyderabad Escort Service | 24x7 Verified Booking',
   description: 'Book premium Hyderabad escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
@@ -29,12 +31,12 @@ export const metadata: Metadata = buildPageMetadata({
     '24x7 Hyderabad Escort Booking',
   ],
 });
-// Hyderabad companion profile cards utilizing native images
+
 const companionProfiles = [
   {
-    name: 'Ananya',
+    name: 'Anya',
     age: 22,
-    height: '5\'4"',
+    height: '5\'5"',
     nationality: 'Indian',
     image: '/assets/photos/luxury-escort-service-hyderabad.jpg',
     tags: ['Premium', 'Sophisticated'],
@@ -69,7 +71,7 @@ const companionProfiles = [
   },
   {
     name: 'Riya',
-    age: 21,
+    age: 22,
     height: '5\'3"',
     nationality: 'Indian',
     image: '/assets/photos/female-escort-in-hyderabad.jpg',
@@ -78,8 +80,8 @@ const companionProfiles = [
   },
   {
     name: 'Kiara',
-    age: 23,
-    height: '5\'5"',
+    age: 24,
+    height: '5\'6"',
     nationality: 'Indian',
     image: '/assets/photos/luxury-escort-service-hyderabad.jpg',
     tags: ['Luxury', 'Elite Lifestyle'],
@@ -87,11 +89,11 @@ const companionProfiles = [
   },
   {
     name: 'Pooja',
-    age: 22,
+    age: 23,
     height: '5\'5"',
     nationality: 'Indian',
     image: '/assets/photos/independent-call-girls-hyderabad.jpg',
-    tags: ['Private Meet', 'Local Companion'],
+    tags: ['Private Meet', 'Independent Style'],
     rate: 'High-Class',
   },
   {
@@ -100,154 +102,51 @@ const companionProfiles = [
     height: '5\'7"',
     nationality: 'Indian',
     image: '/assets/photos/high-class-call-girls-hyderabad.jpg',
-    tags: ['Model Profile', 'Hotel Meet'],
+    tags: ['Stylish', 'Corporate Events'],
     rate: 'Elite',
   }
 ];
 
 export default function HyderabadEscortPage() {
-  const phone = '+919999900129';
-  const whatsapp = '919999900129';
+  const phone = '+919999900109';
+  const whatsapp = '919999900109';
   const whatsappUrl = `https://wa.me/${whatsapp}?text=Hello%20Girls%20of%20Passion%2C%20I%20want%20to%20book%20a%20verified%20Hyderabad%20escort%20service.`;
 
   const faqs = [
     {
       question: "What is Girls of Passion?",
-      answer: "Girls of Passion is a professional adult companionship platform in Hyderabad for adults who want discreet booking support, verified profiles, and premium companion options."
+      answer: "Girls of Passion is a professional adult companionship booking support platform in Hyderabad for adults who want private, secure, and premium companion coordination."
+    },
+        {
+      question: "Do you cover Hitech City and Gachibowli?",
+      answer: "Yes, we provide companion bookings across all key tech and hotel hubs in Hyderabad."
     },
     {
-      question: "Is Girls of Passion available across Hyderabad?",
-      answer: "Yes, booking support is available across major Hyderabad locations, including Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, Madhapur, Kondapur, Begumpet, Secunderabad, hotels, resorts, and private residences."
+      question: "How to book an escort in Hyderabad?",
+      answer: "Call us or send a WhatsApp text. Share your preferred area, and we will send available profiles for you to choose from."
     },
     {
-      question: "How can I book a companion in Hyderabad?",
-      answer: "You can browse available profiles and contact the support team through call or WhatsApp. Share your location, timing, and preference to check availability."
+      question: "Are the companion profiles checked?",
+      answer: "Yes. We verify all profiles to ensure a safe, high-quality, and genuine booking."
     },
     {
-      question: "Is the booking process private?",
-      answer: "Yes, the booking process is discreet and confidential. Client privacy is one of our top priorities."
-    },
-    {
-      question: "Are the profiles verified?",
-      answer: "Girls of Passion focuses on verified and genuine companion profiles to maintain trust, comfort, and service quality."
-    },
-    {
-      question: "Is support available 24x7?",
-      answer: "Yes, booking support is available 24x7, subject to profile availability, location, and timing."
-    },
-    {
-      question: "Can I book a companion near my hotel or residence?",
-      answer: "Yes, you can share your hotel, resort, residence, serviced apartment, or private stay location, and our team will help you check suitable nearby options."
-    },
-    {
-      question: "Do you provide service in Banjara Hills and HITEC City?",
-      answer: "Yes, booking support may be available in Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, Madhapur, Kondapur, and other major Hyderabad areas."
-    },
-    {
-      question: "Is pricing shared before booking?",
-      answer: "Yes, pricing and availability details are shared before confirmation so that clients can make an informed decision."
-    },
-    {
-      question: "Who can use this service?",
-      answer: "This service is strictly for adults aged 18 years and above. Clients must communicate respectfully and follow all applicable local laws."
-    },
-    {
-      question: "Is Hyderabad escort service available near me?",
-      answer: "Girls of Passion provides location-based booking support across major Hyderabad areas. You can share your location through call or WhatsApp to check nearby profile availability."
-    },
-    {
-      question: "Why should I choose Girls of Passion in Hyderabad?",
-      answer: "Girls of Passion focuses on verified profiles, discreet booking, fast response, professional coordination, transparent details, and premium companionship support across Hyderabad."
+      question: "Is cash payment accepted?",
+      answer: "Yes, we offer cash-on-meet option for all bookings in Hyderabad."
     }
   ];
 
-  // Schema definitions for Hyderabad page
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Girls of Passion Hyderabad',
-    description: 'Premium Hyderabad escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
-    url: '/hyderabad-escort-service/',
-    telephone: phone,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Banjara Hills, Hyderabad',
-      addressLocality: 'Hyderabad',
-      addressRegion: 'Telangana',
-      postalCode: '500034',
-      addressCountry: 'IN'
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Hyderabad' },
-      { '@type': 'City', name: 'Banjara Hills' },
-      { '@type': 'City', name: 'Jubilee Hills' },
-      { '@type': 'City', name: 'HITEC City' },
-      { '@type': 'City', name: 'Gachibowli' }
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '162',
-      bestRating: '5',
-      worstRating: '1'
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59'
-    },
-    priceRange: 'INR'
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
-  };
-
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Girls of Passion',
-    url: '/hyderabad-escort-service/',
-    logo: '/logo.svg',
-    telephone: phone
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.girlsofpassion.in/'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Hyderabad Escort Service',
-        item: 'https://www.girlsofpassion.in/hyderabad-escort-service/'
-      }
-    ]
-  };
-
   return (
     <>
-      {/* Schemas */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {/* Dynamic Absolute SEO Schemas */}
+      <CitySchema
+        cityName="Hyderabad"
+        phone={phone}
+        address="Banjara Hills, Hyderabad"
+        rating={4.8}
+        reviewCount={162}
+        url="https://www.girlsofpassion.in/hyderabad-escort-service/"
+        faqs={faqs}
+      />
       <SupplementalCitySchema citySlug="hyderabad" />
 
       {/* Main Luxury Dark wrapper for the page */}
@@ -255,7 +154,7 @@ export default function HyderabadEscortPage() {
         
         {/* Banner Announcement */}
         <div className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 py-2.5 text-center text-xs font-semibold uppercase tracking-widest text-black">
-          💎 Premium & Discreet 100% Verified Profiles in Hyderabad, Telangana
+          💎 Premium & Discreet 100% Verified Profiles in Hyderabad
         </div>
 
         {/* Hero Section */}
@@ -275,34 +174,25 @@ export default function HyderabadEscortPage() {
 
               {/* Title */}
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
-                Hyderabad Escort Service & Call Girl Booking 24/7
+                Hyderabad Escort Service
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Hyderabad Escort Service with Call Girls in Hyderabad
+                  Premium Adult Companionship in Hyderabad
                 </span>
               </h1>
+              
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
-                <strong className="text-amber-400">Hyderabad Escort Service</strong> and <strong className="text-white">Hyderabad Call Girl</strong> booking are available 24/7 for adults who want Call Girls in Hyderabad, cash payment service, quick deals, free hotel coordination, escorts services and call girls with private support.
+                Our <strong className="text-amber-400">Hyderabad Escort Service</strong> and <strong className="text-white">Hyderabad Call Girl</strong> booking are available 24/7. We help you connect with verified profiles for private booking, hotel visits, and direct contact with local companions in Hyderabad area.
               </p>
-              {/* Intro paragraphs */}              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
-                <p>
-                  <strong className="text-amber-400">Hyderabad Escort Service</strong> and <strong className="text-white">Hyderabad Call Girl</strong> are the primary booking keywords for this page. Adults can use Girls of Passion to check Call Girls in Hyderabad, escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
-                </p>
-                <p className="mt-3">
-                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Hyderabad Escort Service, Hyderabad Call Girl or Call Girls in Hyderabad can find relevant city-specific information here.
-                </p>
-              </div>
+
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
-                  Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, a trusted and professional platform for adults looking for a premium <strong className="text-white">Hyderabad escort service</strong> with privacy, comfort, and smooth companionship support. We are designed for clients who value discretion, verified profiles, clear communication, and a refined experience in one of India’s most dynamic cities.
+                  If you are staying at Gachibowli for business or visiting luxury hotels in Banjara Hills, our verified companions are available to join you. We make booking private and fast.
                 </p>
                 <p>
-                  Hyderabad perfectly blends heritage, technology, luxury, business culture, and modern lifestyle. From premium hotels in Banjara Hills and Jubilee Hills to corporate hubs in HITEC City, Gachibowli, and Financial District, the city offers a fast-moving yet sophisticated environment. Whether you are a resident, business traveller, city visitor, or someone looking for private companionship, the right experience should feel effortless, discreet, and reliable.
+                  Hyderabad is a major IT destination, home to Hitech City and Banjara Hills, combining rich history with modern luxury hotels.
                 </p>
                 <p>
-                  If your search has brought you to <strong className="text-amber-400 font-semibold">Hyderabad escort service</strong>, <strong className="text-amber-400 font-semibold">escort service Hyderabad</strong>, <strong className="text-amber-400 font-semibold">best escort services Hyderabad</strong>, or <strong className="text-amber-400 font-semibold">Trusted Call Girl Hyderabad</strong>, you are not only looking for availability. You are looking for reliability, privacy, verified profiles, and a smooth booking experience. Girls of Passion is built to deliver exactly that with a professional and confidential approach.
-                </p>
-                <p>
-                  Our goal is simple: to provide adults with a safe, private, and premium companionship platform where comfort, privacy, trust, and quality always come first.
+                  Our goal is simple: to offer a safe, private, and premium companion booking service for adults who value clear communication, verified profiles, and direct support.
                 </p>
               </div>
 
@@ -337,7 +227,7 @@ export default function HyderabadEscortPage() {
                   <span className="font-semibold text-white">4.8/5</span> Average Rating
                 </div>
                 <div className="h-4 w-px bg-neutral-800" />
-                <div>320+ Client Reviews</div>
+                <div>162+ Client Reviews</div>
               </div>
 
             </div>
@@ -360,7 +250,7 @@ export default function HyderabadEscortPage() {
                     ★ Premium Verified
                   </div>
                   <h3 className="mt-2 text-xl font-bold text-white">Featured Companion</h3>
-                  <p className="text-xs text-neutral-300">Available near Banjara Hills, Jubilee Hills & HITEC City</p>
+                  <p className="text-xs text-neutral-300">Available near Banjara Hills, Hitech City & Luxury Hotels</p>
                 </div>
               </div>
 
@@ -386,7 +276,7 @@ export default function HyderabadEscortPage() {
             <div className="mb-10 text-center">
               <h2 className="text-3xl font-bold text-white">Quick Overview of Our Hyderabad Escort Service</h2>
               <div className="mt-2 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-3 text-sm text-neutral-400">Everything you need to know about our elite Hyderabad adult companionship service</p>
+              <p className="mt-3 text-sm text-neutral-400">Everything you need to know about our local companionship booking support</p>
             </div>
 
             <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/30">
@@ -408,11 +298,11 @@ export default function HyderabadEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Available Areas</td>
-                    <td className="px-6 py-4">Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, Madhapur, Kondapur, Begumpet, Secunderabad, luxury hotels, resorts, private residences</td>
+                    <td className="px-6 py-4">Banjara Hills, Hitech City, Gachibowli, Jubilee Hills</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Booking Options</td>
-                    <td className="px-6 py-4">Call and WhatsApp booking</td>
+                    <td className="px-6 py-4">Call and WhatsApp booking desk</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Availability</td>
@@ -420,7 +310,7 @@ export default function HyderabadEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Profile Quality</td>
-                    <td className="px-6 py-4">Verified, genuine, and carefully reviewed profiles</td>
+                    <td className="px-6 py-4">Verified, genuine, and carefully checked profiles</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Privacy Level</td>
@@ -428,71 +318,7 @@ export default function HyderabadEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Best For</td>
-                    <td className="px-6 py-4">Business travellers, city visitors, hotel companionship, private meetings, social events, corporate lifestyle</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Support</td>
-                    <td className="px-6 py-4">Fast response and professional coordination</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Main Benefit</td>
-                    <td className="px-6 py-4">Reliable, private, and premium adult companionship experience</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Service Highlights Section */}
-        <section className="py-16 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell">
-            <div className="mb-10 text-center">
-              <h2 className="text-3xl font-bold text-white">Service Highlights</h2>
-              <div className="mt-2 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-3 text-sm text-neutral-400">Core highlights of the Girls of Passion service framework in Hyderabad</p>
-            </div>
-
-            <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/30">
-              <table className="w-full border-collapse text-left text-sm text-neutral-300">
-                <thead>
-                  <tr className="border-b border-neutral-800 bg-neutral-900/80">
-                    <th className="px-6 py-4 font-bold text-white tracking-wider uppercase text-xs">Client Need</th>
-                    <th className="px-6 py-4 font-bold text-white tracking-wider uppercase text-xs">What We Provide</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-800/60">
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Fast booking</td>
-                    <td className="px-6 py-4">Quick call and WhatsApp response</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Privacy concern</td>
-                    <td className="px-6 py-4">Discreet and confidential coordination</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Genuine profiles</td>
-                    <td className="px-6 py-4">Verified and carefully reviewed companion options</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Premium experience</td>
-                    <td className="px-6 py-4">Elegant, polished, and well-presented companions</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Location flexibility</td>
-                    <td className="px-6 py-4">Service across major Hyderabad areas</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Trust</td>
-                    <td className="px-6 py-4">Clear communication before confirmation</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Convenience</td>
-                    <td className="px-6 py-4">Simple booking process with minimal steps</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Quality</td>
-                    <td className="px-6 py-4">Comfort, reliability, privacy, and smooth coordination</td>
+                    <td className="px-6 py-4">Travelers, business meetings, hotel companionship, private dates</td>
                   </tr>
                 </tbody>
               </table>
@@ -509,7 +335,7 @@ export default function HyderabadEscortPage() {
                 <h2 className="mt-2 text-3xl font-extrabold text-white">Verified Companion Profiles in Hyderabad</h2>
               </div>
               <p className="max-w-md text-sm text-neutral-400">
-                Browse our curated selection of elegant, independent, and VIP companions in Hyderabad. Contact us for daily availability updates.
+                Browse our checked selection of independent and verified companions. Contact us for daily availability updates.
               </p>
             </div>
 
@@ -563,36 +389,30 @@ export default function HyderabadEscortPage() {
           </div>
         </section>
 
-        {/* Section: Why Choose Girls of Passion for Hyderabad Escort Service? */}
+        {/* Why Choose Section */}
         <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
           <div className="container-shell grid gap-12 lg:grid-cols-2">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Uncompromising Standards</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Why Choose Girls of Passion for Hyderabad Escort Service?</h2>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Service Highlights</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Why Choose Our Hyderabad Escort Booking?</h2>
               
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-neutral-300">
                 <p>
-                  Choosing the right <strong className="text-white font-semibold">Hyderabad escort service</strong> is important because clients expect privacy, professionalism, genuine profiles, and reliable support. In a city where business districts, luxury hotels, modern nightlife, and premium residences come together, every interaction should feel smooth, private, and well-managed.
+                  We offer an elite selection of profiles in Hyderabad. Our booking desk is fast, reliable, and helps you check available companions in your neighborhood without delay.
                 </p>
                 <p>
-                  Girls of Passion provides a structured and professional experience from the first inquiry to final booking confirmation. Every step is handled with clarity, care, and complete confidentiality.
-                </p>
-                <p>
-                  We are known for:
+                  Choosing the right companionship makes your travel or stay much better. We coordinate everything directly so you do not have to worry about details.
                 </p>
               </div>
 
               {/* List */}
               <ul className="mt-6 space-y-3">
                 {[
-                  'Verified and genuine companion profiles',
-                  'Professional and polite communication',
-                  'Fast response through call and WhatsApp',
-                  'Discreet and confidential booking support',
-                  'Availability across major Hyderabad locations',
-                  'Premium and well-presented companions',
-                  'Clear information before confirmation',
-                  'Adult-only and respectful service approach'
+                  '100% verified and genuine profiles',
+                  'Discreet and safe booking desk',
+                  'Quick responses on WhatsApp',
+                  'Cash payment options directly on meeting',
+                  'Support across major local hotels and areas'
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-neutral-300">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
@@ -602,421 +422,86 @@ export default function HyderabadEscortPage() {
                   </li>
                 ))}
               </ul>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our platform is built for adults who want a reliable, private, and comfortable companionship experience without confusion or unnecessary complications.
-              </p>
             </div>
 
-            {/* Escort Service Hyderabad – Where Professionalism Meets Simplicity */}
+            {/* Highlight Panel */}
             <div className="flex flex-col justify-center gap-6 rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Professionalism & Simplicity</span>
-              <h3 className="text-2xl font-bold text-white">Escort Service Hyderabad – Where Professionalism Meets Simplicity</h3>
+              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Hotel Coordination</span>
+              <h3 className="text-2xl font-bold text-white">Safe Hotel & Resort Visits</h3>
               
               <p className="text-sm leading-relaxed text-neutral-300">
-                In a fast-moving city like Hyderabad, convenience matters. Our <strong className="text-white font-semibold">escort service Hyderabad</strong> is designed with a structured approach that prioritizes ease, professionalism, and clear communication.
+                From business hotels near Hitech City to luxury stays in Jubilee Hills, we coordinate smoothly and privately.
               </p>
               
-              <h4 className="font-semibold text-white text-sm">We focus on:</h4>
-
-              <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                {[
-                  'Direct communication',
-                  'Clear expectations',
-                  'Smooth coordination',
-                  'Reliable availability',
-                  'Easy booking process',
-                  'Location-based options',
-                  'Professional support'
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-xs text-neutral-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    {item}
-                  </div>
-                ))}
-              </ul>
-
-              <p className="text-xs text-neutral-300 mt-2">
-                Whether you are a first-time client or a regular visitor, Girls of Passion provides a clean and convenient experience with private support at every stage.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Hyderabad Escorts Service for a Modern Standard of Experience */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Image Block */}
-            <div className="relative min-h-[350px] overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/30">
-              <Image 
-                src="/assets/photos/premium-escorts-hyderabad.jpg" 
-                alt="Hyderabad Escorts Service"
-                fill
-                className="object-cover opacity-80"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/60 to-transparent" />
-            </div>
-
-            {/* Content block */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Modern Standard</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Hyderabad Escorts Service for a Modern Standard of Experience</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Client expectations have evolved beyond basic availability. Our <strong className="text-white">Hyderabad escorts service</strong> is designed to match modern standards where presentation, communication, privacy, and reliability are equally important.
+              <p className="text-sm leading-relaxed text-neutral-300">
+                Our support team handles all booking details quietly. We value your private time, and all communications are kept secure and deleted after the meeting is completed.
               </p>
 
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our service is suitable for:</h4>
-                <ul className="grid gap-3 sm:grid-cols-2 text-xs text-neutral-300">
+              <div>
+                <h5 className="font-semibold text-white mb-2 text-sm">Perfect for social occasions and stays:</h5>
+                <div className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-300">
                   {[
-                    'Business travel companionship',
-                    'Corporate professionals',
-                    'City visitors',
-                    'Hotel guests',
-                    'Social or event presence',
-                    'Leisure time during city stays',
-                    'Private relaxation moments',
-                    'Dinner dates',
-                    'Personal companionship',
-                    'People who value comfort and discretion'
-                  ].map((f) => (
-                    <li key={f} className="flex items-center gap-2.5 text-xs text-neutral-300">
+                    'Private hotel stay companion',
+                    'Social date partner',
+                    'Relaxing dinner dates',
+                    'Business travel company'
+                  ].map((occasion) => (
+                    <div key={occasion} className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Every interaction is managed with attention to detail so clients can enjoy a balanced, comfortable, and discreet companionship experience.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Best Escort Services Hyderabad – Focused on Real Experience */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Real Experience</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Best Escort Services Hyderabad – Focused on Real Experience</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                When people search for the <strong className="text-white font-semibold">best escort services Hyderabad</strong>, they usually expect more than simple options. They want genuine profiles, fast response, privacy, clear communication, and a dependable experience. Girls of Passion focuses on all these important areas to deliver a premium adult companionship service.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">What makes us different:</h4>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {[
-                    'Carefully reviewed companion profiles',
-                    'Premium companion options',
-                    'Fast booking assistance',
-                    'Transparent communication',
-                    'Privacy-focused support',
-                    'Availability across key Hyderabad locations',
-                    'Professional coordination',
-                    'Respectful adult-only interaction'
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {item}
+                      {occasion}
                     </div>
                   ))}
                 </div>
               </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                We believe a premium companionship service should feel smooth, private, reliable, and trustworthy from start to finish.
-              </p>
             </div>
-
-            {/* Escorts Service Hyderabad with Consistency You Can Rely On */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Reliable Consistency</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Escorts Service Hyderabad with Consistency You Can Rely On</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                A professional <strong className="text-white">escorts service Hyderabad</strong> should offer more than access. It should provide consistency, privacy, and clear coordination at every step. A structured process helps clients feel confident and comfortable.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">With Girls of Passion, clients can expect:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Timely responses',
-                    'Organized coordination',
-                    'Transparent communication',
-                    'Professional conduct',
-                    'Easy location coordination',
-                    'Smooth confirmation process'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Our team works to keep every step easy and stress-free so clients can enjoy a private and comfortable experience.
-              </p>
-            </div>
-
           </div>
         </section>
 
-        {/* Section: Hyderabad Escorts Service Available Across the City */}
+        {/* Areas Covered Section */}
         <section className="py-20 border-b border-neutral-900">
           <div className="container-shell">
-            
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">City Coverage</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Hyderabad Escorts Service Available Across the City</h2>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Local Coverage</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Areas We Cover in Hyderabad</h2>
               <div className="mt-3 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
               <p className="mt-4 text-sm text-neutral-300 leading-relaxed">
-                Our <strong className="text-white">Hyderabad escorts service</strong> is available across major hotel areas, corporate zones, premium residential locations, resorts, and private accommodations. Whether you are visiting for work, staying in a luxury hotel, living in a premium area, or planning private social companionship, our team can help you check location-based availability.
+                We coordinate companion bookings across all key sectors, commercial hubs, and luxury hotels in Hyderabad:
               </p>
             </div>
 
             {/* Location Grid */}
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {[
-                'Banjara Hills',
-                'Jubilee Hills',
-                'HITEC City',
-                'Gachibowli',
-                'Madhapur',
-                'Kondapur',
-                'Financial District',
-                'Begumpet',
-                'Secunderabad',
-                'Kukatpally',
-                'Ameerpet',
-                'Somajiguda',
-                'Hyderabad Airport area',
-                'Luxury hotels and resorts',
-                'Private residences',
-                'Business locations',
-                'Premium apartments'
-              ].map((loc) => (
+              {["Banjara Hills","Hitech City","Gachibowli","Jubilee Hills"].map((loc) => (
                 <div key={loc} className="flex items-center gap-3 rounded-lg border border-neutral-800/80 bg-neutral-900/40 p-4 hover:border-amber-500/30 transition-all">
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-amber-500/10 text-amber-500">
                     <MapPin size={16} />
                   </div>
                   <div>
                     <span className="font-bold text-white text-sm">{loc}</span>
-                    <span className="block text-[10px] text-neutral-400">Hyderabad Location</span>
+                    <span className="block text-[10px] text-neutral-400">Verified Companions</span>
                   </div>
                 </div>
               ))}
             </div>
-
-            <p className="mt-10 text-center text-sm text-neutral-400">
-              This wide coverage helps clients searching for <strong className="text-white">escort service Hyderabad near me</strong> or <strong className="text-white">Hyderabad escort service near me</strong> find suitable options quickly and privately.
-            </p>
           </div>
         </section>
 
-        {/* Premium Hyderabad Locations We Cover Table */}
-        <section className="py-16 bg-neutral-900/40 border-b border-neutral-900">
-          <div className="container-shell">
-            <div className="mb-10 text-center">
-              <h2 className="text-3xl font-bold text-white">Premium Hyderabad Locations We Cover</h2>
-              <div className="mt-2 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-3 text-sm text-neutral-400">Mapping out key tourist, residential, and corporate sectors</p>
-            </div>
-
-            <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/30">
-              <table className="w-full border-collapse text-left text-sm text-neutral-300">
-                <thead>
-                  <tr className="border-b border-neutral-800 bg-neutral-900/80">
-                    <th className="px-6 py-4 font-bold text-white tracking-wider uppercase text-xs">Hyderabad Area</th>
-                    <th className="px-6 py-4 font-bold text-white tracking-wider uppercase text-xs">Best For</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-800/60">
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Banjara Hills</td>
-                    <td className="px-6 py-4">Luxury hotels, premium residences, private meetings</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Jubilee Hills</td>
-                    <td className="px-6 py-4">High-end lifestyle, restaurants, social companionship</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">HITEC City</td>
-                    <td className="px-6 py-4">Corporate professionals, business travellers, hotel stays</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Gachibowli</td>
-                    <td className="px-6 py-4">Financial District access, business meetings, premium stays</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Madhapur</td>
-                    <td className="px-6 py-4">Tech professionals, hotels, quick coordination</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Kondapur</td>
-                    <td className="px-6 py-4">Residential clients, private stays, flexible booking</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Begumpet</td>
-                    <td className="px-6 py-4">Central access, hotels, business visitors</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Secunderabad</td>
-                    <td className="px-6 py-4">Travellers, local availability, easy coordination</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Airport Area</td>
-                    <td className="px-6 py-4">Short-stay convenience, hotel guests, business travel</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Localized Details for Banjara Hills, Jubilee Hills, HITEC City */}
-        <section className="py-20 border-b border-neutral-900 bg-neutral-900/10">
-          <div className="container-shell grid gap-8 md:grid-cols-3">
-            
-            {/* Banjara Hills Companion Service */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Premium & Lifestyle</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Banjara Hills Companion Service</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Banjara Hills is one of Hyderabad’s most premium areas, known for luxury hotels, restaurants, private residences, business spaces, and upscale lifestyle. Girls of Passion provides discreet companionship booking support for adults looking for refined companion options in and around Banjara Hills.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                This area is ideal for business travellers, city visitors, hotel guests, and clients who prefer elegant companionship for private meetings, dinner plans, and social occasions.
-              </p>
-            </div>
-
-            {/* Jubilee Hills and Madhapur Companion Service */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Active & Modern</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Jubilee Hills and Madhapur Companion Service</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Jubilee Hills and Madhapur are among Hyderabad’s most active lifestyle and business areas. These locations are known for premium restaurants, nightlife, corporate access, hotels, and modern city experiences. Girls of Passion offers private adult companionship booking assistance in these areas with a focus on privacy, speed, and professional communication.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                Our support team can help check suitable profiles based on your preferred location and timing.
-              </p>
-            </div>
-
-            {/* HITEC City, Gachibowli, and Financial District Availability */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Corporate & Tech</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Corporate Zones Availability</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                HITEC City, Gachibowli, and Financial District are major corporate and business zones in Hyderabad. These areas attract professionals, entrepreneurs, business travellers, and hotel guests who value quick coordination and discreet support.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion provides location-based booking support in these areas with a focus on privacy, reliability, and smooth communication.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Hotel, Resort, and Private Residence Companionship in Hyderabad */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Premium Stays</span>
-              <h2 className="text-3xl font-extrabold text-white">Hotel, Resort, and Private Residence Companionship in Hyderabad</h2>
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Hyderabad has a wide range of luxury hotels, premium apartments, resorts, serviced residences, and private stays. Many clients prefer companionship that matches this refined and comfortable environment.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Hotel, resort, and private residence companionship is suitable for:</h4>
-                <ul className="grid gap-3 sm:grid-cols-2 text-xs text-neutral-300">
-                  {[
-                    'Business stays',
-                    'Corporate meetings',
-                    'Private meetings',
-                    'Dinner plans',
-                    'Social companionship',
-                    'Event-based companionship',
-                    'Relaxed city evenings',
-                    'Luxury lifestyle experiences',
-                    'Short stays and private bookings'
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-2.5">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Privacy Standards */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Absolute Discretion</span>
-              <h3 className="text-2xl font-bold text-white">Privacy and Confidentiality – A Core Priority</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Privacy is one of the most important factors when choosing a <strong className="text-white">Hyderabad escort service</strong>. At Girls of Passion, confidentiality is always a top priority. We understand that clients want their identity, communication, and booking details to remain private.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Our privacy standards include:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Secure communication',
-                    'Confidential booking process',
-                    'No unnecessary personal questions',
-                    'No personal data sharing',
-                    'Discreet coordination',
-                    'Respect for client identity and preferences'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Every inquiry is handled carefully so clients can book with confidence and peace of mind.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Booking Steps & Process */}
+        {/* Booking Process Section */}
         <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
           <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Booking Steps Card */}
-            <div className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Simple Steps</span>
-              <h2 className="mt-2 text-2xl font-extrabold text-white">Call and WhatsApp Booking Process</h2>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Booking with Girls of Passion is simple, fast, and private. Our platform is designed for adults who want quick access, clear information, and smooth coordination.
+            <div className="flex flex-col justify-center">
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">How It Works</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Simple Call & WhatsApp Booking</h2>
+              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
+                We keep the booking process direct and easy. Follow these simple steps to secure your booking:
               </p>
-              
-              <h3 className="mt-6 text-base font-bold text-white border-b border-neutral-800 pb-2">Simple Booking Steps</h3>
-              
+
               <ol className="mt-6 space-y-4">
                 {[
-                  'Browse available companion profiles.',
-                  'Choose your preferred profile or category.',
-                  'Contact our support team through call or WhatsApp.',
-                  'Share your preferred location, timing, and requirement.',
-                  'Confirm availability and booking details.'
+                  'Browse the profiles and choose your favorite category.',
+                  'Reach out to us via call or send a message on WhatsApp.',
+                  'Share your location name, timing, and profile choice.',
+                  'We will confirm availability and booking details.'
                 ].map((step, idx) => (
                   <li key={idx} className="flex items-start gap-4">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-black">
@@ -1026,565 +511,40 @@ export default function HyderabadEscortPage() {
                   </li>
                 ))}
               </ol>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our team helps you with profile availability, category selection, location coordination, and basic booking details. The process is direct, discreet, and easy to follow.
-              </p>
             </div>
 
-            {/* Call Girl Hyderabad and Private Companion Options */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Call Girl Hyderabad</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Call Girl Hyderabad and Private Companion Options</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Many clients search for terms like <strong className="text-white font-semibold">call girl Hyderabad</strong>, <strong className="text-white font-semibold">Hyderabad call girl</strong>, <strong className="text-white font-semibold">call girls service Hyderabad</strong>, or <strong className="text-white font-semibold">Hyderabad call girls service</strong> when looking for adult companionship online. At Girls of Passion, we present this service in a professional, respectful, and privacy-focused way.
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Book Hyderabad Escorts Today</h3>
+              <p className="text-sm leading-relaxed text-neutral-300 mb-6">
+                Ready to find verified companions near you? Contact our booking team for quick assistance, verified profile updates, and direct support.
               </p>
 
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our platform is suitable for adults who want:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Verified companion profiles',
-                    'Quick booking support',
-                    'Private communication',
-                    'Premium companion options',
-                    'Flexible timing',
-                    'Hyderabad-wide availability',
-                    'Professional coordination',
-                    'Discreet booking process'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
-                        <Check size={10} className="stroke-[3]" />
-                      </span>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                We focus on delivering a smooth and confidential experience instead of a complicated or unclear process.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Search Intents & local options */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Left Column */}
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Search Intents</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Best Call Girls Service in Hyderabad with Trust and Reliability</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Clients searching for the <strong className="text-white font-semibold">Best call girls service in Hyderabad</strong> usually want reliability, privacy, genuine profiles, and clear communication. Girls of Passion is built around these expectations with a focus on professional support and a discreet process.
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                We focus on:
-              </p>
-
-              <ul className="mt-4 space-y-2.5">
-                {[
-                  'Clear booking details',
-                  'Verified profile options',
-                  'Fast response',
-                  'Private coordination',
-                  'Professional handling',
-                  'Respectful communication',
-                  'Adult-only service standards'
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-neutral-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our goal is to offer a comfortable and dependable platform for adults who want premium companionship with complete discretion.
-              </p>
-            </div>
-
-            {/* Right Column: Local Options */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Local Familiarity</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Hyderabad Call Girl – Comfort Through Local Familiarity</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Choosing a <strong className="text-white font-semibold">Hyderabad call girl</strong> option through a professional platform gives clients the benefit of local familiarity and smoother coordination. Hyderabad has corporate hubs, hotel zones, premium residential areas, business districts, and lifestyle locations, so local understanding can make the booking process faster and more convenient.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Local companion options are suitable for:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-300">
-                  {[
-                    'Hyderabad residents',
-                    'Business visitors',
-                    'Corporate professionals',
-                    'Hotel guests',
-                    'Private meetings',
-                    'Dinner plans',
-                    'Short-duration companionship',
-                    'City-based availability'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                If you prefer a local companion, our support team can help you check available profiles based on your area and timing.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Trusted Call Girl Hyderabad & Trusted Hyderabad Companionship */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Trusted Call Girl Hyderabad */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Security & Privacy</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Trusted Call Girl Hyderabad – Privacy and Reliability</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Trust is essential when choosing a private companionship service. If you are searching for <strong className="text-white font-semibold">Trusted Call Girl Hyderabad</strong>, you likely want a service that protects your privacy and provides genuine options.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Girls of Passion ensures:</h4>
-                <ul className="grid gap-3 sm:grid-cols-2 text-xs text-neutral-300">
-                  {[
-                    'Verified profiles',
-                    'Secure communication',
-                    'Respect for privacy',
-                    'No unnecessary data sharing',
-                    'Confidential handling of inquiries',
-                    'Discreet booking support',
-                    'Clear information before confirmation'
-                  ].map((f) => (
-                    <li key={f} className="flex items-center gap-2.5 text-xs text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Every inquiry is handled with professionalism so clients can feel confident and comfortable while booking.
-              </p>
-            </div>
-
-            {/* Trusted, Private, and Professional Hyderabad Companionship */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Discreet Support</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Trusted, Private, and Professional Hyderabad Companionship</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Trust is the foundation of every private companionship service. At Girls of Passion, we focus on genuine profiles, respectful communication, and complete confidentiality. Clients who search for call girl Hyderabad, Hyderabad call girl, or Best call girls service in Hyderabad usually want reliability, privacy, and a smooth booking process. Our platform is designed to meet those expectations in a professional and discreet way.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">We ensure:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Verified and genuine companion profiles',
-                    'Secure communication',
-                    'Confidential booking support',
-                    'No unnecessary personal questions',
-                    'Clear details before confirmation',
-                    'Adult-only service standards',
-                    'Respectful and professional interaction'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                This privacy-first approach makes Girls of Passion a dependable choice for adults looking for premium companionship in Hyderabad.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Premium Companion Profiles for Business Travellers and Professionals */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Travellers & Professionals</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Premium Companion Profiles for Business Travellers and Professionals</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Hyderabad attracts business travellers, entrepreneurs, IT professionals, executives, event visitors, and tourists because of its corporate ecosystem, hotels, commercial districts, and modern infrastructure. Many visitors stay in premium hotels or serviced residences and prefer refined companionship support during their stay.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Business travellers and professionals often prefer companions who are:</h4>
-                <ul className="grid gap-3 sm:grid-cols-2 text-xs text-neutral-300">
-                  {[
-                    'Well-presented',
-                    'Polite and professional',
-                    'Comfortable in private settings',
-                    'Easy to communicate with',
-                    'Discreet and respectful',
-                    'Suitable for dinner or social occasions'
-                  ].map((f) => (
-                    <li key={f} className="flex items-center gap-2.5 text-xs text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our platform helps clients find suitable options based on profile availability and preferences.
-              </p>
-            </div>
-
-            {/* Safe and Professional Adult Companionship */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Responsible Service</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Safe and Professional Adult Companionship</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion is designed for adults who value safety, professionalism, and respectful interaction. We focus on maintaining a platform where communication is clear, privacy is protected, and every step is handled responsibly.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Our standards include:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Verified profiles',
-                    'Adult-only access',
-                    'Respectful communication',
-                    'Consent-based interaction',
-                    'Professional coordination',
-                    'Privacy protection',
-                    'Clear information before confirmation'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Clients must be 18 years or older and must follow all applicable local laws and platform guidelines.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: 24x7 Support & Pricing */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* 24x7 Hyderabad Escort Service Support */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Round-The-Clock</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">24x7 Hyderabad Escort Service Support</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Hyderabad operates around the clock, and client schedules can vary depending on work, travel, hotel stays, and private plans. Girls of Passion offers 24x7 booking assistance for adults looking for private companionship in Hyderabad.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our 24x7 support helps with:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Profile availability',
-                    'Location-based options',
-                    'Booking confirmation',
-                    'Timing coordination',
-                    'Category selection',
-                    'Privacy-related questions'
-                  ].map((rule) => (
-                    <li key={rule} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {rule}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Availability may depend on profile, location, timing, and booking schedule. Contact our team through call or WhatsApp for the latest available options.
-              </p>
-            </div>
-
-            {/* Transparent Pricing and Clear Communication */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Pricing Estimates</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Transparent Pricing and Clear Communication</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                A reliable <strong className="text-white">escort service Hyderabad</strong> should always provide clear details before booking. At Girls of Passion, we believe in transparent communication so clients can make informed decisions.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Pricing may depend on:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Companion category',
-                    'Profile selection',
-                    'Duration',
-                    'Location',
-                    'Timing',
-                    'Special preferences',
-                    'Availability'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Our team shares required details before confirmation. This avoids confusion and ensures a smoother booking experience.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Strong Words Definitions Table */}
-        <section className="py-16 bg-neutral-900/40 border-b border-neutral-900">
-          <div className="container-shell">
-            <div className="mb-10 text-center">
-              <h2 className="text-3xl font-bold text-white">Strong Words That Define Our Service</h2>
-              <div className="mt-2 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-3 text-sm text-neutral-400">Core pillars and standards of the Girls of Passion service framework</p>
-            </div>
-
-            <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/30">
-              <table className="w-full border-collapse text-left text-sm text-neutral-300">
-                <thead>
-                  <tr className="border-b border-neutral-800 bg-neutral-900/80">
-                    <th className="px-6 py-4 font-bold text-white tracking-wider uppercase text-xs">Service Quality</th>
-                    <th className="px-6 py-4 font-bold text-white tracking-wider uppercase text-xs">Strong Words</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-800/60">
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Trust</td>
-                    <td className="px-6 py-4">Trusted, reliable, genuine, verified, dependable</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Privacy</td>
-                    <td className="px-6 py-4">Discreet, confidential, secure, private, privacy-focused</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Premium Feel</td>
-                    <td className="px-6 py-4">Elegant, refined, polished, professional, high-quality</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Booking</td>
-                    <td className="px-6 py-4">Quick response, easy access, smooth coordination, simple process</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Local SEO</td>
-                    <td className="px-6 py-4">Near me, across Hyderabad, local companion, hotel availability</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Corporate</td>
-                    <td className="px-6 py-4">HITEC City, Gachibowli, business travel, premium stays</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Safety</td>
-                    <td className="px-6 py-4">Adult-only, respectful, secure communication, responsible service</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Conversion</td>
-                    <td className="px-6 py-4">Call now, WhatsApp booking, check availability, book today</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Designed for Simplicity & Why Choose Us */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Designed for Simplicity and Ease */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Platform Convenience</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Designed for Simplicity and Efficiency</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Everything on Girls of Passion is built to make your experience smooth. From browsing profiles to confirming availability, the process is designed for convenience and privacy.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">You get:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Easy navigation',
-                    'Quick contact options',
-                    'Clear booking steps',
-                    'Clear profile details',
-                    'Professional support',
-                    'Fast response',
-                    'Minimal effort required'
-                  ].map((rule) => (
-                    <li key={rule} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {rule}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                This user-focused approach makes our platform a strong choice for adults searching for <strong className="text-white font-semibold">Hyderabad escort service</strong> or private companionship in Hyderabad.
-              </p>
-            </div>
-
-            {/* Why Choose Girls of Passion? */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Trusted Choice</span>
-              <h3 className="text-2xl font-bold text-white">A Professional Platform by Girls of Passion</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion is built on structured processes and a strong focus on user experience. We do not only provide options; we provide a reliable and private system for adults who value comfort, clarity, and professionalism.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">We aim to:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Maintain consistency',
-                    'Deliver reliable service',
-                    'Ensure comfort and clarity',
-                    'Protect privacy',
-                    'Offer verified profiles',
-                    'Support smooth coordination',
-                    'Deliver professional communication',
-                    'Keep booking simple'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                This creates a platform that users can trust.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Book Now – Girls of Passion & Experience Premium Companionship */}
-        <section className="py-20 border-b border-neutral-900 bg-gradient-to-b from-neutral-950 to-neutral-900">
-          <div className="container-shell">
-            <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-8 md:p-12 shadow-2xl relative overflow-hidden">
-              {/* Background gradient orb */}
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-amber-500/10 blur-[80px]" />
-              
-              <div className="relative z-10 grid gap-8 md:grid-cols-[1.3fr_0.7fr]">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Contact Desk</span>
-                  <h2 className="mt-2 text-3xl font-extrabold text-white">Book Hyderabad Escort Service Now</h2>
-                  
-                  <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                    Ready to explore a premium adult companionship experience in Hyderabad? Contact Girls of Passion for discreet support, verified profiles, and smooth booking assistance.
-                  </p>
-
-                  <div className="mt-6">
-                    <h4 className="font-semibold text-white mb-2 text-sm">We provide:</h4>
-                    <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                      {[
-                        'Call now for availability',
-                        'WhatsApp booking available',
-                        '24x7 support',
-                        'Service across Hyderabad',
-                        'Verified companion profiles',
-                        'Private and discreet booking process',
-                        'Premium options available'
-                      ].map((p) => (
-                        <li key={p} className="flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <h3 className="mt-8 text-xl font-bold text-white">Experience Premium Companionship in Hyderabad Today</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                    If you are looking for a trusted and premium <strong className="text-white">Hyderabad escort service</strong>, Girls of Passion is here to assist you with verified profiles, fast booking support, and complete privacy. Our platform offers multiple companion categories, including premium, local, independent-style, modern, sophisticated, and travel-friendly companion options.
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                    Whether you are searching for best escort services Hyderabad, escort service Hyderabad, Trusted Call Girl Hyderabad, or private companion options near you, our team can help you check suitable available profiles based on your preference.
-                  </p>
-                </div>
-
-                <div className="flex flex-col justify-center gap-4">
-                  
-                  <h3 className="text-center font-bold text-white text-base mb-2">Book Hyderabad Escort Service Now</h3>
-
-                  <a 
-                    href={`tel:${phone}`}
-                    className="flex items-center justify-center gap-3 rounded-lg bg-amber-500 py-4 text-center text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg hover:shadow-amber-500/20"
-                  >
-                    <Phone size={18} />
-                    Call Us Now
-                  </a>
-                  <a 
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
-                  >
-                    <MessageCircle size={18} className="text-emerald-500" />
-                    WhatsApp Booking
-                  </a>
-
-                  <div className="rounded-lg border border-neutral-800 bg-neutral-900/40 p-4 text-center">
-                    <p className="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold mb-1">Hyderabad Hotline</p>
-                    <p className="text-sm font-bold text-white">{phone}</p>
-                    <p className="text-[9px] text-neutral-500 mt-1">Available 24x7. Discretion guaranteed.</p>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-4">
+                <a 
+                  href={`tel:${phone}`}
+                  className="flex items-center justify-center gap-3 rounded-lg bg-amber-500 py-4 text-center text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg"
+                >
+                  <Phone size={18} />
+                  Call Us: {phone}
+                </a>
+                <a 
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
+                >
+                  <MessageCircle size={18} className="text-emerald-500" />
+                  WhatsApp Chat
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        
         {/* Internal Service Links */}
         <section className="py-12 bg-neutral-900/30 border-b border-neutral-900">
           <div className="container-shell">
-            <h2 className="text-2xl font-bold text-white mb-6">All Escort Services in This City</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">All Services in This City</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               <a href="/hyderabad/vip-escort/" className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 hover:border-amber-500/30 transition-colors"><p className="font-semibold text-white text-sm">VIP Escort Service</p><p className="text-xs text-amber-400 mt-1">From Rs. 15,000</p></a>
               <a href="/hyderabad/hotel-escort/" className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 hover:border-amber-500/30 transition-colors"><p className="font-semibold text-white text-sm">Hotel Escort Service</p><p className="text-xs text-amber-400 mt-1">From Rs. 10,000</p></a>
@@ -1598,12 +558,10 @@ export default function HyderabadEscortPage() {
         {/* FAQs Accordion Section */}
         <section id="faqs" className="py-20 bg-neutral-900/10">
           <div className="container-shell max-w-4xl">
-            
             <div className="text-center mb-12">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">FAQ Desk</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">FAQ Helpdesk</span>
               <h2 className="mt-2 text-3xl font-extrabold text-white">Frequently Asked Questions</h2>
               <div className="mt-3 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-4 text-sm text-neutral-400">Clear answers regarding booking, location coverage, and security in Hyderabad</p>
             </div>
 
             <div className="grid gap-4">
@@ -1624,9 +582,8 @@ export default function HyderabadEscortPage() {
               ))}
             </div>
 
-            {/* Disclaimer & Footer check */}
             <div className="mt-12 text-center text-xs text-neutral-500 border-t border-neutral-900 pt-6">
-              🛑 <strong>18+ Adult-Only Disclaimer:</strong> This service is strictly for adults aged 18 years and above. All users must follow applicable local laws and communicate respectfully.<br className="mt-2" />
+              🛑 <strong>18+ Adult-Only Disclaimer:</strong> This service is strictly for adults aged 18 years and above. All users must follow local laws and communicate respectfully.<br className="mt-2" />
               Please review our{' '}
               <Link href="/privacy-policy/" className="underline hover:text-neutral-300">
                 Privacy Policy
@@ -1636,69 +593,10 @@ export default function HyderabadEscortPage() {
                 Terms and Conditions
               </Link>.
             </div>
-
           </div>
         </section>
 
-        {/* Hidden SEO Specifications Section to comply with 100% verbatim content requirement */}
-        <section className="py-8 bg-neutral-950 border-t border-neutral-900 text-neutral-600 text-xs">
-          <div className="container-shell max-w-4xl opacity-50 hover:opacity-100 transition-opacity">
-            <details className="cursor-pointer">
-              <summary className="font-bold select-none text-neutral-500">SEO Target Specifications (Developer Metadata Details)</summary>
-              <div className="mt-4 space-y-4">
-                <div>
-                  <h4 className="font-bold text-neutral-400">SEO Pointers:</h4>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li><strong>Primary keyword:</strong> Hyderabad escort service</li>
-                    <li><strong>Secondary keywords:</strong> Escort service Hyderabad, Hyderabad escorts service, best escort services Hyderabad</li>
-                    <li><strong>Trust keyword:</strong> Trusted Call Girl Hyderabad</li>
-                    <li><strong>Limited-use keywords:</strong> Call girl Hyderabad, Hyderabad call girl, call girls service Hyderabad</li>
-                    <li><strong>Internal links:</strong> Hyderabad location page, Banjara Hills page, Jubilee Hills page, HITEC City page, Gachibowli page, contact page, privacy policy, terms page</li>
-                    <li><strong>Schema:</strong> Organization schema, LocalBusiness schema, Breadcrumb schema</li>
-                    <li><strong>Image alt text:</strong> premium Hyderabad escort service, discreet adult companionship in Hyderabad, private companion service in Banjara Hills, verified companion profiles in Hyderabad</li>
-                    <li><strong>Trust words:</strong> verified, genuine, secure, discreet, confidential, professional, reliable</li>
-                    <li><strong>Premium words:</strong> refined, elegant, polished, high-quality, private, exclusive</li>
-                    <li><strong>Local words:</strong> Banjara Hills, Jubilee Hills, HITEC City, Gachibowli, Madhapur, Kondapur</li>
-                    <li><strong>CTA words:</strong> call now, WhatsApp booking, check availability, book today, 24x7 support</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold text-neutral-400">Final Keyword Targeting Table:</h4>
-                  <div className="overflow-x-auto mt-2">
-                    <table className="w-full text-left text-neutral-400 border border-neutral-800">
-                      <thead>
-                        <tr className="border-b border-neutral-800 bg-neutral-900/30">
-                          <th className="p-2">Keyword</th>
-                          <th className="p-2">Type</th>
-                          <th className="p-2">Suggested Use</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-neutral-900">
-                        <tr><td className="p-2">Hyderabad escort service</td><td className="p-2">Primary</td><td className="p-2">9–10</td></tr>
-                        <tr><td className="p-2">Escort service Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">5–6</td></tr>
-                        <tr><td className="p-2">Hyderabad escorts service</td><td className="p-2">Secondary</td><td className="p-2">3–4</td></tr>
-                        <tr><td className="p-2">Escorts service Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">1–2</td></tr>
-                        <tr><td className="p-2">Call girl Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">1</td></tr>
-                        <tr><td className="p-2">Hyderabad call girl</td><td className="p-2">Secondary</td><td className="p-2">1</td></tr>
-                        <tr><td className="p-2">Call girls service Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">1</td></tr>
-                        <tr><td className="p-2">Hyderabad call girls service</td><td className="p-2">Secondary</td><td className="p-2">1</td></tr>
-                        <tr><td className="p-2">Best escort services Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">3–4</td></tr>
-                        <tr><td className="p-2">Best call girls service in Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">1–2</td></tr>
-                        <tr><td className="p-2">Trusted Call Girl Hyderabad</td><td className="p-2">Secondary</td><td className="p-2">2–3</td></tr>
-                        <tr><td className="p-2">Adult companionship in Hyderabad</td><td className="p-2">LSI</td><td className="p-2">4–6</td></tr>
-                        <tr><td className="p-2">Private companion in Hyderabad</td><td className="p-2">LSI</td><td className="p-2">3–4</td></tr>
-                        <tr><td className="p-2">Verified profiles</td><td className="p-2">Trust term</td><td className="p-2">6–8</td></tr>
-                        <tr><td className="p-2">Discreet / confidential</td><td className="p-2">Trust term</td><td className="p-2">8–10</td></tr>
-                        <tr><td className="p-2">Hyderabad / local areas</td><td className="p-2">Local SEO</td><td className="p-2">15+</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </details>
-          </div>
-        </section></div>
+      </div>
     </>
   );
 }
-

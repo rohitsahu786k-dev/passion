@@ -8,17 +8,15 @@ import {
   Phone, 
   MessageCircle,
   ShieldCheck, 
-  CheckCircle2, 
-  Sparkles, 
-  Send, 
   Clock, 
   Check, 
   ChevronRight, 
   Lock
 } from 'lucide-react';
 import { LeadForm } from '@/components/ui/LeadForm';
-
+import { CitySchema } from '@/components/seo/CitySchema';
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
+
 export const metadata: Metadata = buildPageMetadata({
   title: 'Premium Rishikesh Escort Service | 24x7 Verified Booking',
   description: 'Book premium Rishikesh escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
@@ -33,12 +31,12 @@ export const metadata: Metadata = buildPageMetadata({
     '24x7 Rishikesh Escort Booking',
   ],
 });
-// Rishikesh companion profile cards utilizing native images
+
 const companionProfiles = [
   {
-    name: 'Ananya',
+    name: 'Anya',
     age: 22,
-    height: '5\'4"',
+    height: '5\'5"',
     nationality: 'Indian',
     image: '/assets/photos/luxury-escort-service-rishikesh.jpg',
     tags: ['Premium', 'Sophisticated'],
@@ -73,17 +71,17 @@ const companionProfiles = [
   },
   {
     name: 'Riya',
-    age: 21,
+    age: 22,
     height: '5\'3"',
     nationality: 'Indian',
     image: '/assets/photos/female-escort-in-rishikesh.jpg',
-    tags: ['Seductive', 'Riverside Companion'],
+    tags: ['Seductive', 'Hotel Companion'],
     rate: 'Super Premium',
   },
   {
     name: 'Kiara',
-    age: 23,
-    height: '5\'5"',
+    age: 24,
+    height: '5\'6"',
     nationality: 'Indian',
     image: '/assets/photos/luxury-escort-service-rishikesh.jpg',
     tags: ['Luxury', 'Elite Lifestyle'],
@@ -91,11 +89,11 @@ const companionProfiles = [
   },
   {
     name: 'Pooja',
-    age: 22,
+    age: 23,
     height: '5\'5"',
     nationality: 'Indian',
     image: '/assets/photos/independent-call-girls-rishikesh.jpg',
-    tags: ['Private Meet', 'Local Companion'],
+    tags: ['Private Meet', 'Independent Style'],
     rate: 'High-Class',
   },
   {
@@ -104,7 +102,7 @@ const companionProfiles = [
     height: '5\'7"',
     nationality: 'Indian',
     image: '/assets/photos/high-class-call-girls-rishikesh.jpg',
-    tags: ['Model Profile', 'Resort Meet'],
+    tags: ['Stylish', 'Corporate Events'],
     rate: 'Elite',
   }
 ];
@@ -117,131 +115,38 @@ export default function RishikeshEscortPage() {
   const faqs = [
     {
       question: "What is Girls of Passion?",
-      answer: "Girls of Passion is a professional adult companionship platform in Rishikesh for adults who want discreet booking support, verified profiles, and premium companion options."
+      answer: "Girls of Passion is a professional adult companionship booking support platform in Rishikesh for adults who want private, secure, and premium companion coordination."
+    },
+        {
+      question: "Is escort service available in Tapovan Rishikesh?",
+      answer: "Yes, we provide companion booking support across Tapovan, Muni Ki Reti, and nearby resort locations."
     },
     {
-      question: "Is Girls of Passion available across Rishikesh?",
-      answer: "Yes, booking support is available across major Rishikesh locations, including Tapovan, Laxman Jhula, Ram Jhula, Shivpuri, Muni Ki Reti, riverside resorts, hotels, and private villas."
+      question: "How do I book a companion in Rishikesh?",
+      answer: "Call or WhatsApp our team, share your resort area, and we will send verified profiles."
     },
     {
-      question: "How can I book a companion in Rishikesh?",
-      answer: "You can browse available profiles and contact the support team through call or WhatsApp. Share your location, timing, and preference to check availability."
+      question: "Are companion profiles verified?",
+      answer: "Yes, all profiles are checked to ensure photos are real."
     },
     {
-      question: "Is the booking process private?",
-      answer: "Yes, the booking process is discreet and confidential. Client privacy is one of our top priorities."
-    },
-    {
-      question: "Are the profiles verified?",
-      answer: "Girls of Passion focuses on verified and genuine companion profiles to maintain trust, comfort, and service quality."
-    },
-    {
-      question: "Is support available 24x7?",
-      answer: "Yes, booking support is available 24x7, subject to profile availability, location, and timing."
-    },
-    {
-      question: "Can I book a companion near my resort or villa?",
-      answer: "Yes, you can share your resort, hotel, or villa location, and our team will help you check suitable nearby options."
-    },
-    {
-      question: "Do you provide service in Tapovan and Shivpuri?",
-      answer: "Yes, booking support is available in Tapovan, Shivpuri, Laxman Jhula, Ram Jhula, and other major Rishikesh locations."
-    },
-    {
-      question: "Is pricing shared before booking?",
-      answer: "Yes, pricing and availability details are shared before confirmation so that clients can make an informed decision."
-    },
-    {
-      question: "Who can use this service?",
-      answer: "This service is strictly for adults aged 18 years and above. Clients must communicate respectfully and follow all applicable local laws."
+      question: "Is the booking private?",
+      answer: "Yes. Your privacy is fully protected, and details are deleted after coordination."
     }
   ];
 
-  // Schema definitions for Rishikesh page
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Girls of Passion Rishikesh',
-    description: 'Premium Rishikesh escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
-    url: '/rishikesh-escort-service/',
-    telephone: phone,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Tapovan, Rishikesh',
-      addressLocality: 'Rishikesh',
-      addressRegion: 'Uttarakhand',
-      postalCode: '249192',
-      addressCountry: 'IN'
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Rishikesh' },
-      { '@type': 'City', name: 'Tapovan' },
-      { '@type': 'City', name: 'Shivpuri' }
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '108',
-      bestRating: '5',
-      worstRating: '1'
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59'
-    },
-    priceRange: 'INR'
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
-  };
-
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Girls of Passion',
-    url: '/rishikesh-escort-service/',
-    logo: '/logo.svg',
-    telephone: phone
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.girlsofpassion.in/'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Rishikesh Escort Service',
-        item: 'https://www.girlsofpassion.in/rishikesh-escort-service/'
-      }
-    ]
-  };
-
   return (
     <>
-      {/* Schemas */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {/* Dynamic Absolute SEO Schemas */}
+      <CitySchema
+        cityName="Rishikesh"
+        phone={phone}
+        address="Tapovan, Rishikesh"
+        rating={4.8}
+        reviewCount={108}
+        url="https://www.girlsofpassion.in/rishikesh-escort-service/"
+        faqs={faqs}
+      />
       <SupplementalCitySchema citySlug="rishikesh" />
 
       {/* Main Luxury Dark wrapper for the page */}
@@ -249,7 +154,7 @@ export default function RishikeshEscortPage() {
         
         {/* Banner Announcement */}
         <div className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 py-2.5 text-center text-xs font-semibold uppercase tracking-widest text-black">
-          💎 Premium & Discreet 100% Verified Profiles in Rishikesh (Gateway to Himalayas)
+          💎 Premium & Discreet 100% Verified Profiles in Rishikesh
         </div>
 
         {/* Hero Section */}
@@ -271,32 +176,23 @@ export default function RishikeshEscortPage() {
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
                 Rishikesh Escort Service
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship for Private Getaways
+                  Premium Adult Companionship in Rishikesh
                 </span>
               </h1>
+              
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
-                <strong className="text-amber-400">Rishikesh Escort Service</strong> and <strong className="text-white">Rishikesh Call Girl</strong> booking are available 24/7 for adults who want Call Girls in Rishikesh, cash payment service, quick deals, free hotel coordination, escorts services and call girls with private support.
+                Our <strong className="text-amber-400">Rishikesh Escort Service</strong> and <strong className="text-white">Rishikesh Call Girl</strong> booking are available 24/7. We help you connect with verified profiles for private booking, hotel visits, and direct contact with local companions in Rishikesh area.
               </p>
-              {/* Intro paragraphs */}              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
-                <p>
-                  <strong className="text-amber-400">Rishikesh Escort Service</strong> and <strong className="text-white">Rishikesh Call Girl</strong> are the primary booking keywords for this page. Adults can use Girls of Passion to check Call Girls in Rishikesh, escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
-                </p>
-                <p className="mt-3">
-                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Rishikesh Escort Service, Rishikesh Call Girl or Call Girls in Rishikesh can find relevant city-specific information here.
-                </p>
-              </div>
+
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
-                  Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, a trusted and professional platform for adults looking for a premium <strong className="text-white">Rishikesh escort service</strong> with privacy, comfort, and elegance. We provide discreet adult companionship booking support for clients who value refined experiences, verified profiles, smooth communication, and complete confidentiality.
+                  Staying at a resort in Tapovan or near Laxman Jhula? If you are looking for private companionship during your trip, we provide verified companion bookings in Rishikesh. Contact us for direct support.
                 </p>
                 <p>
-                  Rishikesh is no longer only a spiritual and adventure destination. Today, it has become a popular choice for luxury stays, private villas, riverside resorts, weekend getaways, wellness retreats, and exclusive travel experiences. From Tapovan cafés and riverside properties to Shivpuri resorts and private villas, Rishikesh attracts travellers who want peace, privacy, and a more personalized experience.
+                  Rishikesh is the yoga capital of India, set along the holy Ganges, attracting international travelers, rafters, and spiritual seekers.
                 </p>
                 <p>
-                  If your search has brought you to <strong className="text-amber-400 font-semibold">Rishikesh escort service</strong>, <strong className="text-amber-400 font-semibold">escort service Rishikesh</strong>, <strong className="text-amber-400 font-semibold">Rishikesh escorts service</strong>, or <strong className="text-amber-400 font-semibold">best escort services Rishikesh</strong>, you are likely looking for a smooth, private, and well-managed companionship platform. Girls of Passion is designed to deliver exactly that with professionalism, speed, and discretion.
-                </p>
-                <p>
-                  Our goal is simple: to provide adults with a safe, private, and premium companionship experience in Rishikesh, where comfort, trust, and privacy always come first.
+                  Our goal is simple: to offer a safe, private, and premium companion booking service for adults who value clear communication, verified profiles, and direct support.
                 </p>
               </div>
 
@@ -331,7 +227,7 @@ export default function RishikeshEscortPage() {
                   <span className="font-semibold text-white">4.8/5</span> Average Rating
                 </div>
                 <div className="h-4 w-px bg-neutral-800" />
-                <div>130+ Client Reviews</div>
+                <div>108+ Client Reviews</div>
               </div>
 
             </div>
@@ -354,7 +250,7 @@ export default function RishikeshEscortPage() {
                     ★ Premium Verified
                   </div>
                   <h3 className="mt-2 text-xl font-bold text-white">Featured Companion</h3>
-                  <p className="text-xs text-neutral-300">Available in Tapovan, Shivpuri & Luxury Resorts</p>
+                  <p className="text-xs text-neutral-300">Available near Tapovan, Laxman Jhula & Luxury Hotels</p>
                 </div>
               </div>
 
@@ -380,7 +276,7 @@ export default function RishikeshEscortPage() {
             <div className="mb-10 text-center">
               <h2 className="text-3xl font-bold text-white">Quick Overview of Our Rishikesh Escort Service</h2>
               <div className="mt-2 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-3 text-sm text-neutral-400">Everything you need to know about our elite Rishikesh adult companionship service</p>
+              <p className="mt-3 text-sm text-neutral-400">Everything you need to know about our local companionship booking support</p>
             </div>
 
             <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/30">
@@ -402,11 +298,11 @@ export default function RishikeshEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Available Areas</td>
-                    <td className="px-6 py-4">Tapovan, Laxman Jhula, Ram Jhula, Shivpuri, Muni Ki Reti, riverside resorts, private villas, hotels</td>
+                    <td className="px-6 py-4">Tapovan, Laxman Jhula, Muni Ki Reti, Ram Jhula</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Booking Options</td>
-                    <td className="px-6 py-4">Call and WhatsApp booking</td>
+                    <td className="px-6 py-4">Call and WhatsApp booking desk</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Availability</td>
@@ -414,7 +310,7 @@ export default function RishikeshEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Profile Quality</td>
-                    <td className="px-6 py-4">Verified, genuine, and carefully reviewed profiles</td>
+                    <td className="px-6 py-4">Verified, genuine, and carefully checked profiles</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Privacy Level</td>
@@ -422,15 +318,7 @@ export default function RishikeshEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Best For</td>
-                    <td className="px-6 py-4">Travellers, weekend getaways, luxury stays, private villas, hotel companionship, social company</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Support</td>
-                    <td className="px-6 py-4">Fast response and professional coordination</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Main Benefit</td>
-                    <td className="px-6 py-4">Reliable, private, and premium adult companionship experience</td>
+                    <td className="px-6 py-4">Travelers, business meetings, hotel companionship, private dates</td>
                   </tr>
                 </tbody>
               </table>
@@ -447,7 +335,7 @@ export default function RishikeshEscortPage() {
                 <h2 className="mt-2 text-3xl font-extrabold text-white">Verified Companion Profiles in Rishikesh</h2>
               </div>
               <p className="max-w-md text-sm text-neutral-400">
-                Browse our curated selection of elegant, independent, and resort-friendly companions. Contact us for daily availability updates.
+                Browse our checked selection of independent and verified companions. Contact us for daily availability updates.
               </p>
             </div>
 
@@ -505,33 +393,26 @@ export default function RishikeshEscortPage() {
         <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
           <div className="container-shell grid gap-12 lg:grid-cols-2">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Uncompromising Standards</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Why Choose Girls of Passion for Rishikesh Escort Service?</h2>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Service Highlights</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Why Choose Our Rishikesh Escort Booking?</h2>
               
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-neutral-300">
                 <p>
-                  Choosing the right <strong className="text-white">Rishikesh escort service</strong> is important because clients expect privacy, trust, genuine profiles, and smooth coordination. Rishikesh is a destination where people often stay in resorts, villas, and peaceful private locations, so discreet communication and reliable arrangements matter even more.
+                  We respect client privacy in this tourist town. We offer polite, checked, and verified companions who can join you at private villas or tourist resorts.
                 </p>
                 <p>
-                  Girls of Passion focuses on creating a professional and comfortable experience from the first inquiry to final confirmation. Every step is handled with care, clarity, and confidentiality.
-                </p>
-                <p>
-                  We are known for:
+                  Choosing the right companionship makes your travel or stay much better. We coordinate everything directly so you do not have to worry about details.
                 </p>
               </div>
 
               {/* List */}
               <ul className="mt-6 space-y-3">
                 {[
-                  'Verified and genuine companion profiles',
-                  'Professional and polite communication',
-                  'Fast response through call and WhatsApp',
-                  'Discreet booking process',
-                  '24x7 booking support',
-                  'Premium and well-presented companions',
-                  'Coverage across major Rishikesh locations',
-                  'Clear information before confirmation',
-                  'Adult-only and respectful service approach'
+                  '100% verified and genuine profiles',
+                  'Discreet and safe booking desk',
+                  'Quick responses on WhatsApp',
+                  'Cash payment options directly on meeting',
+                  'Support across major local hotels and areas'
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-neutral-300">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
@@ -541,282 +422,86 @@ export default function RishikeshEscortPage() {
                   </li>
                 ))}
               </ul>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our platform is built for adults who want a reliable companionship service with privacy, elegance, and complete peace of mind.
-              </p>
             </div>
 
-            {/* Escort Service Rishikesh */}
+            {/* Highlight Panel */}
             <div className="flex flex-col justify-center gap-6 rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Atmospheric Matches</span>
-              <h3 className="text-2xl font-bold text-white">Escort Service Rishikesh – Designed for Private Getaways</h3>
+              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Hotel Coordination</span>
+              <h3 className="text-2xl font-bold text-white">Safe Hotel & Resort Visits</h3>
               
               <p className="text-sm leading-relaxed text-neutral-300">
-                Rishikesh is all about calm surroundings, private stays, riverside views, luxury resorts, and peaceful travel experiences. Our <strong className="text-white font-semibold">escort service Rishikesh</strong> is designed to match this private and relaxed atmosphere.
+                We cover hotel bookings, riverside resorts, and private stays in Tapovan, Muni Ki Reti, and nearby areas.
               </p>
               
-              <h4 className="font-semibold text-white text-sm">We focus on:</h4>
-
-              <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                {[
-                  'Smooth coordination',
-                  'Quick response',
-                  'Discreet communication',
-                  'Easy booking process',
-                  'Location-based availability',
-                  'Clear profile information',
-                  'Professional support'
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-xs text-neutral-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    {item}
-                  </div>
-                ))}
-              </ul>
-
-              <p className="text-xs text-neutral-300 mt-2">
-                Whether you are visiting for a weekend trip, staying in a private villa, attending a retreat, or enjoying a luxury resort stay, Girls of Passion helps you check suitable companion options in a private and convenient way.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Rishikesh Escorts Service for Travellers & Luxury Stays */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Image Block */}
-            <div className="relative min-h-[350px] overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/30">
-              <Image 
-                src="/assets/photos/premium-escorts-rishikesh.jpg" 
-                alt="Rishikesh Escorts Service for Travellers & Luxury Stays"
-                fill
-                className="object-cover opacity-80"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/60 to-transparent" />
-            </div>
-
-            {/* Content block */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Destination Audiences</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Rishikesh Escorts Service for Travellers and Luxury Stays</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Unlike metro cities, Rishikesh attracts a different type of audience. Many visitors come here for relaxation, privacy, nature, wellness, adventure, and premium stays. Our <strong className="text-white">Rishikesh escorts service</strong> is tailored for adults who want a refined companionship experience that suits this destination lifestyle.
+              <p className="text-sm leading-relaxed text-neutral-300">
+                Our support team handles all booking details quietly. We value your private time, and all communications are kept secure and deleted after the meeting is completed.
               </p>
 
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our service is suitable for:</h4>
-                <ul className="grid gap-3 sm:grid-cols-2 text-xs text-neutral-300">
+              <div>
+                <h5 className="font-semibold text-white mb-2 text-sm">Perfect for social occasions and stays:</h5>
+                <div className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-300">
                   {[
-                    'Travellers staying in resorts',
-                    'Guests in private villas',
-                    'Weekend visitors',
-                    'Solo travellers',
-                    'Business guests',
-                    'Couples seeking social companionship support',
-                    'Private social meetings',
-                    'Hotel companionship',
-                    'Riverside stays',
-                    'Luxury getaway experiences'
-                  ].map((f) => (
-                    <li key={f} className="flex items-center gap-2.5 text-xs text-neutral-300">
+                    'Private hotel stay companion',
+                    'Social date partner',
+                    'Relaxing dinner dates',
+                    'Business travel company'
+                  ].map((occasion) => (
+                    <div key={occasion} className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Every interaction is handled with professionalism and attention to detail so clients can enjoy a smooth, discreet, and comfortable experience.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Best Escort Services Rishikesh */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Destination Matches</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Best Escort Services Rishikesh – Experience That Matches the Destination</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                When users search for the <strong className="text-white font-semibold">best escort services Rishikesh</strong>, they are usually looking for more than basic availability. They want privacy, premium profiles, quick communication, and a reliable platform that understands the nature of the destination.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Girls of Passion focuses on:</h4>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {[
-                    'High-quality companion profiles',
-                    'Smooth booking coordination',
-                    'Consistent service standards',
-                    'Private communication',
-                    'Location-based support',
-                    'Professional customer handling',
-                    'Comfortable client experience',
-                    'Verified profile options'
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {item}
+                      {occasion}
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-
-            {/* Reliable Coordination Column */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Dependable Arrangements</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Escorts Service Rishikesh with Reliable Coordination</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                A good <strong className="text-white">escorts service Rishikesh</strong> should be simple, organized, and dependable. In a destination where resorts, villas, and riverside properties are spread across different areas, coordination plays an important role.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">With Girls of Passion, clients can expect:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Fast communication',
-                    'Organized arrangements',
-                    'Clear expectations',
-                    'Professional booking support',
-                    'Easy location coordination',
-                    'Smooth confirmation process'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Our team works to keep every step simple and stress-free so clients can focus on enjoying their stay.
-              </p>
-            </div>
-
           </div>
         </section>
 
-        {/* Section: Rishikesh Escorts Service Available Across Premium Locations */}
+        {/* Areas Covered Section */}
         <section className="py-20 border-b border-neutral-900">
           <div className="container-shell">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Rishikesh Locations</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Rishikesh Escorts Service Available Across Premium Locations</h2>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Local Coverage</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Areas We Cover in Rishikesh</h2>
               <div className="mt-3 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
               <p className="mt-4 text-sm text-neutral-300 leading-relaxed">
-                Our <strong className="text-white">Rishikesh escorts service</strong> is available across major areas, hotels, resorts, private villas, and tourist locations in and around the city. Whether you are staying near Tapovan, Laxman Jhula, Shivpuri, or a riverside property, our team can help check companion availability based on your preferred timing and location.
+                We coordinate companion bookings across all key sectors, commercial hubs, and luxury hotels in Rishikesh:
               </p>
             </div>
 
             {/* Location Grid */}
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {[
-                'Tapovan',
-                'Laxman Jhula',
-                'Ram Jhula',
-                'Shivpuri',
-                'Muni Ki Reti',
-                'Swarg Ashram area',
-                'Neelkanth Road',
-                'Riverside resorts',
-                'Private villas',
-                'Luxury hotels',
-                'Retreat properties',
-                'Weekend stay locations'
-              ].map((loc) => (
+              {["Tapovan","Laxman Jhula","Muni Ki Reti","Ram Jhula"].map((loc) => (
                 <div key={loc} className="flex items-center gap-3 rounded-lg border border-neutral-800/80 bg-neutral-900/40 p-4 hover:border-amber-500/30 transition-all">
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-amber-500/10 text-amber-500">
                     <MapPin size={16} />
                   </div>
                   <div>
                     <span className="font-bold text-white text-sm">{loc}</span>
-                    <span className="block text-[10px] text-neutral-400">Rishikesh Companion Location</span>
+                    <span className="block text-[10px] text-neutral-400">Verified Companions</span>
                   </div>
                 </div>
               ))}
             </div>
-
-            <p className="mt-10 text-center text-sm text-neutral-400">
-              This wide coverage helps clients searching for <strong className="text-white">escort service Rishikesh near me</strong> or <strong className="text-white">Rishikesh escort service near me</strong> to find suitable options quickly and privately.
-            </p>
           </div>
         </section>
 
-        {/* Localized Details Section: Tapovan, Shivpuri, Laxman/Ram Jhula */}
-        <section className="py-20 border-b border-neutral-900 bg-neutral-900/10">
-          <div className="container-shell grid gap-8 md:grid-cols-3">
-            
-            {/* Tapovan Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Boutique Accommodations</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Tapovan Companion Service</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Tapovan is one of the most active and popular areas in Rishikesh. It is known for cafés, boutique stays, yoga spaces, hostels, guest houses, and premium travel accommodations. Girls of Passion provides discreet companionship booking support for adults staying in and around Tapovan.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                This area is ideal for travellers who want quick coordination, easy communication, and location-based availability.
-              </p>
-            </div>
-
-            {/* Shivpuri Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Riverside Resorts</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Shivpuri and Riverside Resort Companionship</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Shivpuri is popular for luxury resorts, adventure activities, private stays, and riverside experiences. Many visitors choose Shivpuri for weekend getaways, peaceful stays, and premium travel experiences.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                Our service helps clients check companion availability for Shivpuri resorts, riverside properties, villas, and private stays, subject to profile availability and local guidelines.
-              </p>
-            </div>
-
-            {/* Laxman/Ram Jhula Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Iconic Settings</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Laxman Jhula and Ram Jhula Area Support</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Laxman Jhula and Ram Jhula are among the most recognized areas of Rishikesh. These locations are popular among travellers, tourists, café visitors, and people staying in guest houses or boutique hotels.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion offers private companionship booking support in these areas with a focus on discreet coordination and clear communication.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Booking Steps & Process */}
+        {/* Booking Process Section */}
         <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
           <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Booking Steps Card */}
-            <div className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Simple Steps</span>
-              <h2 className="mt-2 text-2xl font-extrabold text-white">Call and WhatsApp Booking Process</h2>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Booking with Girls of Passion is simple, fast, and private. Our process is designed for adults who want clear information, quick response, and smooth coordination.
+            <div className="flex flex-col justify-center">
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">How It Works</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Simple Call & WhatsApp Booking</h2>
+              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
+                We keep the booking process direct and easy. Follow these simple steps to secure your booking:
               </p>
-              
-              <h3 className="mt-6 text-base font-bold text-white border-b border-neutral-800 pb-2">Simple Booking Steps</h3>
-              
+
               <ol className="mt-6 space-y-4">
                 {[
-                  'Browse available companion profiles.',
-                  'Choose your preferred profile or category.',
-                  'Contact our support team through call or WhatsApp.',
-                  'Share your preferred location, timing, and requirement.',
-                  'Confirm availability and booking details.'
+                  'Browse the profiles and choose your favorite category.',
+                  'Reach out to us via call or send a message on WhatsApp.',
+                  'Share your location name, timing, and profile choice.',
+                  'We will confirm availability and booking details.'
                 ].map((step, idx) => (
                   <li key={idx} className="flex items-start gap-4">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-black">
@@ -826,429 +511,40 @@ export default function RishikeshEscortPage() {
                   </li>
                 ))}
               </ol>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our support team helps with profile availability, location coordination, timing, and basic booking information. The entire process is direct, discreet, and easy to follow.
-              </p>
             </div>
 
-            {/* Privacy Standards */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Security First</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Privacy and Confidentiality Always Come First</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Privacy is one of the most important factors when choosing a <strong className="text-white">Rishikesh escort service</strong>. At Girls of Passion, confidentiality is always a top priority. We understand that clients want their identity, communication, and booking details to remain private.
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Book Rishikesh Escorts Today</h3>
+              <p className="text-sm leading-relaxed text-neutral-300 mb-6">
+                Ready to find verified companions near you? Contact our booking team for quick assistance, verified profile updates, and direct support.
               </p>
 
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our privacy standards include:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Secure communication',
-                    'Confidential booking process',
-                    'No unnecessary personal questions',
-                    'No personal data sharing',
-                    'Discreet coordination',
-                    'Respect for client identity and preferences'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
-                        <Check size={10} className="stroke-[3]" />
-                      </span>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Your privacy is handled carefully at every step so you can book with confidence and peace of mind.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Search Intents & local options */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Left Column */}
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Professional Platform</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Call Girl Rishikesh and Private Companion Options</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Many clients search for terms like <strong className="text-white">call girl Rishikesh</strong>, <strong className="text-white">Rishikesh call girl</strong>, <strong className="text-white">call girls service Rishikesh</strong>, or <strong className="text-white">Rishikesh call girls service</strong> when looking for adult companionship online. At Girls of Passion, we present this service in a professional, privacy-focused, and respectful way.
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Our platform is suitable for adults who want:
-              </p>
-
-              <ul className="mt-4 space-y-2.5">
-                {[
-                  'Verified companion profiles',
-                  'Quick booking support',
-                  'Private communication',
-                  'Flexible timing',
-                  'Rishikesh location coverage',
-                  'Premium companion options',
-                  'Professional coordination',
-                  'Discreet booking process'
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-neutral-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                We focus on making the experience smooth, confidential, and convenient for adults looking for private companionship in Rishikesh.
-              </p>
-            </div>
-
-            {/* Right Column: Local Options */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Local Familiarity</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Local Rishikesh Companion Options</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Local companion options can be useful in a destination like Rishikesh because locations are spread across different areas. A local companion may understand the city’s layout, resort zones, and travel-friendly locations better.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Local companion options are suitable for:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                  {[
-                    'Travellers staying in Rishikesh',
-                    'Weekend visitors',
-                    'Private villa guests',
-                    'Resort stays',
-                    'Café outings',
-                    'Short-duration companionship',
-                    'Location-based availability',
-                    'Relaxed social company'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Our support team can help you check suitable options depending on profile availability and your preferred area.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Models, Support, and Pricing */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-8 md:grid-cols-3">
-            
-            {/* Premium Profiles */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Travel Profiles</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Premium Companion Profiles for Private Travel Experiences</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Rishikesh attracts travellers who want peaceful stays, premium surroundings, and personal comfort. Girls of Passion offers companion profiles suitable for different travel experiences and private occasions.
-              </p>
-              
-              <h4 className="mt-4 font-semibold text-white text-xs uppercase tracking-wider mb-2">You can choose from:</h4>
-              <ul className="space-y-1.5 text-xs text-neutral-400">
-                {[
-                  'Premium companions',
-                  'Independent-style companions',
-                  'Local companion options',
-                  'Modern companion profiles',
-                  'Sophisticated companions',
-                  'Travel-friendly companions',
-                  'Private social companions',
-                  'Resort-friendly companions'
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Support Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Round-The-Clock</span>
-              <h3 className="mt-2 text-xl font-bold text-white">24x7 Rishikesh Escort Service Support</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Even in a calm destination like Rishikesh, travel plans can change quickly. That is why Girls of Passion offers 24x7 booking assistance for adults looking for private companionship in Rishikesh.
-              </p>
-              
-              <h4 className="mt-4 font-semibold text-white text-xs uppercase tracking-wider mb-2">Our 24x7 support helps with:</h4>
-              <ul className="space-y-1.5 text-xs text-neutral-400">
-                {['Profile availability', 'Location-based options', 'Booking confirmation', 'Timing coordination', 'Category selection', 'Privacy-related questions'].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-xs text-neutral-400">
-                Availability may depend on profile, location, timing, and booking schedule. Contact our team through call or WhatsApp for the latest available options.
-              </p>
-            </div>
-
-            {/* Pricing Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Clear Communication</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Transparent Pricing and Clear Communication</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                A reliable <strong className="text-white">escort service Rishikesh</strong> should always provide clear details before booking. At Girls of Passion, we believe in transparent communication so clients can make informed decisions.
-              </p>
-              
-              <h4 className="mt-4 font-semibold text-white text-xs uppercase tracking-wider mb-2">Pricing may depend on:</h4>
-              <ul className="space-y-1.5 text-xs text-neutral-400">
-                {['Companion category', 'Profile selection', 'Duration', 'Location', 'Timing', 'Special preferences', 'Availability'].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-xs text-neutral-400">
-                Our team shares required details before confirmation. This avoids confusion and makes the booking experience smoother.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Private Villa & Resort / Unique Experience */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Villa and Resort */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Scenic Comforts</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Private Villa and Resort Companionship in Rishikesh</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Rishikesh is famous for private villas, riverside resorts, luxury retreats, and peaceful travel stays. Many clients prefer companionship that fits this calm and private environment.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Private villa and resort companionship is suitable for:</h4>
-                <ul className="space-y-2">
-                  {[
-                    'Weekend getaways',
-                    'Riverside stays',
-                    'Luxury resort visits',
-                    'Private social meetings',
-                    'Dinner plans',
-                    'Relaxed travel companionship',
-                    'Personal company',
-                    'Premium lifestyle experiences'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our team helps coordinate location and timing in a discreet and professional way.
-              </p>
-            </div>
-
-            {/* Unique Experience of Rishikesh */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Destination Vibe</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Unique Experience of Rishikesh Companionship</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Rishikesh offers a different atmosphere compared to metro cities. The experience here is more private, relaxed, and travel-focused. From riverside views to villa stays and peaceful surroundings, Rishikesh creates a unique setting for premium adult companionship.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">What makes Rishikesh different:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                  {[
-                    'Private resorts and villas',
-                    'Riverside luxury stays',
-                    'Peaceful natural surroundings',
-                    'Weekend getaway culture',
-                    'Less crowded premium locations',
-                    'Exclusive travel atmosphere',
-                    'Relaxed and personal experiences'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Safe and Professional / Why Trusted */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Standards */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Legal Compliance</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Safe and Professional Adult Companionship</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion is designed for adults who value safety, professionalism, and respectful interaction. We focus on maintaining a platform where communication is clear, privacy is protected, and every step is handled responsibly.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our standards include:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Verified profiles',
-                    'Adult-only access',
-                    'Respectful communication',
-                    'Consent-based interaction',
-                    'Professional coordination',
-                    'Privacy protection',
-                    'Clear information before confirmation'
-                  ].map((rule) => (
-                    <li key={rule} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {rule}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Clients must be 18 years or older and must follow all applicable local laws and platform guidelines.
-              </p>
-            </div>
-
-            {/* Why trusted */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Trusted Partner</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Why Girls of Passion is a Trusted Name in Rishikesh</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion understands what travellers and private-stay guests actually want: privacy, reliability, smooth coordination, and genuine profiles. We focus on providing a professional platform that respects your time, comfort, and confidentiality.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Clients choose us because:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                  {[
-                    'We maintain high service standards',
-                    'We respect privacy',
-                    'We provide quick support',
-                    'We offer premium companion categories',
-                    'We focus on genuine profiles',
-                    'We ensure smooth communication',
-                    'We support major Rishikesh locations',
-                    'We provide a discreet adult-only experience'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Call Girls Service & Call to Action */}
-        <section className="py-20 border-b border-neutral-900 bg-gradient-to-b from-neutral-950 to-neutral-900">
-          <div className="container-shell">
-            <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-8 md:p-12 shadow-2xl relative overflow-hidden">
-              {/* Background gradient orb */}
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-amber-500/10 blur-[80px]" />
-              
-              <div className="relative z-10 grid gap-8 md:grid-cols-[1.3fr_0.7fr]">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Instant Booking</span>
-                  <h2 className="mt-2 text-3xl font-extrabold text-white">Best Call Girls Service in Rishikesh with Trust and Privacy</h2>
-                  
-                  <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                    Clients searching for the <strong className="text-white font-semibold">best Call Girls service in Rishikesh</strong> usually want reliability, privacy, genuine profiles, and clear communication. Girls of Passion is built around these expectations.
-                  </p>
-
-                  <div className="mt-4">
-                    <h4 className="font-semibold text-white mb-2 text-sm">We focus on:</h4>
-                    <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                      {['Clear booking details', 'Verified profile options', 'Fast response', 'Private coordination', 'Professional handling', 'Respectful communication', 'Adult-only service standards'].map((p) => (
-                        <li key={p} className="flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                    Our goal is to offer a comfortable and dependable platform for adults who want premium companionship with complete discretion.
-                  </p>
-
-                  <h3 className="mt-8 text-xl font-bold text-white">Experience Premium Companionship in Rishikesh Today</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                    If you are looking for a trusted and premium <strong className="text-white">Rishikesh escort service</strong>, Girls of Passion is here to assist you with verified profiles, fast booking support, and complete privacy. Our platform offers multiple companion categories, including premium, local, independent-style, modern, and travel-friendly companion options.
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                    Whether you are searching for <strong className="text-white">best escort services Rishikesh</strong>, <strong className="text-white">escort service Rishikesh</strong>, <strong className="text-white">Trusted Call Girl Rishikesh</strong>, or private companion options near you, our team can help you check suitable available profiles based on your preference.
-                  </p>
-                </div>
-
-                <div className="flex flex-col justify-center gap-4">
-                  
-                  <h3 className="text-center font-bold text-white text-base mb-2">Book Rishikesh Escort Service Now</h3>
-
-                  <a 
-                    href={`tel:${phone}`}
-                    className="flex items-center justify-center gap-3 rounded-lg bg-amber-500 py-4 text-center text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg hover:shadow-amber-500/20"
-                  >
-                    <Phone size={18} />
-                    Call Us Now
-                  </a>
-                  <a 
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
-                  >
-                    <MessageCircle size={18} className="text-emerald-500" />
-                    WhatsApp Booking
-                  </a>
-
-                  <div className="rounded-lg border border-neutral-800 bg-neutral-900/40 p-4 text-center">
-                    <p className="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold mb-1">Rishikesh Hotline</p>
-                    <p className="text-sm font-bold text-white">{phone}</p>
-                    <p className="text-[9px] text-neutral-500 mt-1">Available 24x7. Verification required.</p>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-4">
+                <a 
+                  href={`tel:${phone}`}
+                  className="flex items-center justify-center gap-3 rounded-lg bg-amber-500 py-4 text-center text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg"
+                >
+                  <Phone size={18} />
+                  Call Us: {phone}
+                </a>
+                <a 
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
+                >
+                  <MessageCircle size={18} className="text-emerald-500" />
+                  WhatsApp Chat
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        
         {/* Internal Service Links */}
         <section className="py-12 bg-neutral-900/30 border-b border-neutral-900">
           <div className="container-shell">
-            <h2 className="text-2xl font-bold text-white mb-6">All Escort Services in This City</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">All Services in This City</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               <a href="/rishikesh/vip-escort/" className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 hover:border-amber-500/30 transition-colors"><p className="font-semibold text-white text-sm">VIP Escort Service</p><p className="text-xs text-amber-400 mt-1">From Rs. 15,000</p></a>
               <a href="/rishikesh/hotel-escort/" className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 hover:border-amber-500/30 transition-colors"><p className="font-semibold text-white text-sm">Hotel Escort Service</p><p className="text-xs text-amber-400 mt-1">From Rs. 10,000</p></a>
@@ -1262,12 +558,10 @@ export default function RishikeshEscortPage() {
         {/* FAQs Accordion Section */}
         <section id="faqs" className="py-20 bg-neutral-900/10">
           <div className="container-shell max-w-4xl">
-            
             <div className="text-center mb-12">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">FAQ Desk</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">FAQ Helpdesk</span>
               <h2 className="mt-2 text-3xl font-extrabold text-white">Frequently Asked Questions</h2>
               <div className="mt-3 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-4 text-sm text-neutral-400">Clear answers regarding booking, location coverage, and security in Rishikesh</p>
             </div>
 
             <div className="grid gap-4">
@@ -1288,9 +582,8 @@ export default function RishikeshEscortPage() {
               ))}
             </div>
 
-            {/* Disclaimer & Footer check */}
             <div className="mt-12 text-center text-xs text-neutral-500 border-t border-neutral-900 pt-6">
-              🛑 <strong>18+ Adult-Only Disclaimer:</strong> This service is strictly restricted to adults aged 18 years and above. All interactions are based on mutual adult consent. Clients must comply with local rules.<br className="mt-2" />
+              🛑 <strong>18+ Adult-Only Disclaimer:</strong> This service is strictly for adults aged 18 years and above. All users must follow local laws and communicate respectfully.<br className="mt-2" />
               Please review our{' '}
               <Link href="/privacy-policy/" className="underline hover:text-neutral-300">
                 Privacy Policy
@@ -1300,10 +593,10 @@ export default function RishikeshEscortPage() {
                 Terms and Conditions
               </Link>.
             </div>
-
           </div>
-        </section></div>
+        </section>
+
+      </div>
     </>
   );
 }
-

@@ -8,17 +8,15 @@ import {
   Phone, 
   MessageCircle,
   ShieldCheck, 
-  CheckCircle2, 
-  Sparkles, 
-  Send, 
   Clock, 
   Check, 
   ChevronRight, 
   Lock
 } from 'lucide-react';
 import { LeadForm } from '@/components/ui/LeadForm';
-
+import { CitySchema } from '@/components/seo/CitySchema';
 import { SupplementalCitySchema } from '@/components/seo/SupplementalCitySchema';
+
 export const metadata: Metadata = buildPageMetadata({
   title: 'Premium Surat Escort Service | 24x7 Verified Booking',
   description: 'Book premium Surat escort service 24x7 with verified profiles, discreet support, quick WhatsApp response, hotel coordination, and private booking.',
@@ -33,12 +31,12 @@ export const metadata: Metadata = buildPageMetadata({
     '24x7 Surat Escort Booking',
   ],
 });
-// Surat companion profile cards utilizing native images
+
 const companionProfiles = [
   {
-    name: 'Ananya',
+    name: 'Anya',
     age: 22,
-    height: '5\'4"',
+    height: '5\'5"',
     nationality: 'Indian',
     image: '/assets/photos/luxury-escort-service-surat.jpg',
     tags: ['Premium', 'Sophisticated'],
@@ -73,7 +71,7 @@ const companionProfiles = [
   },
   {
     name: 'Riya',
-    age: 21,
+    age: 22,
     height: '5\'3"',
     nationality: 'Indian',
     image: '/assets/photos/female-escort-in-surat.jpg',
@@ -82,8 +80,8 @@ const companionProfiles = [
   },
   {
     name: 'Kiara',
-    age: 23,
-    height: '5\'5"',
+    age: 24,
+    height: '5\'6"',
     nationality: 'Indian',
     image: '/assets/photos/luxury-escort-service-surat.jpg',
     tags: ['Luxury', 'Elite Lifestyle'],
@@ -91,11 +89,11 @@ const companionProfiles = [
   },
   {
     name: 'Pooja',
-    age: 22,
+    age: 23,
     height: '5\'5"',
     nationality: 'Indian',
     image: '/assets/photos/independent-call-girls-surat.jpg',
-    tags: ['Private Meet', 'Local Companion'],
+    tags: ['Private Meet', 'Independent Style'],
     rate: 'High-Class',
   },
   {
@@ -104,7 +102,7 @@ const companionProfiles = [
     height: '5\'7"',
     nationality: 'Indian',
     image: '/assets/photos/high-class-call-girls-surat.jpg',
-    tags: ['Model Profile', 'Hotel Meet'],
+    tags: ['Stylish', 'Corporate Events'],
     rate: 'Elite',
   }
 ];
@@ -117,131 +115,38 @@ export default function SuratEscortPage() {
   const faqs = [
     {
       question: "What is Girls of Passion?",
-      answer: "Girls of Passion is a professional adult companionship platform in Surat for adults who want discreet booking support, verified profiles, and premium companion options."
+      answer: "Girls of Passion is a professional adult companionship booking support platform in Surat for adults who want private, secure, and premium companion coordination."
+    },
+        {
+      question: "Can I book a companion in Surat Vesu area?",
+      answer: "Yes. We cover Vesu, Adajan, Dumas Road, and all major business hotels in Surat."
     },
     {
-      question: "Is Girls of Passion available across Surat?",
-      answer: "Yes, booking support is available across major Surat locations, including Vesu, VIP Road, Adajan, Pal, Citylight, Piplod, Athwa, Dumas Road, hotels, and private residences."
+      question: "How can I contact the Surat booking desk?",
+      answer: "You can call us directly or drop a text on WhatsApp for private coordination."
     },
     {
-      question: "How can I book a companion in Surat?",
-      answer: "You can browse available profiles and contact the support team through call or WhatsApp. Share your location, timing, and preference to check availability."
+      question: "Are the profiles genuine in Surat?",
+      answer: "Yes, we only list verified profiles to maintain high quality and trust."
     },
     {
-      question: "Is the booking process private?",
-      answer: "Yes, the booking process is discreet and confidential. Client privacy is one of our top priorities."
-    },
-    {
-      question: "Are the profiles verified?",
-      answer: "Girls of Passion focuses on verified and genuine companion profiles to maintain trust, comfort, and service quality."
-    },
-    {
-      question: "Do you offer VIP escort services Surat?",
-      answer: "Yes, VIP companion options are available for clients who prefer premium presentation, refined communication, and priority booking support."
-    },
-    {
-      question: "Is support available 24x7?",
-      answer: "Yes, booking support is available 24x7, subject to profile availability, location, and timing."
-    },
-    {
-      question: "Can I book a companion near my hotel or residence?",
-      answer: "Yes, you can share your hotel or residence location, and our team will help you check suitable nearby options."
-    },
-    {
-      question: "Is pricing shared before booking?",
-      answer: "Yes, pricing and availability details are shared before confirmation so that clients can make an informed decision."
-    },
-    {
-      question: "Who can use this service?",
-      answer: "This service is strictly for adults aged 18 years and above. Clients must communicate respectfully and follow all applicable local laws."
+      question: "Is the booking private?",
+      answer: "Yes, your booking details are kept strictly secret and deleted after checkout."
     }
   ];
 
-  // Schema definitions for Surat page
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Girls of Passion Surat',
-    description: 'Premium Surat escort service & call girl booking 24/7. Verified profiles, WhatsApp support, hotel coordination, quick deals, private booking.',
-    url: '/surat-escort-service/',
-    telephone: phone,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Vesu, Surat',
-      addressLocality: 'Surat',
-      addressRegion: 'Gujarat',
-      postalCode: '395007',
-      addressCountry: 'IN'
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Surat' },
-      { '@type': 'City', name: 'Vesu' },
-      { '@type': 'City', name: 'Adajan' }
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.7',
-      reviewCount: '124',
-      bestRating: '5',
-      worstRating: '1'
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59'
-    },
-    priceRange: 'INR'
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
-  };
-
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Girls of Passion',
-    url: '/surat-escort-service/',
-    logo: '/logo.svg',
-    telephone: phone
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.girlsofpassion.in/'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Surat Escort Service',
-        item: 'https://www.girlsofpassion.in/surat-escort-service/'
-      }
-    ]
-  };
-
   return (
     <>
-      {/* Schemas */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {/* Dynamic Absolute SEO Schemas */}
+      <CitySchema
+        cityName="Surat"
+        phone={phone}
+        address="Vesu, Surat"
+        rating={4.7}
+        reviewCount={124}
+        url="https://www.girlsofpassion.in/surat-escort-service/"
+        faqs={faqs}
+      />
       <SupplementalCitySchema citySlug="surat" />
 
       {/* Main Luxury Dark wrapper for the page */}
@@ -249,7 +154,7 @@ export default function SuratEscortPage() {
         
         {/* Banner Announcement */}
         <div className="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 py-2.5 text-center text-xs font-semibold uppercase tracking-widest text-black">
-          💎 Premium & Discreet 100% Verified Profiles in Surat, Gujarat
+          💎 Premium & Discreet 100% Verified Profiles in Surat
         </div>
 
         {/* Hero Section */}
@@ -271,32 +176,23 @@ export default function SuratEscortPage() {
               <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
                 Surat Escort Service
                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 text-2xl md:text-3xl lg:text-4xl font-semibold">
-                  Premium Adult Companionship with Privacy & Elegance
+                  Premium Adult Companionship in Surat
                 </span>
               </h1>
+              
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-300">
-                <strong className="text-amber-400">Surat Escort Service</strong> and <strong className="text-white">Surat Call Girl</strong> booking are available 24/7 for adults who want Call Girls in Surat, cash payment service, quick deals, free hotel coordination, escorts services and call girls with private support.
+                Our <strong className="text-amber-400">Surat Escort Service</strong> and <strong className="text-white">Surat Call Girl</strong> booking are available 24/7. We help you connect with verified profiles for private booking, hotel visits, and direct contact with local companions in Surat area.
               </p>
-              {/* Intro paragraphs */}              <div data-seo-answer-summary className="mt-5 max-w-3xl rounded-lg border border-amber-500/20 bg-neutral-900/40 p-5 text-sm leading-7 text-neutral-300">
-                <p>
-                  <strong className="text-amber-400">Surat Escort Service</strong> and <strong className="text-white">Surat Call Girl</strong> are the primary booking keywords for this page. Adults can use Girls of Passion to check Call Girls in Surat, escorts services, verified profile coordination, cash payment availability, quick deals, free hotel coordination, and private 24/7 booking support.
-                </p>
-                <p className="mt-3">
-                  This page is optimized for answer-first search results by clearly covering who the service is for, where it is available, how booking support works, and why users searching for Surat Escort Service, Surat Call Girl or Call Girls in Surat can find relevant city-specific information here.
-                </p>
-              </div>
+
               <div className="mt-8 space-y-4 text-base leading-relaxed text-neutral-300">
                 <p>
-                  Welcome to <strong className="text-amber-400 font-semibold">Girls of Passion</strong>, a trusted and professional platform for adults looking for a premium <strong className="text-white">Surat escort service</strong> with privacy, comfort, and refined companionship. We are designed for clients who value discretion, smooth communication, verified profiles, and a high-quality experience in one of Gujarat’s fastest-growing cities.
+                  If you are visiting Surat for business, staying in a premium hotel near Vesu, or visiting diamond markets, our companion booking service provides a safe, simple way to find verified companions.
                 </p>
                 <p>
-                  Surat is known for its business energy, diamond industry, textile market, luxury lifestyle, and rapidly developing urban culture. From business travellers and entrepreneurs to local professionals and visitors, the city attracts people who expect quality, speed, and reliability in every service they choose.
+                  Surat is a major textile and diamond hub, hosting business merchants and travelers in hotels near Vesu and Dumas Road.
                 </p>
                 <p>
-                  If your search has brought you to <strong className="text-amber-400 font-semibold">Surat escort service</strong>, <strong className="text-amber-400 font-semibold">escort service Surat</strong>, <strong className="text-amber-400 font-semibold">best escort services Surat</strong>, or <strong className="text-amber-400 font-semibold">VIP escort services Surat</strong>, you are not only looking for availability. You are looking for a smooth, private, and well-managed adult companionship experience. Girls of Passion is built to deliver exactly that with professionalism and complete confidentiality.
-                </p>
-                <p>
-                  Our goal is simple: to provide adults with a safe, discreet, and premium companionship platform where comfort, privacy, and quality always come first.
+                  Our goal is simple: to offer a safe, private, and premium companion booking service for adults who value clear communication, verified profiles, and direct support.
                 </p>
               </div>
 
@@ -331,7 +227,7 @@ export default function SuratEscortPage() {
                   <span className="font-semibold text-white">4.7/5</span> Average Rating
                 </div>
                 <div className="h-4 w-px bg-neutral-800" />
-                <div>185+ Client Reviews</div>
+                <div>124+ Client Reviews</div>
               </div>
 
             </div>
@@ -354,7 +250,7 @@ export default function SuratEscortPage() {
                     ★ Premium Verified
                   </div>
                   <h3 className="mt-2 text-xl font-bold text-white">Featured Companion</h3>
-                  <p className="text-xs text-neutral-300">Available near Vesu, VIP Road & Luxury Hotels</p>
+                  <p className="text-xs text-neutral-300">Available near Vesu, Adajan & Luxury Hotels</p>
                 </div>
               </div>
 
@@ -380,7 +276,7 @@ export default function SuratEscortPage() {
             <div className="mb-10 text-center">
               <h2 className="text-3xl font-bold text-white">Quick Overview of Our Surat Escort Service</h2>
               <div className="mt-2 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-3 text-sm text-neutral-400">Everything you need to know about our elite Surat adult companionship service</p>
+              <p className="mt-3 text-sm text-neutral-400">Everything you need to know about our local companionship booking support</p>
             </div>
 
             <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-900/30">
@@ -402,11 +298,11 @@ export default function SuratEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Available Areas</td>
-                    <td className="px-6 py-4">Vesu, VIP Road, Adajan, Pal, Citylight, Piplod, Athwa, Dumas Road, hotels and private residences</td>
+                    <td className="px-6 py-4">Vesu, Adajan, City Light, Dumas Road</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Booking Options</td>
-                    <td className="px-6 py-4">Call and WhatsApp booking</td>
+                    <td className="px-6 py-4">Call and WhatsApp booking desk</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Availability</td>
@@ -414,7 +310,7 @@ export default function SuratEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Profile Quality</td>
-                    <td className="px-6 py-4">Verified, genuine, and carefully reviewed profiles</td>
+                    <td className="px-6 py-4">Verified, genuine, and carefully checked profiles</td>
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Privacy Level</td>
@@ -422,15 +318,7 @@ export default function SuratEscortPage() {
                   </tr>
                   <tr className="hover:bg-neutral-900/40 transition-colors">
                     <td className="px-6 py-4 font-medium text-white">Best For</td>
-                    <td className="px-6 py-4">Business travellers, local professionals, private meetings, hotel companionship, dinner dates, social events</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Support</td>
-                    <td className="px-6 py-4">Fast response and professional coordination</td>
-                  </tr>
-                  <tr className="hover:bg-neutral-900/40 transition-colors">
-                    <td className="px-6 py-4 font-medium text-white">Main Benefit</td>
-                    <td className="px-6 py-4">Reliable, private, and premium adult companionship experience</td>
+                    <td className="px-6 py-4">Travelers, business meetings, hotel companionship, private dates</td>
                   </tr>
                 </tbody>
               </table>
@@ -447,7 +335,7 @@ export default function SuratEscortPage() {
                 <h2 className="mt-2 text-3xl font-extrabold text-white">Verified Companion Profiles in Surat</h2>
               </div>
               <p className="max-w-md text-sm text-neutral-400">
-                Browse our curated selection of elegant, independent, and VIP companions in Surat. Contact us for daily availability updates.
+                Browse our checked selection of independent and verified companions. Contact us for daily availability updates.
               </p>
             </div>
 
@@ -505,32 +393,26 @@ export default function SuratEscortPage() {
         <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
           <div className="container-shell grid gap-12 lg:grid-cols-2">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Uncompromising Standards</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Why Choose Girls of Passion for Surat Escort Service?</h2>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Service Highlights</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Why Choose Our Surat Escort Booking?</h2>
               
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-neutral-300">
                 <p>
-                  Choosing the right <strong className="text-white">Surat escort service</strong> is important because clients expect trust, privacy, genuine profiles, and professional support. In a business-driven city like Surat, time matters and privacy matters even more. Girls of Passion focuses on both.
+                  We cater to business merchants who value privacy above all else. We offer verified profiles and direct coordination for hotel stays in Surat.
                 </p>
                 <p>
-                  We offer a structured and smooth experience from the first inquiry to final booking confirmation. Every step is handled with care, clarity, and confidentiality.
-                </p>
-                <p>
-                  We are known for:
+                  Choosing the right companionship makes your travel or stay much better. We coordinate everything directly so you do not have to worry about details.
                 </p>
               </div>
 
               {/* List */}
               <ul className="mt-6 space-y-3">
                 {[
-                  'Verified and genuine companion profiles',
-                  'Professional and polite communication',
-                  'Fast response through call and WhatsApp',
-                  'Discreet and confidential booking support',
-                  'Availability across major Surat locations',
-                  'Premium and well-presented companions',
-                  'Clear information before confirmation',
-                  'Adult-only and respectful service approach'
+                  '100% verified and genuine profiles',
+                  'Discreet and safe booking desk',
+                  'Quick responses on WhatsApp',
+                  'Cash payment options directly on meeting',
+                  'Support across major local hotels and areas'
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-neutral-300">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
@@ -540,245 +422,86 @@ export default function SuratEscortPage() {
                   </li>
                 ))}
               </ul>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our platform is built for adults who want a reliable service with comfort, elegance, and complete privacy.
-              </p>
             </div>
 
-            {/* Escort Service Surat */}
+            {/* Highlight Panel */}
             <div className="flex flex-col justify-center gap-6 rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Fast & Simple</span>
-              <h3 className="text-2xl font-bold text-white">Escort Service Surat – Built for Speed, Privacy, and Simplicity</h3>
+              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Hotel Coordination</span>
+              <h3 className="text-2xl font-bold text-white">Safe Hotel & Resort Visits</h3>
               
               <p className="text-sm leading-relaxed text-neutral-300">
-                Surat is a fast-moving city where people value time and efficiency. That is why our <strong className="text-white font-semibold">escort service Surat</strong> is designed to be quick, simple, and easy to access. We make the booking process smooth so clients do not have to deal with confusion or unnecessary delays.
+                We cover business hotels, suites, and private stays in Vesu, Dumas Road, and Adajan areas.
               </p>
               
-              <h4 className="font-semibold text-white text-sm">Our process focuses on:</h4>
-
-              <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                {[
-                  'Instant communication',
-                  'Quick confirmations',
-                  'Smooth coordination',
-                  'Easy booking steps',
-                  'Clear profile information',
-                  'Location-based availability',
-                  'Professional customer support'
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-xs text-neutral-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    {item}
-                  </div>
-                ))}
-              </ul>
-
-              <p className="text-xs text-neutral-300 mt-2">
-                Whether you are a first-time client or a regular visitor, Girls of Passion gives you a clean and convenient experience with private support at every step.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Surat Escorts Service for Modern Lifestyle Needs */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Image Block */}
-            <div className="relative min-h-[350px] overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/30">
-              <Image 
-                src="/assets/photos/premium-escorts-surat.jpg" 
-                alt="Surat Escorts Service for Modern Lifestyle Needs"
-                fill
-                className="object-cover opacity-80"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/60 to-transparent" />
-            </div>
-
-            {/* Content block */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Modern Lifestyles</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Surat Escorts Service for Modern Lifestyle Needs</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Surat has evolved into a modern city with premium hotels, luxury residences, corporate zones, nightlife spaces, and high-value business circles. Our <strong className="text-white">Surat escorts service</strong> is designed for adults who want companionship that matches this modern lifestyle.
+              <p className="text-sm leading-relaxed text-neutral-300">
+                Our support team handles all booking details quietly. We value your private time, and all communications are kept secure and deleted after the meeting is completed.
               </p>
 
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our service is suitable for:</h4>
-                <ul className="grid gap-3 sm:grid-cols-2">
+              <div>
+                <h5 className="font-semibold text-white mb-2 text-sm">Perfect for social occasions and stays:</h5>
+                <div className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-300">
                   {[
-                    'Business travellers',
-                    'Diamond and textile entrepreneurs',
-                    'Local professionals',
-                    'Visitors staying in luxury hotels',
-                    'Private social meetings',
-                    'Dinner dates',
-                    'Event companionship',
-                    'Personal companionship',
-                    'Relaxed city experiences'
-                  ].map((f) => (
-                    <li key={f} className="flex items-center gap-2.5 text-xs text-neutral-300">
+                    'Private hotel stay companion',
+                    'Social date partner',
+                    'Relaxing dinner dates',
+                    'Business travel company'
+                  ].map((occasion) => (
+                    <div key={occasion} className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Every interaction is handled professionally so that clients feel comfortable, respected, and confident throughout the booking process.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Best Escort Services Surat */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Service Excellence</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Best Escort Services Surat – Experience That Delivers Quality</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                When people search for the <strong className="text-white font-semibold">best escort services Surat</strong>, they are usually looking for more than just options. They want genuine profiles, fast response, privacy, and a premium experience. Girls of Passion focuses on all these areas to deliver a dependable adult companionship service.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">What makes us different:</h4>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {[
-                    'Carefully reviewed companion profiles',
-                    'Premium and VIP companion options',
-                    'Fast booking assistance',
-                    'Transparent communication',
-                    'Privacy-focused support',
-                    'Availability across key Surat areas',
-                    'Professional coordination',
-                    'Respectful adult-only interaction'
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {item}
+                      {occasion}
                     </div>
                   ))}
                 </div>
               </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                We believe that a good companionship service should feel smooth, private, and trustworthy from start to finish.
-              </p>
             </div>
-
-            {/* VIP Escort Services Surat Card */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">High-Class Offerings</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">VIP Escort Services Surat for Premium Experiences</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Our <strong className="text-white">VIP escort services Surat</strong> are designed for clients who prefer a more refined and exclusive experience. VIP companions are suitable for luxury hotels, private residences, premium social events, business evenings, and high-class lifestyle settings.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">VIP companionship focuses on:</h4>
-                <ul className="space-y-1.5 text-xs text-neutral-400">
-                  {[
-                    'Elegant presentation',
-                    'Professional communication',
-                    'Premium profile quality',
-                    'Priority booking support',
-                    'Discreet coordination',
-                    'Refined social presence',
-                    'Personalized assistance'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400 font-medium text-neutral-300">
-                For clients who value sophistication, comfort, and exclusivity, our VIP category offers a more polished companionship experience in Surat.
-              </p>
-            </div>
-
           </div>
         </section>
 
-        {/* Section: Surat Escorts Service Available Across Key Areas */}
+        {/* Areas Covered Section */}
         <section className="py-20 border-b border-neutral-900">
           <div className="container-shell">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Surat Locations</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Surat Escorts Service Available Across Key Areas</h2>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Local Coverage</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Areas We Cover in Surat</h2>
               <div className="mt-3 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
               <p className="mt-4 text-sm text-neutral-300 leading-relaxed">
-                Our <strong className="text-white">Surat escorts service</strong> is available across major locations of the city. Whether you are staying in a hotel, working in a business area, living in a premium residential zone, or visiting the city for a short stay, our team can help you check location-based availability.
+                We coordinate companion bookings across all key sectors, commercial hubs, and luxury hotels in Surat:
               </p>
             </div>
 
             {/* Location Grid */}
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {[
-                'Vesu',
-                'VIP Road',
-                'Adajan',
-                'Pal',
-                'Citylight',
-                'Piplod',
-                'Athwa',
-                'Dumas Road',
-                'Varachha',
-                'Ring Road',
-                'Surat Railway Station area',
-                'Hotels and private residences',
-                'Business locations',
-                'Premium apartments'
-              ].map((loc) => (
+              {["Vesu","Adajan","City Light","Dumas Road"].map((loc) => (
                 <div key={loc} className="flex items-center gap-3 rounded-lg border border-neutral-800/80 bg-neutral-900/40 p-4 hover:border-amber-500/30 transition-all">
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-amber-500/10 text-amber-500">
                     <MapPin size={16} />
                   </div>
                   <div>
                     <span className="font-bold text-white text-sm">{loc}</span>
-                    <span className="block text-[10px] text-neutral-400">Surat Companion Location</span>
+                    <span className="block text-[10px] text-neutral-400">Verified Companions</span>
                   </div>
                 </div>
               ))}
             </div>
-
-            <p className="mt-10 text-center text-sm text-neutral-400">
-              This wide coverage helps clients searching for <strong className="text-white">escort service Surat near me</strong> or <strong className="text-white">Surat escort service near me</strong> find suitable options quickly and conveniently.
-            </p>
           </div>
         </section>
 
-        {/* Section: Booking Steps & Process */}
+        {/* Booking Process Section */}
         <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
           <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Booking Steps Card */}
-            <div className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Fast Setup</span>
-              <h2 className="mt-2 text-2xl font-extrabold text-white">Call and WhatsApp Booking Process</h2>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Booking with Girls of Passion is simple, fast, and private. Our platform is designed for adults who want quick access, clear information, and smooth coordination.
+            <div className="flex flex-col justify-center">
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">How It Works</span>
+              <h2 className="mt-2 text-3xl font-extrabold text-white">Simple Call & WhatsApp Booking</h2>
+              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
+                We keep the booking process direct and easy. Follow these simple steps to secure your booking:
               </p>
-              
-              <h3 className="mt-6 text-base font-bold text-white border-b border-neutral-800 pb-2">Simple Booking Steps</h3>
-              
+
               <ol className="mt-6 space-y-4">
                 {[
-                  'Browse available companion profiles.',
-                  'Choose your preferred profile or category.',
-                  'Contact our support team through call or WhatsApp.',
-                  'Share your preferred location, timing, and requirement.',
-                  'Confirm availability and booking details.'
+                  'Browse the profiles and choose your favorite category.',
+                  'Reach out to us via call or send a message on WhatsApp.',
+                  'Share your location name, timing, and profile choice.',
+                  'We will confirm availability and booking details.'
                 ].map((step, idx) => (
                   <li key={idx} className="flex items-start gap-4">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-black">
@@ -788,417 +511,40 @@ export default function SuratEscortPage() {
                   </li>
                 ))}
               </ol>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our team helps you with profile availability, category selection, location coordination, and basic booking details. The process is direct, discreet, and easy to follow.
-              </p>
             </div>
 
-            {/* Privacy Standards */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Security First</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Privacy and Confidentiality Always Protected</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Privacy is one of the most important factors when choosing a <strong className="text-white">Surat escort service</strong>. At Girls of Passion, confidentiality is always a top priority. We understand that clients want their identity, communication, and booking details to remain private.
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/30 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Book Surat Escorts Today</h3>
+              <p className="text-sm leading-relaxed text-neutral-300 mb-6">
+                Ready to find verified companions near you? Contact our booking team for quick assistance, verified profile updates, and direct support.
               </p>
 
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our privacy standards include:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Secure communication',
-                    'Confidential booking process',
-                    'No unnecessary personal questions',
-                    'No personal data sharing',
-                    'Discreet coordination',
-                    'Respect for client identity and preferences'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/10 text-amber-500">
-                        <Check size={10} className="stroke-[3]" />
-                      </span>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Every inquiry is handled carefully so that clients can book with confidence and peace of mind.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Search Intents & local options */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Left Column */}
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Trust & Respect</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Call Girl Surat and Private Companion Options</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Many clients search for terms like <strong className="text-white">call girl Surat</strong>, <strong className="text-white">Surat call girl</strong>, <strong className="text-white">call girls service Surat</strong>, or <strong className="text-white">Surat call girls service</strong> when looking for adult companionship online. At Girls of Passion, we present this service in a more professional, respectful, and privacy-focused way.
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Our platform is suitable for adults who want:
-              </p>
-
-              <ul className="mt-4 space-y-2.5">
-                {[
-                  'Verified companion profiles',
-                  'Quick booking support',
-                  'Private communication',
-                  'Premium companion options',
-                  'Flexible timing',
-                  'Surat-wide availability',
-                  'Professional coordination',
-                  'Discreet booking process'
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-neutral-300">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                We focus on delivering a smooth and confidential experience instead of a complicated or unclear process.
-              </p>
-            </div>
-
-            {/* Right Column: Local Options */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Local Lifestyle</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Local Companion Options in Surat</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Local companion options are ideal for clients who prefer someone familiar with the city’s lifestyle, locations, and pace. Surat is a busy city, and local familiarity can make coordination easier and more convenient.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Local companion options are suitable for:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                  {[
-                    'Residents of Surat',
-                    'Business visitors',
-                    'Hotel guests',
-                    'Private meetings',
-                    'Short-duration companionship',
-                    'City-based availability',
-                    'Dinner or social plans'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                If you prefer a local companion, our support team can help you check available profiles based on your area and timing.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Models, Support, and Pricing */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-8 md:grid-cols-3">
-            
-            {/* Business Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Corporate Guests</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Premium Companion Profiles for Business Travellers</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Surat attracts thousands of business travellers because of its diamond, textile, real estate, and corporate sectors. Many visitors stay in premium hotels or attend private business meetings and social events. Girls of Passion provides professional adult companionship support for clients who want a refined and discreet companion during their stay.
-              </p>
-              
-              <h4 className="mt-4 font-semibold text-white text-xs uppercase tracking-wider mb-2">Business travellers often prefer companions who are:</h4>
-              <ul className="space-y-1.5 text-xs text-neutral-400">
-                {['Well-presented', 'Polite and professional', 'Comfortable in premium settings', 'Easy to communicate with', 'Discreet and respectful', 'Suitable for dinner or social occasions'].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-xs text-neutral-400">
-                Our platform helps clients find suitable options based on profile availability and preferences.
-              </p>
-            </div>
-
-            {/* Support Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Round-The-Clock</span>
-              <h3 className="mt-2 text-xl font-bold text-white">24x7 Surat Escort Service Support</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Surat has an active and fast-moving lifestyle, and flexibility is important. Girls of Passion offers 24x7 booking assistance for adults looking for private companionship in Surat.
-              </p>
-              
-              <h4 className="mt-4 font-semibold text-white text-xs uppercase tracking-wider mb-2">Our 24x7 support helps with:</h4>
-              <ul className="space-y-1.5 text-xs text-neutral-400">
-                {['Profile availability', 'Location-based options', 'Booking confirmation', 'Timing coordination', 'Category selection', 'Privacy-related questions'].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-xs text-neutral-400">
-                Availability may depend on profile, location, timing, and booking schedule. Contact our team through call or WhatsApp for the latest available options.
-              </p>
-            </div>
-
-            {/* Pricing Card */}
-            <div className="flex flex-col rounded-xl border border-neutral-800 bg-neutral-900/30 p-6">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Clear Estimates</span>
-              <h3 className="mt-2 text-xl font-bold text-white">Transparent Pricing and Clear Communication</h3>
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                A reliable <strong className="text-white">escort service Surat</strong> should always provide clear details before booking. At Girls of Passion, we believe in transparency so that clients can make informed decisions.
-              </p>
-              
-              <h4 className="mt-4 font-semibold text-white text-xs uppercase tracking-wider mb-2">Pricing may depend on:</h4>
-              <ul className="space-y-1.5 text-xs text-neutral-400">
-                {['Companion category', 'Profile selection', 'Duration', 'Location', 'Timing', 'Special preferences', 'Availability'].map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-amber-500 rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-xs text-neutral-400">
-                Our team shares required details before confirmation. This avoids confusion and ensures a smoother booking experience.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Affordable Companionship & Hotels/Resorts */}
-        <section className="py-20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Affordable Premium */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Value & Quality</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Affordable Premium Companionship in Surat</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion aims to provide premium companionship with flexible options. Different clients have different preferences and budgets, so our platform offers multiple categories and clear communication before booking.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Clients can expect:</h4>
-                <ul className="space-y-2">
-                  {[
-                    'Clear pricing information',
-                    'Flexible profile options',
-                    'Premium and VIP categories',
-                    'No confusing process',
-                    'Location-based support',
-                    'Quick response',
-                    'Discreet coordination'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Our focus is to combine comfort, privacy, and quality in one smooth experience.
-              </p>
-            </div>
-
-            {/* Hotel & Private Residence Companionship */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Luxury Stays</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Hotel and Private Residence Companionship in Surat</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion provides companionship booking support for hotels, private residences, premium apartments, and selected locations across Surat, subject to availability and local guidelines.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Hotel and private companionship is suitable for:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                  {['Business stays', 'Private meetings', 'Dinner plans', 'Social companionship', 'Personal company', 'Luxury lifestyle experiences', 'Relaxed city evenings'].map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-4 text-xs text-neutral-400">
-                Our team helps coordinate location and timing in a professional and confidential way.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Guidelines & Trust Indicators */}
-        <section className="py-20 bg-neutral-900/20 border-b border-neutral-900">
-          <div className="container-shell grid gap-12 lg:grid-cols-2">
-            
-            {/* Guidelines */}
-            <div className="flex flex-col justify-center">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Legal Compliance</span>
-              <h2 className="mt-2 text-3xl font-extrabold text-white">Safe and Professional Adult Companionship</h2>
-              
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Girls of Passion is designed for adults who value safety, professionalism, and respectful interaction. We focus on maintaining a platform where communication is clear, privacy is protected, and every step is handled responsibly.
-              </p>
-
-              <div className="mt-6">
-                <h4 className="font-semibold text-white mb-3 text-sm">Our standards include:</h4>
-                <ul className="space-y-3">
-                  {[
-                    'Verified profiles',
-                    'Adult-only access',
-                    'Respectful communication',
-                    'Consent-based interaction',
-                    'Professional coordination',
-                    'Privacy protection',
-                    'Clear information before confirmation'
-                  ].map((rule) => (
-                    <li key={rule} className="flex items-center gap-2.5 text-sm text-neutral-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                      {rule}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                Clients must be 18 years or older and must follow all applicable local laws and platform guidelines.
-              </p>
-            </div>
-
-            {/* Why Girls of Passion is trusted */}
-            <div className="flex flex-col justify-center rounded-xl border border-neutral-800 bg-neutral-900/35 p-8">
-              <span className="text-amber-500 text-xs font-semibold uppercase tracking-wider">Trusted Brand</span>
-              <h3 className="mt-2 text-2xl font-bold text-white">Why Girls of Passion is a Trusted Name in Surat</h3>
-              
-              <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                Reliability matters in a growing city like Surat. Clients want a platform that respects their time, privacy, and expectations. Girls of Passion is built on consistent service, verified profiles, and professional coordination.
-              </p>
-
-              <div className="mt-4">
-                <h4 className="font-semibold text-white mb-2 text-sm">Clients choose us because:</h4>
-                <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                  {[
-                    'We maintain high service standards',
-                    'We respect privacy',
-                    'We provide quick support',
-                    'We offer premium companion categories',
-                    'We focus on genuine profiles',
-                    'We ensure smooth communication',
-                    'We provide Delhi-style premium service standards in Surat',
-                    'We are available across key locations'
-                  ].map((p) => (
-                    <li key={p} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* Section: Call Girls Service & Call to Action */}
-        <section className="py-20 border-b border-neutral-900 bg-gradient-to-b from-neutral-950 to-neutral-900">
-          <div className="container-shell">
-            <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-8 md:p-12 shadow-2xl relative overflow-hidden">
-              {/* Background gradient orb */}
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-amber-500/10 blur-[80px]" />
-              
-              <div className="relative z-10 grid gap-8 md:grid-cols-[1.3fr_0.7fr]">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">Instant Booking</span>
-                  <h2 className="mt-2 text-3xl font-extrabold text-white">Best Call Girls Service in Surat with Trust and Privacy</h2>
-                  
-                  <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                    Clients searching for the <strong className="text-white font-semibold">best Call Girls service in Surat</strong> usually want reliability, comfort, and genuine profiles. Girls of Passion focuses on creating a better experience through transparent communication, verified profiles, and privacy-first support.
-                  </p>
-
-                  <div className="mt-4">
-                    <h4 className="font-semibold text-white mb-2 text-sm">We ensure:</h4>
-                    <ul className="grid gap-2 sm:grid-cols-2 text-xs text-neutral-400">
-                      {['Clear booking details', 'Genuine profile options', 'Respectful communication', 'Private coordination', 'Fast response', 'Professional handling', 'Adult-only service standards'].map((p) => (
-                        <li key={p} className="flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 bg-amber-500 rounded-full" />
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-                    Our goal is to make every interaction simple, safe, and comfortable for adults looking for private companionship in Surat.
-                  </p>
-
-                  <h3 className="mt-8 text-xl font-bold text-white">Experience Premium Companionship in Surat Today</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-neutral-300">
-                    If you are looking for a trusted and premium <strong className="text-white">Surat escort service</strong>, Girls of Passion is here to assist you with verified profiles, fast booking support, and complete privacy. Our platform offers multiple companion categories, including premium, VIP, independent-style, local, and modern companion options.
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                    Whether you are searching for <strong className="text-white">best escort services Surat</strong>, <strong className="text-white">VIP escort services Surat</strong>, <strong className="text-white">escort service Surat</strong>, or private companion options near you, our team can help you check suitable available profiles based on your preference.
-                  </p>
-                </div>
-
-                <div className="flex flex-col justify-center gap-4">
-                  
-                  <h3 className="text-center font-bold text-white text-base mb-2">Book Surat Escort Service Now</h3>
-
-                  <a 
-                    href={`tel:${phone}`}
-                    className="flex items-center justify-center gap-3 rounded-lg bg-amber-500 py-4 text-center text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg hover:shadow-amber-500/20"
-                  >
-                    <Phone size={18} />
-                    Call Us Now
-                  </a>
-                  <a 
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
-                  >
-                    <MessageCircle size={18} className="text-emerald-500" />
-                    WhatsApp Booking
-                  </a>
-
-                  <div className="rounded-lg border border-neutral-800 bg-neutral-900/40 p-4 text-center">
-                    <p className="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold mb-1">Surat Booking Line</p>
-                    <p className="text-sm font-bold text-white">{phone}</p>
-                    <p className="text-[9px] text-neutral-500 mt-1">Available 24x7. Verification required.</p>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-4">
+                <a 
+                  href={`tel:${phone}`}
+                  className="flex items-center justify-center gap-3 rounded-lg bg-amber-500 py-4 text-center text-sm font-bold text-black hover:bg-amber-400 transition-all shadow-lg"
+                >
+                  <Phone size={18} />
+                  Call Us: {phone}
+                </a>
+                <a 
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="flex items-center justify-center gap-3 rounded-lg border border-neutral-700 bg-neutral-900 py-4 text-center text-sm font-bold text-white hover:bg-neutral-800 transition-all"
+                >
+                  <MessageCircle size={18} className="text-emerald-500" />
+                  WhatsApp Chat
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        
         {/* Internal Service Links */}
         <section className="py-12 bg-neutral-900/30 border-b border-neutral-900">
           <div className="container-shell">
-            <h2 className="text-2xl font-bold text-white mb-6">All Escort Services in This City</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">All Services in This City</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               <a href="/surat/vip-escort/" className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 hover:border-amber-500/30 transition-colors"><p className="font-semibold text-white text-sm">VIP Escort Service</p><p className="text-xs text-amber-400 mt-1">From Rs. 15,000</p></a>
               <a href="/surat/hotel-escort/" className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 hover:border-amber-500/30 transition-colors"><p className="font-semibold text-white text-sm">Hotel Escort Service</p><p className="text-xs text-amber-400 mt-1">From Rs. 10,000</p></a>
@@ -1212,12 +558,10 @@ export default function SuratEscortPage() {
         {/* FAQs Accordion Section */}
         <section id="faqs" className="py-20 bg-neutral-900/10">
           <div className="container-shell max-w-4xl">
-            
             <div className="text-center mb-12">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">FAQ Desk</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-500">FAQ Helpdesk</span>
               <h2 className="mt-2 text-3xl font-extrabold text-white">Frequently Asked Questions</h2>
               <div className="mt-3 h-1 w-20 bg-amber-500 mx-auto rounded-full" />
-              <p className="mt-4 text-sm text-neutral-400">Clear answers regarding booking, location coverage, and security in Surat</p>
             </div>
 
             <div className="grid gap-4">
@@ -1238,9 +582,8 @@ export default function SuratEscortPage() {
               ))}
             </div>
 
-            {/* Disclaimer & Footer check */}
             <div className="mt-12 text-center text-xs text-neutral-500 border-t border-neutral-900 pt-6">
-              🛑 <strong>18+ Adult-Only Disclaimer:</strong> This service is strictly restricted to adults aged 18 years and above. All interactions are based on mutual adult consent. Clients must comply with local rules.<br className="mt-2" />
+              🛑 <strong>18+ Adult-Only Disclaimer:</strong> This service is strictly for adults aged 18 years and above. All users must follow local laws and communicate respectfully.<br className="mt-2" />
               Please review our{' '}
               <Link href="/privacy-policy/" className="underline hover:text-neutral-300">
                 Privacy Policy
@@ -1250,10 +593,10 @@ export default function SuratEscortPage() {
                 Terms and Conditions
               </Link>.
             </div>
-
           </div>
-        </section></div>
+        </section>
+
+      </div>
     </>
   );
 }
-
