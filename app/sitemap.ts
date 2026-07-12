@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { blogSeeds } from '@/data/blogSeeds';
 import { cities } from '@/data/cities';
+import { services } from '@/data/services';
 import { connectDB } from '@/lib/mongodb';
 import { Blog } from '@/lib/models/Blog';
-import { absoluteUrl, cityLandingPath } from '@/lib/seo/site';
+import { absoluteUrl, cityLandingPath, cityServicePath } from '@/lib/seo/site';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -31,6 +32,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: city.slug === 'india' ? 'daily' : 'weekly',
     priority: cityPriority[city.slug] ?? 0.9,
   }));
+
+  // Every canonical, indexable service route must be discoverable in the XML
+  // sitemap. These pages are also linked from the HTML sitemap and city hubs.
+  const servicePages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+    services.map((service) => ({
+      url: absoluteUrl(cityServicePath(city.slug, service.slug)),
+      lastModified: INDEXATION_REFRESH_DATE,
+      changeFrequency: 'monthly' as const,
+      priority: Math.max(0.55, (cityPriority[city.slug] ?? 0.88) - 0.25),
+    }))
+  );
 
   const brandPages: MetadataRoute.Sitemap = [
     { url: absoluteUrl('/about/'), lastModified: INDEXATION_REFRESH_DATE, changeFrequency: 'monthly', priority: 0.70 },
@@ -81,6 +93,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...corePagesHigh,
     ...staticCityPages,
+    ...servicePages,
     ...brandPages,
     ...legalPages,
     ...dbBlogPages,
